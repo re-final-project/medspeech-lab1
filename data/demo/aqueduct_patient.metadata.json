@@ -1,0 +1,12 @@
+{
+  "kind": "synthetic_tts_not_patient_audio",
+  "reference_transcript": "머리가 계속 아프고 구토도 했어요.",
+  "tts_input": "머리가 계속 아프고 구토도 했어요.",
+  "model": "facebook/mms-tts-kor",
+  "revision": "1b6491366d2ed6ea8e4e735607155d9f0110df29",
+  "seed": 42,
+  "sample_rate": 16000,
+  "duration_seconds": 3.568,
+  "license": "CC-BY-NC-4.0; see reports/data_license.md",
+  "stt_executed": false
+}

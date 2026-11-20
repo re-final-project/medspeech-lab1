@@ -31,6 +31,27 @@ def create_app(stt=None,llm=None,mode=None):
     @app.get("/health")
     def health(): return dict(mode=mode,models_loaded=stt is not None and llm is not None,retention=False)
 
+    def ensure_models():
+        nonlocal stt,llm
+        if stt is None or llm is None:
+            if mode=="smoke":
+                from .adapters import FixtureSTT,FixtureExtractor
+                stt,llm=FixtureSTT(),FixtureExtractor()
+            else:
+                from pathlib import Path
+                import json
+                from .adapters import WhisperAdapter,LocalLLM
+                root=Path(__file__).resolve().parents[1]
+                lock=root/"artifacts/full/model_revisions.json"
+                if not lock.exists(): raise HTTPException(503,"Run full setup before serving")
+                config=json.loads((root/"configs/full.json").read_text(encoding="utf-8"))
+                revisions=json.loads(lock.read_text(encoding="utf-8"))
+                stt=WhisperAdapter(config,revisions); llm=LocalLLM(config,revisions)
+        return stt,llm
+
+    from .demo import mount_demo
+    mount_demo(app,ensure_models,mode)
+
     @app.post("/infer",response_model=InferenceResponse)
     async def infer(file:UploadFile=File(...)):
         nonlocal stt,llm
@@ -48,20 +69,7 @@ def create_app(stt=None,llm=None,mode=None):
                 if not np.isfinite(audio).all(): raise ValueError("nonfinite")
             except HTTPException: raise
             except Exception: raise HTTPException(422,"Unreadable WAV")
-            if stt is None or llm is None:
-                if mode=="smoke":
-                    from .adapters import FixtureSTT,FixtureExtractor
-                    stt,llm=FixtureSTT(),FixtureExtractor()
-                else:
-                    # Offline startup contract: full setup must be completed first.
-                    from pathlib import Path
-                    import json
-                    from .adapters import WhisperAdapter,LocalLLM
-                    root=Path(__file__).resolve().parents[1]
-                    lock=root/"artifacts/full/model_revisions.json"
-                    if not lock.exists(): raise HTTPException(503,"Run full setup before serving")
-                    config=json.loads((root/"configs/full.json").read_text())
-                    revisions=json.loads(lock.read_text()); stt=WhisperAdapter(config,revisions); llm=LocalLLM(config,revisions)
+            ensure_models()
             start=time.perf_counter(); text=stt.transcribe(audio); stt_s=time.perf_counter()-start
             start=time.perf_counter(); raw=llm.extract(text,"grounded"); llm_s=time.perf_counter()-start
             try: result=Consultation.model_validate_json(raw)

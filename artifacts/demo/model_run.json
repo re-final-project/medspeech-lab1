@@ -1,0 +1,39 @@
+{
+  "case": {
+    "reference_transcript": "머리가 계속 아프고 구토도 했어요.",
+    "stt_transcript": " 머리가 계속 아프고, 굳어도 했어요.",
+    "simulated_mri_report": "송과체 부위 종괴가 중뇌수도관을 압박한다. 측뇌실과 제3뇌실이 확장되어 폐쇄성 수두증을 시사한다.",
+    "scenario_diagnosis": "송과체 부위 생식세포종(germinoma)"
+  },
+  "execution": {
+    "stt": "completed",
+    "structure": "schema_error",
+    "message": "실제 STT 완료 · 구조화 실패 — JSON 스키마 오류",
+    "stt_model": "openai/whisper-tiny",
+    "llm_model": "Qwen/Qwen2.5-0.5B-Instruct/cpu-dynamic-int8",
+    "audio_seconds": 3.568,
+    "stt_seconds": 2.734108400007244,
+    "structure_seconds": 3.1973403000156395,
+    "rtf": 0.7662859865491155
+  },
+  "audio_findings": null,
+  "imaging_findings": {
+    "obstruction_site": {
+      "value": "중뇌수도관",
+      "evidence": "송과체 부위 종괴가 중뇌수도관을 압박한다."
+    },
+    "enlarged_ventricles": [
+      {
+        "value": "측뇌실",
+        "evidence": "측뇌실과 제3뇌실이 확장되어 폐쇄성 수두증을 시사한다."
+      },
+      {
+        "value": "제3뇌실",
+        "evidence": "측뇌실과 제3뇌실이 확장되어 폐쇄성 수두증을 시사한다."
+      }
+    ]
+  },
+  "imaging_status": "report_text",
+  "imaging_method": "가상 판독문 문자열 근거 · 규칙 기반 · 영상 분석 미실행",
+  "audio_available": true
+}

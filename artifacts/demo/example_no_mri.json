@@ -1,0 +1,35 @@
+{
+  "case": {
+    "reference_transcript": "머리가 계속 아프고 구토도 했어요.",
+    "stt_transcript": null,
+    "simulated_mri_report": null,
+    "scenario_diagnosis": "송과체 부위 생식세포종(germinoma)"
+  },
+  "execution": {
+    "stt": "not_run",
+    "structure": "example_annotation",
+    "message": "예시 전사문 · 모델 미실행",
+    "stt_model": null,
+    "llm_model": null,
+    "audio_seconds": null,
+    "stt_seconds": null,
+    "structure_seconds": null,
+    "rtf": null
+  },
+  "audio_findings": {
+    "symptoms": [
+      {
+        "value": "머리가 계속 아프고",
+        "evidence": "머리가 계속 아프고"
+      },
+      {
+        "value": "구토",
+        "evidence": "구토도 했어요."
+      }
+    ]
+  },
+  "imaging_findings": null,
+  "imaging_status": "no_information",
+  "imaging_method": "가상 판독문 문자열 근거 · 규칙 기반 · 영상 분석 미실행",
+  "audio_available": true
+}

@@ -6,3 +6,4 @@ data/full/
 artifacts/full/checkpoints/
 .cache/
 work/
+node_modules/

@@ -18,6 +18,9 @@ medspeech = "medspeech.cli:main"
 [tool.setuptools.packages.find]
 include = ["medspeech*"]
 
+[tool.setuptools.package-data]
+medspeech = ["web/*.html", "web/*.css", "web/*.js", "cases/*.json"]
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["."]

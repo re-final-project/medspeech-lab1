@@ -1,0 +1,85 @@
+{
+  "commands": [
+    {
+      "name": "pytest",
+      "command": [
+        "C:\\Users\\정준하\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-m",
+        "pytest",
+        "-q",
+        "-s",
+        "-p",
+        "no:cacheprovider",
+        "-p",
+        "no:tmpdir",
+        "tests"
+      ],
+      "exit_code": 0,
+      "seconds": 2.8868485999992117
+    },
+    {
+      "name": "dom",
+      "command": [
+        "node",
+        "tests/demo_dom.test.cjs"
+      ],
+      "exit_code": 0,
+      "seconds": 1.1533201999845915
+    },
+    {
+      "name": "smoke",
+      "command": [
+        "C:\\Users\\정준하\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-m",
+        "medspeech.cli",
+        "smoke",
+        "--base",
+        "C:\\Users\\정준하\\Documents\\Codex\\2026-11-20\\llm-medspeech-lab-stt-llm-qc\\work\\publish-medspeech-lab1\\work\\demo-smoke-check"
+      ],
+      "exit_code": 0,
+      "seconds": 1.4116792000131682
+    }
+  ],
+  "http": {
+    "/demo/aqueduct": {
+      "status": 200,
+      "bytes": 8272
+    },
+    "/demo/api/case": {
+      "status": 200,
+      "bytes": 1261
+    },
+    "/demo/api/case?include_mri=false": {
+      "status": 200,
+      "bytes": 764
+    },
+    "/demo/audio": {
+      "status": 200,
+      "bytes": 114220
+    },
+    "/health": {
+      "status": 200,
+      "bytes": 55
+    },
+    "/docs": {
+      "status": 200,
+      "bytes": 937
+    }
+  },
+  "actual_model": {
+    "stt": "completed",
+    "structure": "schema_error",
+    "message": "실제 STT 완료 · 구조화 실패 — JSON 스키마 오류",
+    "stt_model": "openai/whisper-tiny",
+    "llm_model": "Qwen/Qwen2.5-0.5B-Instruct/cpu-dynamic-int8",
+    "audio_seconds": 3.568,
+    "stt_seconds": 2.734108400007244,
+    "structure_seconds": 3.1973403000156395,
+    "rtf": 0.7662859865491155
+  },
+  "browser_visual_qa": {
+    "completed": false,
+    "reason": "Computer Use stopped: current browser URL could not be determined with sufficient confidence to enforce policy; no further UI actions attempted."
+  },
+  "dom_qa": "5 tests on actual HTML/JS; no real browser or pixel rendering"
+}

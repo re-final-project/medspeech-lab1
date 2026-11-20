@@ -18,6 +18,47 @@ py -3.12 -m venv .venv
 .\.venv\Scripts\python.exe -m medspeech.cli smoke
 ```
 
+## 뇌실 통로 폐쇄 가상 사례 데모
+
+기존 FastAPI 앱에 로컬 단일 페이지를 추가했습니다. 서버를 시작한 다음 브라우저에서 [가상 사례 화면](http://127.0.0.1:8765/demo/aqueduct)을 여세요.
+
+```powershell
+.\.venv\Scripts\python.exe -m medspeech.demo serve --port 8765
+```
+
+기본 화면은 **수도관 폐쇄**와 **예시 전사문 · 모델 미실행** 상태입니다. 별도 모델 설치 없이 페이지와 예시 주석, 가상 판독문 근거를 확인할 수 있습니다. 정상 흐름 버튼은 측뇌실 → 제3뇌실 → 중뇌수도관 → 제4뇌실을 연결하며, 수도관 폐쇄 버튼은 압박 지점에서 화살표를 멈추고 상류 확장을 표시합니다. 개념도 상태와 입력의 추출 결과는 독립적입니다. 정상 흐름을 선택해도 가상 판독문 자체를 정상으로 바꾸지 않습니다.
+
+**가상 MRI 판독문 숨기기**를 누르면 판독문 텍스트, 폐쇄 관련 위치, 확장된 뇌실 및 그 근거를 제거하고 ‘영상 정보 없음’을 표시합니다. 개념도와 시나리오 설정은 입력 소견과 구분되어 남습니다. ‘현재 사례 JSON 저장’도 숨김 상태를 반영합니다.
+
+`medspeech/cases/aqueduct_obstruction.json`은 `reference_transcript`, `stt_transcript`, `simulated_mri_report`, `scenario_diagnosis`를 구분합니다. 기준 사례의 `stt_transcript`는 null이고, 실제 STT 호출이 완료된 경우에만 응답/실험 파일에 실제 문자열을 기록합니다. 원인 질환명은 시나리오 설정에만 있으며 STT·LLM의 입력에 전달하지 않습니다. 음성 결과는 증상만 노출하고, 영상 소견은 **가상 판독문 문자열 근거 · 규칙 기반**으로 표시합니다. MRI 이미지, 질환 후보 순위·확률, 치료 추천은 사용하지 않습니다.
+
+실제 모델 연결은 기존 `WhisperAdapter`와 `LocalLLM`을 공유합니다. `[full]` 의존성을 설치하고 기존 SHA lock을 유지하세요. 배포물에는 이 한 발화의 TTS 합성 WAV와 출처 metadata가 포함됩니다. 다시 생성하거나 CLI에서 실제 실행 결과를 기록하려면:
+
+```powershell
+.\.venv\Scripts\python.exe -m pip install -e '.[test,full]'
+.\.venv\Scripts\python.exe -m medspeech.demo generate-audio
+.\.venv\Scripts\python.exe -m medspeech.demo run
+# 판독문을 제공하지 않는 상태의 실제 실행 기록:
+.\.venv\Scripts\python.exe -m medspeech.demo run --no-mri --output artifacts/demo/no_mri_run.json
+```
+
+UI의 ‘합성 음성으로 STT·LLM 실행’도 같은 경로를 호출합니다. `MEDSPEECH_MODE=smoke`인 서버는 대역 모델을 실제 STT로 표시하지 않고 모델 미실행 상태를 반환합니다. 모델 환경이 없거나 실행에 실패해도 예시 정답을 실제 출력으로 채우지 않습니다. LLM 스키마 오류 시 실제 STT는 유지하고 음성 구조화는 null로 반환합니다. `/demo/api/run`의 HTTP 200은 실행 상태 envelope 수신을 뜻하며, 구조화 성공은 반드시 `execution.structure == "completed"`로 판단합니다. 웹 요청은 사례 원음이나 전사를 파일로 저장하지 않고, `demo run` CLI만 가상 사례의 실험 기록을 저장합니다.
+
+새 데모는 [실행·검증 보고서](reports/demo_report.md)에 정리했습니다. 실제 클릭에 대한 브라우저 시각 검증은 자동화 정책 차단으로 미완료이며, 전환·숨김·실패 상태의 동작은 실제 HTML/JS를 실행하는 DOM 단위 테스트로 검증했습니다. 선택적인 DOM 테스트는 Node.js와 개발 의존성이 필요합니다.
+
+```powershell
+npm install
+npm run test:ui
+.\.venv\Scripts\python.exe -m pytest -q
+```
+
+관리형 Windows의 Hugging Face symlink 검사 문제가 있으면 기존 복사 캐시 도구와 같은 `tools/run_demo_windows_copy_cache.py`를 사용하세요.
+
+```powershell
+.\.venv\Scripts\python.exe tools\run_demo_windows_copy_cache.py generate-audio
+.\.venv\Scripts\python.exe tools\run_demo_windows_copy_cache.py run
+```
+
 실제 모델 설치와 데이터 생성·QC·학습·평가 순서:
 
 ```powershell

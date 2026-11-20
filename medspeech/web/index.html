@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>뇌실 통로 폐쇄 가상 사례 | medspeech-lab</title>
+  <link rel="stylesheet" href="/demo/assets/style.css">
+  <script src="/demo/assets/app.js" defer></script>
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="/demo/aqueduct"><span class="brand-mark">m</span> medspeech<span class="brand-light">-lab</span></a><span class="eyebrow">KOREAN MEDICAL SPEECH LAB</span><a href="/docs">API 문서</a></header>
+  <main>
+    <section class="intro">
+      <div><span class="education">가상 사례 · 교육용 시뮬레이션</span><h1>뇌실 통로 폐쇄 가상 사례</h1><p class="intro-copy">환자가 말한 증상과 판독문 근거를 나누어, 뇌척수액의 흐름을 살펴봅니다.</p></div>
+      <aside class="scenario"><span class="mini-label">시나리오 설정 · 추출 결과 아님</span><p id="scenario-diagnosis">시나리오 불러오는 중</p><small>질환명은 설정값입니다. 모델의 진단 결과가 아닙니다.</small></aside>
+    </section>
+
+    <section class="diagram-card" aria-labelledby="diagram-heading">
+      <div class="section-heading"><div><span class="mini-label">SCENARIO FLOW</span><h2 id="diagram-heading">뇌척수액 통로 <span class="chip">개념도</span></h2></div>
+        <div class="segmented" aria-label="개념도 상태"><button id="normal-button" type="button" aria-pressed="false">정상 흐름</button><button id="blocked-button" class="selected" type="button" aria-pressed="true">수도관 폐쇄</button></div>
+      </div>
+      <p class="diagram-scope">시나리오 개념도 · 입력에서 추출한 소견과 별개이며, 실제 해부학적 위치·크기·비율을 재현하지 않습니다.</p>
+      <div class="diagram-layout">
+        <div class="diagram-scroll" tabindex="0" aria-label="뇌실 흐름 개념도. 좁은 화면에서는 좌우로 이동할 수 있습니다.">
+          <svg id="flow-diagram" viewBox="0 0 1000 315" role="img" aria-labelledby="svg-title svg-desc" data-state="blocked">
+            <title id="svg-title">수도관 폐쇄 개념도</title><desc id="svg-desc">송과체 부위 종괴가 중뇌수도관을 압박하여 흐름이 멈추고 상류인 측뇌실과 제3뇌실이 확장된 시나리오.</desc>
+            <defs>
+              <marker id="flow-tip" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="#48d9ca"/></marker>
+              <marker id="pressure-tip" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0 L7 4 L0 8" fill="#ff937d"/></marker>
+            </defs>
+            <path class="guide" d="M60 182 H947"/>
+            <text x="158" y="37" class="svg-label">측뇌실 (좌·우)</text><text x="417" y="37" class="svg-label">제3뇌실</text><text x="676" y="37" class="svg-label">중뇌수도관</text><text x="892" y="37" class="svg-label">제4뇌실</text>
+            <g id="lateral-node" data-expanded="true"><ellipse id="lateral-left" cx="110" cy="180" rx="42" ry="62" class="ventricle expanded"/><ellipse id="lateral-right" cx="205" cy="180" rx="42" ry="62" class="ventricle expanded"/></g>
+            <path class="flow-line" d="M263 180 H346" marker-end="url(#flow-tip)"/>
+            <g id="third-node" data-expanded="true"><ellipse id="third-shape" cx="417" cy="180" rx="46" ry="62" class="ventricle expanded"/></g>
+            <path class="flow-line" d="M480 180 H593" marker-end="url(#flow-tip)"/>
+            <rect x="621" y="164" width="122" height="32" rx="16" class="aqueduct"/>
+            <path id="aqueduct-flow" class="flow-line" d="M628 180 H670" marker-end="url(#flow-tip)"/>
+            <g id="obstruction-marker"><circle cx="687" cy="103" r="33" class="mass"/><text x="687" y="108" class="mass-label"> 종괴 </text><path d="M687 142 V160" class="pressure" marker-end="url(#pressure-tip)"/><path d="M687 164 V196" class="stop-line"/><text x="687" y="235" class="svg-alert">송과체 부위 · 압박 지점</text></g>
+            <path id="downstream-flow" class="flow-line" d="M756 180 H824" marker-end="url(#flow-tip)" hidden/>
+            <ellipse id="fourth-shape" cx="892" cy="180" rx="34" ry="43" class="ventricle downstream"/>
+            <text id="lateral-caption" x="158" y="277" class="svg-alert">상류 확장</text><text id="third-caption" x="417" y="277" class="svg-alert">상류 확장</text><text id="aqueduct-caption" x="687" y="277" class="svg-alert">흐름 중단</text><text x="892" y="277" class="svg-muted">하류 경로 (개념)</text>
+          </svg>
+        </div>
+        <aside class="flow-explainer" aria-live="polite"><span id="flow-tag" class="flow-tag blocked">수도관 폐쇄</span><h3 id="flow-title">좁은 통로에서 흐름이 멈춥니다.</h3><p id="flow-description">종괴의 압박 지점에서 흐름을 중단하고, 상류인 측뇌실과 제3뇌실의 확장을 강조했습니다.</p><div class="legend"><span><i class="legend-flow"></i>뇌척수액 흐름</span><span><i class="legend-stop"></i>압박 · 상류 확장</span></div><small>제4뇌실의 크기에 대한 입력 소견은 제공되지 않았습니다.</small></aside>
+      </div>
+    </section>
+
+    <div class="evidence-heading"><div><span class="mini-label">INPUT & EVIDENCE</span><h2>입력과 근거 확인</h2></div><button id="mri-toggle" class="secondary" type="button" aria-expanded="true" aria-controls="mri-panel">가상 MRI 판독문 숨기기</button></div>
+    <div id="execution-status" class="execution-banner" role="status" aria-live="polite">예시 전사문 · 모델 미실행</div>
+    <section class="evidence-grid">
+      <article class="input-card"><span class="source-tag">AUDIO / TRANSCRIPT</span><h3>환자 발화 및 전사</h3><p class="field-label">환자 발화 예시 · reference_transcript</p><blockquote id="reference-transcript">불러오는 중…</blockquote><audio id="case-audio" controls preload="none" aria-label="가상 환자 발화의 TTS 합성 음성" hidden></audio><p id="audio-note" class="muted">실환자 녹취를 사용하지 않습니다.</p><div class="transcript-box"><span class="field-label">실제 모델 출력 · stt_transcript</span><p id="stt-transcript">미실행 · null</p></div><div class="button-stack"><button id="run-models" class="primary" type="button">합성 음성으로 STT·LLM 실행</button><button id="reset-example" class="text-button" type="button">예시 전사문으로 초기화</button></div><p id="model-detail" class="muted"></p></article>
+      <article class="input-card" id="mri-panel"><span class="source-tag">SIMULATED REPORT / TEXT</span><h3>가상 MRI 판독문</h3><p class="field-label">작성된 판독문 · simulated_mri_report</p><blockquote id="mri-report">불러오는 중…</blockquote><p id="mri-empty" class="empty-state" hidden>영상 정보 없음</p><p class="muted">가상의 텍스트 입력입니다. 실제 MRI 이미지나 영상 분석을 사용하지 않습니다.</p><div class="source-note"><strong>출처 경계를 유지합니다.</strong><p>판독문을 숨기면 영상 소견과 그 근거도 제거됩니다. 위 개념도는 시나리오 설명으로 남습니다.</p></div></article>
+      <article class="input-card results"><span class="source-tag">GROUNDED OUTPUT</span><h3>구조화 결과</h3><div class="result-section"><h4>음성에서 확인하는 증상</h4><p id="symptom-method" class="muted">예시 주석 · 모델 미실행</p><div id="symptoms"></div></div><div class="result-section"><h4>판독문에서 확인하는 소견</h4><p id="imaging-method" class="muted">가상 판독문 문자열 근거 · 규칙 기반</p><div id="imaging-findings"></div></div><details><summary>구조화 JSON 확인</summary><pre id="structured-json"></pre></details><button id="download-case" class="text-button" type="button">현재 사례 JSON 저장</button></article>
+    </section>
+    <footer><span>medspeech-lab · Fictional case study</span><span>시나리오 설정, 개념도, 입력 근거를 구분합니다. 질환 후보·진단 확률·치료 추천은 제공하지 않습니다.</span></footer>
+  </main>
+</body>
+</html>
