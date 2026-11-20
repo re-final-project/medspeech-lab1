@@ -1,0 +1,23 @@
+{
+  "valid_status": 200,
+  "invalid_status": 422,
+  "response": {
+    "mode": "smoke",
+    "stt_model": "constant-fixture-not-stt",
+    "llm_model": "rule-fixture-not-llm",
+    "transcript": "테스트 입력입니다.",
+    "structured": {
+      "purpose": null,
+      "symptoms": [],
+      "denied_symptoms": [],
+      "medications": [],
+      "measurements": []
+    },
+    "audio_seconds": 1.0,
+    "stt_seconds": 1.700012944638729e-06,
+    "structure_seconds": 6.269995355978608e-05,
+    "rtf": 1.700012944638729e-06,
+    "timing_scope": "request; first request may include model initialization outside stage timers",
+    "retained": false
+  }
+}

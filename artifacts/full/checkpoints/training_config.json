@@ -1,0 +1,59 @@
+{
+  "config": {
+    "seed": 42,
+    "data_version": "synthetic-ko-v1",
+    "stt": "openai/whisper-tiny",
+    "tts": "facebook/mms-tts-kor",
+    "llm": "Qwen/Qwen2.5-0.5B-Instruct",
+    "epochs": 3,
+    "learning_rate": 0.0001,
+    "lora_rank": 8,
+    "lora_alpha": 16,
+    "batch_size": 1,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "language": "ko",
+    "task": "transcribe"
+  },
+  "revisions": {
+    "stt": "169d4a4341b33bc18d8881c4b69c2e104e1cc0af",
+    "tts": "1b6491366d2ed6ea8e4e735607155d9f0110df29",
+    "llm": "7ae557604adf67be50417f59c2c2f167def9a775"
+  },
+  "device": "cpu",
+  "batch_size_effective": 1,
+  "train_ids": [
+    "s05-noise20db",
+    "s00-noise20db",
+    "s06-clean",
+    "s02-noise20db",
+    "s01-noise20db",
+    "s03-noise20db",
+    "s04-noise20db",
+    "s05-clean",
+    "s07-clean",
+    "s02-speed1.1",
+    "s05-speed1.1",
+    "s00-clean",
+    "s06-noise20db",
+    "s07-speed1.1",
+    "s00-speed1.1",
+    "s06-speed1.1",
+    "s04-speed1.1",
+    "s07-noise20db",
+    "s03-clean",
+    "s02-clean",
+    "s04-clean",
+    "s01-clean",
+    "s03-speed1.1",
+    "s01-speed1.1"
+  ],
+  "validation_ids": [
+    "s08-clean",
+    "s08-noise20db",
+    "s08-speed1.1",
+    "s09-clean",
+    "s09-noise20db",
+    "s09-speed1.1"
+  ]
+}

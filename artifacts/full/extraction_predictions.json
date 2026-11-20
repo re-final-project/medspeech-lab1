@@ -1,0 +1,386 @@
+[
+  {
+    "sample_id": "s10-clean",
+    "source": "gold",
+    "prompt": "basic",
+    "input": "발열 상담 때문에 왔어요. 오한이 있고 기침은 없어요. 아세트아미노펜 복용했고 체온은 38.2 도예요.",
+    "raw": "발",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s10-noise20db",
+    "source": "gold",
+    "prompt": "basic",
+    "input": "발열 상담 때문에 왔어요. 오한이 있고 기침은 없어요. 아세트아미노펜 복용했고 체온은 38.2 도예요.",
+    "raw": "발",
+    "cache_hit": true
+  },
+  {
+    "sample_id": "s10-speed1.1",
+    "source": "gold",
+    "prompt": "basic",
+    "input": "발열 상담 때문에 왔어요. 오한이 있고 기침은 없어요. 아세트아미노펜 복용했고 체온은 38.2 도예요.",
+    "raw": "발",
+    "cache_hit": true
+  },
+  {
+    "sample_id": "s11-clean",
+    "source": "gold",
+    "prompt": "basic",
+    "input": "검사 상담 때문에 왔어요. 피로가 있고 흉통은 없어요. 로수바스타틴 복용하고 LDL은 110 mg/dL예요.",
+    "raw": "\"",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s11-noise20db",
+    "source": "gold",
+    "prompt": "basic",
+    "input": "검사 상담 때문에 왔어요. 피로가 있고 흉통은 없어요. 로수바스타틴 복용하고 LDL은 110 mg/dL예요.",
+    "raw": "\"",
+    "cache_hit": true
+  },
+  {
+    "sample_id": "s11-speed1.1",
+    "source": "gold",
+    "prompt": "basic",
+    "input": "검사 상담 때문에 왔어요. 피로가 있고 흉통은 없어요. 로수바스타틴 복용하고 LDL은 110 mg/dL예요.",
+    "raw": "\"",
+    "cache_hit": true
+  },
+  {
+    "sample_id": "s10-clean",
+    "source": "gold",
+    "prompt": "grounded",
+    "input": "발열 상담 때문에 왔어요. 오한이 있고 기침은 없어요. 아세트아미노펜 복용했고 체온은 38.2 도예요.",
+    "raw": "외",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s10-noise20db",
+    "source": "gold",
+    "prompt": "grounded",
+    "input": "발열 상담 때문에 왔어요. 오한이 있고 기침은 없어요. 아세트아미노펜 복용했고 체온은 38.2 도예요.",
+    "raw": "외",
+    "cache_hit": true
+  },
+  {
+    "sample_id": "s10-speed1.1",
+    "source": "gold",
+    "prompt": "grounded",
+    "input": "발열 상담 때문에 왔어요. 오한이 있고 기침은 없어요. 아세트아미노펜 복용했고 체온은 38.2 도예요.",
+    "raw": "외",
+    "cache_hit": true
+  },
+  {
+    "sample_id": "s11-clean",
+    "source": "gold",
+    "prompt": "grounded",
+    "input": "검사 상담 때문에 왔어요. 피로가 있고 흉통은 없어요. 로수바스타틴 복용하고 LDL은 110 mg/dL예요.",
+    "raw": "성",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s11-noise20db",
+    "source": "gold",
+    "prompt": "grounded",
+    "input": "검사 상담 때문에 왔어요. 피로가 있고 흉통은 없어요. 로수바스타틴 복용하고 LDL은 110 mg/dL예요.",
+    "raw": "성",
+    "cache_hit": true
+  },
+  {
+    "sample_id": "s11-speed1.1",
+    "source": "gold",
+    "prompt": "grounded",
+    "input": "검사 상담 때문에 왔어요. 피로가 있고 흉통은 없어요. 로수바스타틴 복용하고 LDL은 110 mg/dL예요.",
+    "raw": "성",
+    "cache_hit": true
+  },
+  {
+    "sample_id": "s10-clean",
+    "source": "A",
+    "prompt": "basic",
+    "input": " 발엘 선단때문에 왔어요. 오안이 있고 기침은 없어요. 아세트암인 오펜 폭영에 있고, 천은 38.2 도이예요.",
+    "raw": "의",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s10-noise20db",
+    "source": "A",
+    "prompt": "basic",
+    "input": " 발엘 선담때문에 왔어요. 오안이 있고 기침은 없어요. 아세트암인 후팬 폭영했고, 천은 38.2 도이예요.",
+    "raw": "유",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s10-speed1.1",
+    "source": "A",
+    "prompt": "basic",
+    "input": " 발엘 선간때문에 왔어요. 오안이 있고 기침은 없어요. 아세트의 미는 펜 폭영했고, 천은 38.2 도이예요.",
+    "raw": "이",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s11-clean",
+    "source": "A",
+    "prompt": "basic",
+    "input": " 검사 상담때문에 왔어요. 필요가 있고, 형통은 없어요. 노수바 스피친 보기와 엘지에 른 1001g 버텨 시리터예요.",
+    "raw": "이",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s11-noise20db",
+    "source": "A",
+    "prompt": "basic",
+    "input": " 검사 상담때문에 왔어요. 필요가 있고, 툭통은 높어요. 로수바 스피친 보기화고 LG에는 10000mAh 버텨 시리터예요.",
+    "raw": "검",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s11-speed1.1",
+    "source": "A",
+    "prompt": "basic",
+    "input": " 검사 상담때문에 왔어요. 필요가 있고, 형통은 없어요. 이 수바스 피친 보기와 엘리에 른 100mm의 버텨 시리터예요.",
+    "raw": "검",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s10-clean",
+    "source": "A",
+    "prompt": "grounded",
+    "input": " 발엘 선단때문에 왔어요. 오안이 있고 기침은 없어요. 아세트암인 오펜 폭영에 있고, 천은 38.2 도이예요.",
+    "raw": "``",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s10-noise20db",
+    "source": "A",
+    "prompt": "grounded",
+    "input": " 발엘 선담때문에 왔어요. 오안이 있고 기침은 없어요. 아세트암인 후팬 폭영했고, 천은 38.2 도이예요.",
+    "raw": "to",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s10-speed1.1",
+    "source": "A",
+    "prompt": "grounded",
+    "input": " 발엘 선간때문에 왔어요. 오안이 있고 기침은 없어요. 아세트의 미는 펜 폭영했고, 천은 38.2 도이예요.",
+    "raw": "\"",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s11-clean",
+    "source": "A",
+    "prompt": "grounded",
+    "input": " 검사 상담때문에 왔어요. 필요가 있고, 형통은 없어요. 노수바 스피친 보기와 엘지에 른 1001g 버텨 시리터예요.",
+    "raw": "과",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s11-noise20db",
+    "source": "A",
+    "prompt": "grounded",
+    "input": " 검사 상담때문에 왔어요. 필요가 있고, 툭통은 높어요. 로수바 스피친 보기화고 LG에는 10000mAh 버텨 시리터예요.",
+    "raw": "검",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s11-speed1.1",
+    "source": "A",
+    "prompt": "grounded",
+    "input": " 검사 상담때문에 왔어요. 필요가 있고, 형통은 없어요. 이 수바스 피친 보기와 엘리에 른 100mm의 버텨 시리터예요.",
+    "raw": "To",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s10-clean",
+    "source": "B",
+    "prompt": "basic",
+    "input": " 발엘 선단때문에 왔어요. 오안이 있고 기침은 없어요. 아세트암인 오펜 폭영에 있고, 천은 38.2 도이예요.",
+    "raw": "의",
+    "cache_hit": true
+  },
+  {
+    "sample_id": "s10-noise20db",
+    "source": "B",
+    "prompt": "basic",
+    "input": " 발엘 선담때문에 왔어요. 오안이 있고 기침은 없어요. 아세트암인 후팬 폭영했고, 천은 38.2 도이예요.",
+    "raw": "유",
+    "cache_hit": true
+  },
+  {
+    "sample_id": "s10-speed1.1",
+    "source": "B",
+    "prompt": "basic",
+    "input": " 발엘 선간때문에 왔어요. 오안이 있고 기침은 없어요. 아세트의 미는 펜 폭영했고, 천은 38.2 도이예요.",
+    "raw": "이",
+    "cache_hit": true
+  },
+  {
+    "sample_id": "s11-clean",
+    "source": "B",
+    "prompt": "basic",
+    "input": " 검사 상담때문에 왔어요. 필요가 있고, 형통은 없어요. 노수바 스피친 보기와 엘지에 른 1001g 버텨 시리터예요.",
+    "raw": "이",
+    "cache_hit": true
+  },
+  {
+    "sample_id": "s11-noise20db",
+    "source": "B",
+    "prompt": "basic",
+    "input": " 검사 상담때문에 왔어요. 필요가 있고, 툭통은 높어요. 로수바 스피친 보기화고 LG에는 10000mAh 버텨 시리터예요.",
+    "raw": "검",
+    "cache_hit": true
+  },
+  {
+    "sample_id": "s11-speed1.1",
+    "source": "B",
+    "prompt": "basic",
+    "input": " 검사 상담때문에 왔어요. 필요가 있고, 형통은 없어요. 이 수바스 피친 보기와 엘리에 른 100mm의 버텨 시리터예요.",
+    "raw": "검",
+    "cache_hit": true
+  },
+  {
+    "sample_id": "s10-clean",
+    "source": "B",
+    "prompt": "grounded",
+    "input": " 발엘 선단때문에 왔어요. 오안이 있고 기침은 없어요. 아세트암인 오펜 폭영에 있고, 천은 38.2 도이예요.",
+    "raw": "``",
+    "cache_hit": true
+  },
+  {
+    "sample_id": "s10-noise20db",
+    "source": "B",
+    "prompt": "grounded",
+    "input": " 발엘 선담때문에 왔어요. 오안이 있고 기침은 없어요. 아세트암인 후팬 폭영했고, 천은 38.2 도이예요.",
+    "raw": "to",
+    "cache_hit": true
+  },
+  {
+    "sample_id": "s10-speed1.1",
+    "source": "B",
+    "prompt": "grounded",
+    "input": " 발엘 선간때문에 왔어요. 오안이 있고 기침은 없어요. 아세트의 미는 펜 폭영했고, 천은 38.2 도이예요.",
+    "raw": "\"",
+    "cache_hit": true
+  },
+  {
+    "sample_id": "s11-clean",
+    "source": "B",
+    "prompt": "grounded",
+    "input": " 검사 상담때문에 왔어요. 필요가 있고, 형통은 없어요. 노수바 스피친 보기와 엘지에 른 1001g 버텨 시리터예요.",
+    "raw": "과",
+    "cache_hit": true
+  },
+  {
+    "sample_id": "s11-noise20db",
+    "source": "B",
+    "prompt": "grounded",
+    "input": " 검사 상담때문에 왔어요. 필요가 있고, 툭통은 높어요. 로수바 스피친 보기화고 LG에는 10000mAh 버텨 시리터예요.",
+    "raw": "검",
+    "cache_hit": true
+  },
+  {
+    "sample_id": "s11-speed1.1",
+    "source": "B",
+    "prompt": "grounded",
+    "input": " 검사 상담때문에 왔어요. 필요가 있고, 형통은 없어요. 이 수바스 피친 보기와 엘리에 른 100mm의 버텨 시리터예요.",
+    "raw": "To",
+    "cache_hit": true
+  },
+  {
+    "sample_id": "s10-clean",
+    "source": "C",
+    "prompt": "basic",
+    "input": " 발엘 상담 때문에 왔어요. 오안이 있고 기침은 없어요. 아세트암인 오페앤 폭영했고. 천은 38.2 도예요.",
+    "raw": "전",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s10-noise20db",
+    "source": "C",
+    "prompt": "basic",
+    "input": " 발엘 상담 때문에 왔어요. 오안이 있고 기침은 없어요. 아세트야민호팬 폭영했고. 저는 38.2 도이예요.",
+    "raw": "유",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s10-speed1.1",
+    "source": "C",
+    "prompt": "basic",
+    "input": " 발엘 상담 때문에 왔어요. 오안이 있고 기침은 없어요. 아세트암인업앤 보경에 있고. 천은 38.2 도예요.",
+    "raw": "주",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s11-clean",
+    "source": "C",
+    "prompt": "basic",
+    "input": " 검사 상담 때문에 왔어요. 피로가 있고 형통은 없어요. 로수바스피친 보기와 LGL은 100mAh.",
+    "raw": "주",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s11-noise20db",
+    "source": "C",
+    "prompt": "basic",
+    "input": " 검사 상담 때문에 왔어요. 필요가 있고 형통은 없어요. 로스바스피친 보기화고 LGL은 100mAh.",
+    "raw": "검",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s11-speed1.1",
+    "source": "C",
+    "prompt": "basic",
+    "input": " 검사 상담 때문에 왔어요. 피로가 있고 흉통은 없어요. 로스바스 피친 보기와 엘지에는 100mg per teciri터예요.",
+    "raw": "이",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s10-clean",
+    "source": "C",
+    "prompt": "grounded",
+    "input": " 발엘 상담 때문에 왔어요. 오안이 있고 기침은 없어요. 아세트암인 오페앤 폭영했고. 천은 38.2 도예요.",
+    "raw": "이",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s10-noise20db",
+    "source": "C",
+    "prompt": "grounded",
+    "input": " 발엘 상담 때문에 왔어요. 오안이 있고 기침은 없어요. 아세트야민호팬 폭영했고. 저는 38.2 도이예요.",
+    "raw": "주",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s10-speed1.1",
+    "source": "C",
+    "prompt": "grounded",
+    "input": " 발엘 상담 때문에 왔어요. 오안이 있고 기침은 없어요. 아세트암인업앤 보경에 있고. 천은 38.2 도예요.",
+    "raw": "의",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s11-clean",
+    "source": "C",
+    "prompt": "grounded",
+    "input": " 검사 상담 때문에 왔어요. 피로가 있고 형통은 없어요. 로수바스피친 보기와 LGL은 100mAh.",
+    "raw": "유",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s11-noise20db",
+    "source": "C",
+    "prompt": "grounded",
+    "input": " 검사 상담 때문에 왔어요. 필요가 있고 형통은 없어요. 로스바스피친 보기화고 LGL은 100mAh.",
+    "raw": "기",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s11-speed1.1",
+    "source": "C",
+    "prompt": "grounded",
+    "input": " 검사 상담 때문에 왔어요. 피로가 있고 흉통은 없어요. 로스바스 피친 보기와 엘지에는 100mg per teciri터예요.",
+    "raw": "\"",
+    "cache_hit": false
+  }
+]

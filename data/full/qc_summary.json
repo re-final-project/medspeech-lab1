@@ -1,0 +1,37 @@
+{
+  "samples": 36,
+  "checks": 289,
+  "failures": 0,
+  "speakers": {
+    "train": [
+      "mms-kor-single"
+    ],
+    "validation": [
+      "mms-kor-single"
+    ],
+    "test": [
+      "mms-kor-single"
+    ]
+  },
+  "speaker_overlap": [
+    "mms-kor-single"
+  ],
+  "speaker_disjoint_evaluation": false,
+  "splits": {
+    "train": {
+      "samples": 24,
+      "scenarios": 8,
+      "audio_seconds": 223.092625
+    },
+    "validation": {
+      "samples": 6,
+      "scenarios": 2,
+      "audio_seconds": 62.1848125
+    },
+    "test": {
+      "samples": 6,
+      "scenarios": 2,
+      "audio_seconds": 65.629125
+    }
+  }
+}

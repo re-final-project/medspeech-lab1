@@ -1,0 +1,147 @@
+{
+  "mode": "smoke",
+  "stt": {
+    "fixture_A": {
+      "n": 6,
+      "cer": 0.043010752688172046,
+      "wer": 0.19230769230769232,
+      "medical_term_f1": 0.9090909090909091,
+      "number_unit_exact": 0.5,
+      "negation_exact": 0.5,
+      "char_edits": 12,
+      "reference_chars": 279
+    },
+    "fixture_B": {
+      "n": 6,
+      "cer": 0.043010752688172046,
+      "wer": 0.19230769230769232,
+      "medical_term_f1": 0.9090909090909091,
+      "number_unit_exact": 0.5,
+      "negation_exact": 0.5,
+      "char_edits": 12,
+      "reference_chars": 279
+    }
+  },
+  "slices": {
+    "fixture_A": {
+      "variant": {
+        "clean": {
+          "n": 2,
+          "cer": 0.043010752688172046,
+          "wer": 0.19230769230769232,
+          "medical_term_f1": 0.9090909090909091,
+          "number_unit_exact": 0.5,
+          "negation_exact": 0.5,
+          "char_edits": 4,
+          "reference_chars": 93
+        },
+        "noise20db": {
+          "n": 2,
+          "cer": 0.043010752688172046,
+          "wer": 0.19230769230769232,
+          "medical_term_f1": 0.9090909090909091,
+          "number_unit_exact": 0.5,
+          "negation_exact": 0.5,
+          "char_edits": 4,
+          "reference_chars": 93
+        },
+        "speed1.1": {
+          "n": 2,
+          "cer": 0.043010752688172046,
+          "wer": 0.19230769230769232,
+          "medical_term_f1": 0.9090909090909091,
+          "number_unit_exact": 0.5,
+          "negation_exact": 0.5,
+          "char_edits": 4,
+          "reference_chars": 93
+        }
+      },
+      "utterance_type": {
+        "abbreviation": {
+          "n": 3,
+          "cer": 0.041666666666666664,
+          "wer": 0.3076923076923077,
+          "medical_term_f1": 0.8,
+          "number_unit_exact": 1.0,
+          "negation_exact": 0.0,
+          "char_edits": 6,
+          "reference_chars": 144
+        },
+        "standard": {
+          "n": 3,
+          "cer": 0.044444444444444446,
+          "wer": 0.07692307692307693,
+          "medical_term_f1": 1.0,
+          "number_unit_exact": 0.0,
+          "negation_exact": 1.0,
+          "char_edits": 6,
+          "reference_chars": 135
+        }
+      }
+    },
+    "fixture_B": {
+      "variant": {
+        "clean": {
+          "n": 2,
+          "cer": 0.043010752688172046,
+          "wer": 0.19230769230769232,
+          "medical_term_f1": 0.9090909090909091,
+          "number_unit_exact": 0.5,
+          "negation_exact": 0.5,
+          "char_edits": 4,
+          "reference_chars": 93
+        },
+        "noise20db": {
+          "n": 2,
+          "cer": 0.043010752688172046,
+          "wer": 0.19230769230769232,
+          "medical_term_f1": 0.9090909090909091,
+          "number_unit_exact": 0.5,
+          "negation_exact": 0.5,
+          "char_edits": 4,
+          "reference_chars": 93
+        },
+        "speed1.1": {
+          "n": 2,
+          "cer": 0.043010752688172046,
+          "wer": 0.19230769230769232,
+          "medical_term_f1": 0.9090909090909091,
+          "number_unit_exact": 0.5,
+          "negation_exact": 0.5,
+          "char_edits": 4,
+          "reference_chars": 93
+        }
+      },
+      "utterance_type": {
+        "abbreviation": {
+          "n": 3,
+          "cer": 0.041666666666666664,
+          "wer": 0.3076923076923077,
+          "medical_term_f1": 0.8,
+          "number_unit_exact": 1.0,
+          "negation_exact": 0.0,
+          "char_edits": 6,
+          "reference_chars": 144
+        },
+        "standard": {
+          "n": 3,
+          "cer": 0.044444444444444446,
+          "wer": 0.07692307692307693,
+          "medical_term_f1": 1.0,
+          "number_unit_exact": 0.0,
+          "negation_exact": 1.0,
+          "char_edits": 6,
+          "reference_chars": 135
+        }
+      }
+    }
+  },
+  "test_ids": [
+    "s10-clean",
+    "s10-noise20db",
+    "s10-speed1.1",
+    "s11-clean",
+    "s11-noise20db",
+    "s11-speed1.1"
+  ]
+}

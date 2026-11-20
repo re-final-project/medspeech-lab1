@@ -1,0 +1,47 @@
+{
+  "stt": {
+    "A": {
+      "n": 6,
+      "cer": 0.3655913978494624,
+      "wer": 0.8461538461538461,
+      "medical_term_f1": 0.2857142857142857,
+      "number_unit_exact": 0.5,
+      "negation_exact": 0.5,
+      "char_edits": 102,
+      "reference_chars": 279
+    },
+    "B": {
+      "n": 6,
+      "cer": 0.3655913978494624,
+      "wer": 0.8461538461538461,
+      "medical_term_f1": 0.2857142857142857,
+      "number_unit_exact": 0.5,
+      "negation_exact": 0.5,
+      "char_edits": 102,
+      "reference_chars": 279
+    },
+    "C": {
+      "n": 6,
+      "cer": 0.31899641577060933,
+      "wer": 0.48717948717948717,
+      "medical_term_f1": 0.5,
+      "number_unit_exact": 0.5,
+      "negation_exact": 0.6666666666666666,
+      "char_edits": 89,
+      "reference_chars": 279
+    }
+  },
+  "llm_schema_pass": {
+    "gold/basic": 0.0,
+    "gold/grounded": 0.0,
+    "A/basic": 0.0,
+    "A/grounded": 0.0,
+    "B/basic": 0.0,
+    "B/grounded": 0.0,
+    "C/basic": 0.0,
+    "C/grounded": 0.0
+  },
+  "generated_calls": 28,
+  "cache_hits": 20,
+  "test_audio_seconds": 65.629125
+}

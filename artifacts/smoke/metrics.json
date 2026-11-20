@@ -1,0 +1,1871 @@
+{
+  "mode": "smoke",
+  "performance_claims": false,
+  "stt": {
+    "fixture_A": {
+      "n": 6,
+      "cer": 0.043010752688172046,
+      "wer": 0.19230769230769232,
+      "medical_term_f1": 0.9090909090909091,
+      "number_unit_exact": 0.5,
+      "negation_exact": 0.5,
+      "char_edits": 12,
+      "reference_chars": 279
+    },
+    "fixture_B": {
+      "n": 6,
+      "cer": 0.043010752688172046,
+      "wer": 0.19230769230769232,
+      "medical_term_f1": 0.9090909090909091,
+      "number_unit_exact": 0.5,
+      "negation_exact": 0.5,
+      "char_edits": 12,
+      "reference_chars": 279
+    }
+  },
+  "slices": {
+    "fixture_A": {
+      "variant": {
+        "clean": {
+          "n": 2,
+          "cer": 0.043010752688172046,
+          "wer": 0.19230769230769232,
+          "medical_term_f1": 0.9090909090909091,
+          "number_unit_exact": 0.5,
+          "negation_exact": 0.5,
+          "char_edits": 4,
+          "reference_chars": 93
+        },
+        "noise20db": {
+          "n": 2,
+          "cer": 0.043010752688172046,
+          "wer": 0.19230769230769232,
+          "medical_term_f1": 0.9090909090909091,
+          "number_unit_exact": 0.5,
+          "negation_exact": 0.5,
+          "char_edits": 4,
+          "reference_chars": 93
+        },
+        "speed1.1": {
+          "n": 2,
+          "cer": 0.043010752688172046,
+          "wer": 0.19230769230769232,
+          "medical_term_f1": 0.9090909090909091,
+          "number_unit_exact": 0.5,
+          "negation_exact": 0.5,
+          "char_edits": 4,
+          "reference_chars": 93
+        }
+      },
+      "utterance_type": {
+        "abbreviation": {
+          "n": 3,
+          "cer": 0.041666666666666664,
+          "wer": 0.3076923076923077,
+          "medical_term_f1": 0.8,
+          "number_unit_exact": 1.0,
+          "negation_exact": 0.0,
+          "char_edits": 6,
+          "reference_chars": 144
+        },
+        "standard": {
+          "n": 3,
+          "cer": 0.044444444444444446,
+          "wer": 0.07692307692307693,
+          "medical_term_f1": 1.0,
+          "number_unit_exact": 0.0,
+          "negation_exact": 1.0,
+          "char_edits": 6,
+          "reference_chars": 135
+        }
+      }
+    },
+    "fixture_B": {
+      "variant": {
+        "clean": {
+          "n": 2,
+          "cer": 0.043010752688172046,
+          "wer": 0.19230769230769232,
+          "medical_term_f1": 0.9090909090909091,
+          "number_unit_exact": 0.5,
+          "negation_exact": 0.5,
+          "char_edits": 4,
+          "reference_chars": 93
+        },
+        "noise20db": {
+          "n": 2,
+          "cer": 0.043010752688172046,
+          "wer": 0.19230769230769232,
+          "medical_term_f1": 0.9090909090909091,
+          "number_unit_exact": 0.5,
+          "negation_exact": 0.5,
+          "char_edits": 4,
+          "reference_chars": 93
+        },
+        "speed1.1": {
+          "n": 2,
+          "cer": 0.043010752688172046,
+          "wer": 0.19230769230769232,
+          "medical_term_f1": 0.9090909090909091,
+          "number_unit_exact": 0.5,
+          "negation_exact": 0.5,
+          "char_edits": 4,
+          "reference_chars": 93
+        }
+      },
+      "utterance_type": {
+        "abbreviation": {
+          "n": 3,
+          "cer": 0.041666666666666664,
+          "wer": 0.3076923076923077,
+          "medical_term_f1": 0.8,
+          "number_unit_exact": 1.0,
+          "negation_exact": 0.0,
+          "char_edits": 6,
+          "reference_chars": 144
+        },
+        "standard": {
+          "n": 3,
+          "cer": 0.044444444444444446,
+          "wer": 0.07692307692307693,
+          "medical_term_f1": 1.0,
+          "number_unit_exact": 0.0,
+          "negation_exact": 1.0,
+          "char_edits": 6,
+          "reference_chars": 135
+        }
+      }
+    }
+  },
+  "extraction": {
+    "gold/basic": {
+      "n": 6,
+      "schema_pass_rate": 1.0,
+      "field_f1": {
+        "purpose": 1.0,
+        "symptoms": 1.0,
+        "denied_symptoms": 1.0,
+        "medications": 1.0,
+        "measurements": 1.0
+      },
+      "field_counts": {
+        "purpose": {
+          "tp": 6,
+          "fp": 0,
+          "fn": 0
+        },
+        "symptoms": {
+          "tp": 6,
+          "fp": 0,
+          "fn": 0
+        },
+        "denied_symptoms": {
+          "tp": 6,
+          "fp": 0,
+          "fn": 0
+        },
+        "medications": {
+          "tp": 6,
+          "fp": 0,
+          "fn": 0
+        },
+        "measurements": {
+          "tp": 6,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "evidence_match_rate": 1.0,
+      "unsupported_value_rate": 0.0,
+      "extracted_items": 30,
+      "errors": [],
+      "latency_seconds": [
+        0.0004989999579265714,
+        7.930002175271511e-05,
+        6.839999696239829e-05,
+        6.150000263005495e-05,
+        6.439996650442481e-05,
+        4.7900015488266945e-05
+      ],
+      "generation_calls": 6,
+      "cache_hits": 0
+    },
+    "gold/grounded": {
+      "n": 6,
+      "schema_pass_rate": 1.0,
+      "field_f1": {
+        "purpose": 1.0,
+        "symptoms": 1.0,
+        "denied_symptoms": 1.0,
+        "medications": 1.0,
+        "measurements": 1.0
+      },
+      "field_counts": {
+        "purpose": {
+          "tp": 6,
+          "fp": 0,
+          "fn": 0
+        },
+        "symptoms": {
+          "tp": 6,
+          "fp": 0,
+          "fn": 0
+        },
+        "denied_symptoms": {
+          "tp": 6,
+          "fp": 0,
+          "fn": 0
+        },
+        "medications": {
+          "tp": 6,
+          "fp": 0,
+          "fn": 0
+        },
+        "measurements": {
+          "tp": 6,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "evidence_match_rate": 1.0,
+      "unsupported_value_rate": 0.0,
+      "extracted_items": 30,
+      "errors": [],
+      "latency_seconds": [
+        0.00010770000517368317,
+        8.789997082203627e-05,
+        0.00010379997547715902,
+        0.00012919999426230788,
+        0.00011189997894689441,
+        0.00010269996710121632
+      ],
+      "generation_calls": 6,
+      "cache_hits": 0
+    },
+    "fixture_A/basic": {
+      "n": 6,
+      "schema_pass_rate": 1.0,
+      "field_f1": {
+        "purpose": 1.0,
+        "symptoms": 0.6666666666666666,
+        "denied_symptoms": 0.6666666666666666,
+        "medications": 0.6666666666666666,
+        "measurements": 0.5
+      },
+      "field_counts": {
+        "purpose": {
+          "tp": 6,
+          "fp": 0,
+          "fn": 0
+        },
+        "symptoms": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 3
+        },
+        "denied_symptoms": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 3
+        },
+        "medications": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 3
+        },
+        "measurements": {
+          "tp": 3,
+          "fp": 3,
+          "fn": 3
+        }
+      },
+      "evidence_match_rate": 1.0,
+      "unsupported_value_rate": 0.0,
+      "extracted_items": 21,
+      "errors": [
+        {
+          "index": 0,
+          "type": "content",
+          "prediction": {
+            "purpose": {
+              "value": "발열 상담",
+              "evidence": "발열 상담"
+            },
+            "symptoms": [
+              {
+                "value": "오한",
+                "evidence": "오한"
+              }
+            ],
+            "denied_symptoms": [
+              {
+                "value": "기침",
+                "evidence": "기침은 없어요"
+              }
+            ],
+            "medications": [
+              {
+                "value": "아세트아미노펜",
+                "evidence": "아세트아미노펜"
+              }
+            ],
+            "measurements": [
+              {
+                "value": "32.8",
+                "evidence": "32.8 도",
+                "unit": "도"
+              }
+            ]
+          },
+          "gold": {
+            "purpose": {
+              "value": "발열 상담",
+              "evidence": "발열 상담"
+            },
+            "symptoms": [
+              {
+                "value": "오한",
+                "evidence": "오한"
+              }
+            ],
+            "denied_symptoms": [
+              {
+                "value": "기침",
+                "evidence": "기침은 없어요"
+              }
+            ],
+            "medications": [
+              {
+                "value": "아세트아미노펜",
+                "evidence": "아세트아미노펜"
+              }
+            ],
+            "measurements": [
+              {
+                "value": "38.2",
+                "unit": "도",
+                "evidence": "38.2 도"
+              }
+            ]
+          }
+        },
+        {
+          "index": 1,
+          "type": "content",
+          "prediction": {
+            "purpose": {
+              "value": "발열 상담",
+              "evidence": "발열 상담"
+            },
+            "symptoms": [
+              {
+                "value": "오한",
+                "evidence": "오한"
+              }
+            ],
+            "denied_symptoms": [
+              {
+                "value": "기침",
+                "evidence": "기침은 없어요"
+              }
+            ],
+            "medications": [
+              {
+                "value": "아세트아미노펜",
+                "evidence": "아세트아미노펜"
+              }
+            ],
+            "measurements": [
+              {
+                "value": "32.8",
+                "evidence": "32.8 도",
+                "unit": "도"
+              }
+            ]
+          },
+          "gold": {
+            "purpose": {
+              "value": "발열 상담",
+              "evidence": "발열 상담"
+            },
+            "symptoms": [
+              {
+                "value": "오한",
+                "evidence": "오한"
+              }
+            ],
+            "denied_symptoms": [
+              {
+                "value": "기침",
+                "evidence": "기침은 없어요"
+              }
+            ],
+            "medications": [
+              {
+                "value": "아세트아미노펜",
+                "evidence": "아세트아미노펜"
+              }
+            ],
+            "measurements": [
+              {
+                "value": "38.2",
+                "unit": "도",
+                "evidence": "38.2 도"
+              }
+            ]
+          }
+        },
+        {
+          "index": 2,
+          "type": "content",
+          "prediction": {
+            "purpose": {
+              "value": "발열 상담",
+              "evidence": "발열 상담"
+            },
+            "symptoms": [
+              {
+                "value": "오한",
+                "evidence": "오한"
+              }
+            ],
+            "denied_symptoms": [
+              {
+                "value": "기침",
+                "evidence": "기침은 없어요"
+              }
+            ],
+            "medications": [
+              {
+                "value": "아세트아미노펜",
+                "evidence": "아세트아미노펜"
+              }
+            ],
+            "measurements": [
+              {
+                "value": "32.8",
+                "evidence": "32.8 도",
+                "unit": "도"
+              }
+            ]
+          },
+          "gold": {
+            "purpose": {
+              "value": "발열 상담",
+              "evidence": "발열 상담"
+            },
+            "symptoms": [
+              {
+                "value": "오한",
+                "evidence": "오한"
+              }
+            ],
+            "denied_symptoms": [
+              {
+                "value": "기침",
+                "evidence": "기침은 없어요"
+              }
+            ],
+            "medications": [
+              {
+                "value": "아세트아미노펜",
+                "evidence": "아세트아미노펜"
+              }
+            ],
+            "measurements": [
+              {
+                "value": "38.2",
+                "unit": "도",
+                "evidence": "38.2 도"
+              }
+            ]
+          }
+        },
+        {
+          "index": 3,
+          "type": "content",
+          "prediction": {
+            "purpose": {
+              "value": "검사 상담",
+              "evidence": "검사 상담"
+            },
+            "symptoms": [],
+            "denied_symptoms": [],
+            "medications": [],
+            "measurements": [
+              {
+                "value": "110",
+                "evidence": "110 mg/dL",
+                "unit": "mg/dL"
+              }
+            ]
+          },
+          "gold": {
+            "purpose": {
+              "value": "검사 상담",
+              "evidence": "검사 상담"
+            },
+            "symptoms": [
+              {
+                "value": "피로",
+                "evidence": "피로"
+              }
+            ],
+            "denied_symptoms": [
+              {
+                "value": "흉통",
+                "evidence": "흉통은 없어요"
+              }
+            ],
+            "medications": [
+              {
+                "value": "로수바스타틴",
+                "evidence": "로수바스타틴"
+              }
+            ],
+            "measurements": [
+              {
+                "value": "110",
+                "unit": "mg/dL",
+                "evidence": "110 mg/dL"
+              }
+            ]
+          }
+        },
+        {
+          "index": 4,
+          "type": "content",
+          "prediction": {
+            "purpose": {
+              "value": "검사 상담",
+              "evidence": "검사 상담"
+            },
+            "symptoms": [],
+            "denied_symptoms": [],
+            "medications": [],
+            "measurements": [
+              {
+                "value": "110",
+                "evidence": "110 mg/dL",
+                "unit": "mg/dL"
+              }
+            ]
+          },
+          "gold": {
+            "purpose": {
+              "value": "검사 상담",
+              "evidence": "검사 상담"
+            },
+            "symptoms": [
+              {
+                "value": "피로",
+                "evidence": "피로"
+              }
+            ],
+            "denied_symptoms": [
+              {
+                "value": "흉통",
+                "evidence": "흉통은 없어요"
+              }
+            ],
+            "medications": [
+              {
+                "value": "로수바스타틴",
+                "evidence": "로수바스타틴"
+              }
+            ],
+            "measurements": [
+              {
+                "value": "110",
+                "unit": "mg/dL",
+                "evidence": "110 mg/dL"
+              }
+            ]
+          }
+        },
+        {
+          "index": 5,
+          "type": "content",
+          "prediction": {
+            "purpose": {
+              "value": "검사 상담",
+              "evidence": "검사 상담"
+            },
+            "symptoms": [],
+            "denied_symptoms": [],
+            "medications": [],
+            "measurements": [
+              {
+                "value": "110",
+                "evidence": "110 mg/dL",
+                "unit": "mg/dL"
+              }
+            ]
+          },
+          "gold": {
+            "purpose": {
+              "value": "검사 상담",
+              "evidence": "검사 상담"
+            },
+            "symptoms": [
+              {
+                "value": "피로",
+                "evidence": "피로"
+              }
+            ],
+            "denied_symptoms": [
+              {
+                "value": "흉통",
+                "evidence": "흉통은 없어요"
+              }
+            ],
+            "medications": [
+              {
+                "value": "로수바스타틴",
+                "evidence": "로수바스타틴"
+              }
+            ],
+            "measurements": [
+              {
+                "value": "110",
+                "unit": "mg/dL",
+                "evidence": "110 mg/dL"
+              }
+            ]
+          }
+        }
+      ],
+      "latency_seconds": [
+        0.00012670003343373537,
+        0.00010639999527484179,
+        9.960000170394778e-05,
+        4.8799964133650064e-05,
+        4.280003486201167e-05,
+        4.650000482797623e-05
+      ],
+      "generation_calls": 6,
+      "cache_hits": 0
+    },
+    "fixture_A/grounded": {
+      "n": 6,
+      "schema_pass_rate": 1.0,
+      "field_f1": {
+        "purpose": 1.0,
+        "symptoms": 0.6666666666666666,
+        "denied_symptoms": 0.6666666666666666,
+        "medications": 0.6666666666666666,
+        "measurements": 0.5
+      },
+      "field_counts": {
+        "purpose": {
+          "tp": 6,
+          "fp": 0,
+          "fn": 0
+        },
+        "symptoms": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 3
+        },
+        "denied_symptoms": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 3
+        },
+        "medications": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 3
+        },
+        "measurements": {
+          "tp": 3,
+          "fp": 3,
+          "fn": 3
+        }
+      },
+      "evidence_match_rate": 1.0,
+      "unsupported_value_rate": 0.0,
+      "extracted_items": 21,
+      "errors": [
+        {
+          "index": 0,
+          "type": "content",
+          "prediction": {
+            "purpose": {
+              "value": "발열 상담",
+              "evidence": "발열 상담"
+            },
+            "symptoms": [
+              {
+                "value": "오한",
+                "evidence": "오한"
+              }
+            ],
+            "denied_symptoms": [
+              {
+                "value": "기침",
+                "evidence": "기침은 없어요"
+              }
+            ],
+            "medications": [
+              {
+                "value": "아세트아미노펜",
+                "evidence": "아세트아미노펜"
+              }
+            ],
+            "measurements": [
+              {
+                "value": "32.8",
+                "evidence": "32.8 도",
+                "unit": "도"
+              }
+            ]
+          },
+          "gold": {
+            "purpose": {
+              "value": "발열 상담",
+              "evidence": "발열 상담"
+            },
+            "symptoms": [
+              {
+                "value": "오한",
+                "evidence": "오한"
+              }
+            ],
+            "denied_symptoms": [
+              {
+                "value": "기침",
+                "evidence": "기침은 없어요"
+              }
+            ],
+            "medications": [
+              {
+                "value": "아세트아미노펜",
+                "evidence": "아세트아미노펜"
+              }
+            ],
+            "measurements": [
+              {
+                "value": "38.2",
+                "unit": "도",
+                "evidence": "38.2 도"
+              }
+            ]
+          }
+        },
+        {
+          "index": 1,
+          "type": "content",
+          "prediction": {
+            "purpose": {
+              "value": "발열 상담",
+              "evidence": "발열 상담"
+            },
+            "symptoms": [
+              {
+                "value": "오한",
+                "evidence": "오한"
+              }
+            ],
+            "denied_symptoms": [
+              {
+                "value": "기침",
+                "evidence": "기침은 없어요"
+              }
+            ],
+            "medications": [
+              {
+                "value": "아세트아미노펜",
+                "evidence": "아세트아미노펜"
+              }
+            ],
+            "measurements": [
+              {
+                "value": "32.8",
+                "evidence": "32.8 도",
+                "unit": "도"
+              }
+            ]
+          },
+          "gold": {
+            "purpose": {
+              "value": "발열 상담",
+              "evidence": "발열 상담"
+            },
+            "symptoms": [
+              {
+                "value": "오한",
+                "evidence": "오한"
+              }
+            ],
+            "denied_symptoms": [
+              {
+                "value": "기침",
+                "evidence": "기침은 없어요"
+              }
+            ],
+            "medications": [
+              {
+                "value": "아세트아미노펜",
+                "evidence": "아세트아미노펜"
+              }
+            ],
+            "measurements": [
+              {
+                "value": "38.2",
+                "unit": "도",
+                "evidence": "38.2 도"
+              }
+            ]
+          }
+        },
+        {
+          "index": 2,
+          "type": "content",
+          "prediction": {
+            "purpose": {
+              "value": "발열 상담",
+              "evidence": "발열 상담"
+            },
+            "symptoms": [
+              {
+                "value": "오한",
+                "evidence": "오한"
+              }
+            ],
+            "denied_symptoms": [
+              {
+                "value": "기침",
+                "evidence": "기침은 없어요"
+              }
+            ],
+            "medications": [
+              {
+                "value": "아세트아미노펜",
+                "evidence": "아세트아미노펜"
+              }
+            ],
+            "measurements": [
+              {
+                "value": "32.8",
+                "evidence": "32.8 도",
+                "unit": "도"
+              }
+            ]
+          },
+          "gold": {
+            "purpose": {
+              "value": "발열 상담",
+              "evidence": "발열 상담"
+            },
+            "symptoms": [
+              {
+                "value": "오한",
+                "evidence": "오한"
+              }
+            ],
+            "denied_symptoms": [
+              {
+                "value": "기침",
+                "evidence": "기침은 없어요"
+              }
+            ],
+            "medications": [
+              {
+                "value": "아세트아미노펜",
+                "evidence": "아세트아미노펜"
+              }
+            ],
+            "measurements": [
+              {
+                "value": "38.2",
+                "unit": "도",
+                "evidence": "38.2 도"
+              }
+            ]
+          }
+        },
+        {
+          "index": 3,
+          "type": "content",
+          "prediction": {
+            "purpose": {
+              "value": "검사 상담",
+              "evidence": "검사 상담"
+            },
+            "symptoms": [],
+            "denied_symptoms": [],
+            "medications": [],
+            "measurements": [
+              {
+                "value": "110",
+                "evidence": "110 mg/dL",
+                "unit": "mg/dL"
+              }
+            ]
+          },
+          "gold": {
+            "purpose": {
+              "value": "검사 상담",
+              "evidence": "검사 상담"
+            },
+            "symptoms": [
+              {
+                "value": "피로",
+                "evidence": "피로"
+              }
+            ],
+            "denied_symptoms": [
+              {
+                "value": "흉통",
+                "evidence": "흉통은 없어요"
+              }
+            ],
+            "medications": [
+              {
+                "value": "로수바스타틴",
+                "evidence": "로수바스타틴"
+              }
+            ],
+            "measurements": [
+              {
+                "value": "110",
+                "unit": "mg/dL",
+                "evidence": "110 mg/dL"
+              }
+            ]
+          }
+        },
+        {
+          "index": 4,
+          "type": "content",
+          "prediction": {
+            "purpose": {
+              "value": "검사 상담",
+              "evidence": "검사 상담"
+            },
+            "symptoms": [],
+            "denied_symptoms": [],
+            "medications": [],
+            "measurements": [
+              {
+                "value": "110",
+                "evidence": "110 mg/dL",
+                "unit": "mg/dL"
+              }
+            ]
+          },
+          "gold": {
+            "purpose": {
+              "value": "검사 상담",
+              "evidence": "검사 상담"
+            },
+            "symptoms": [
+              {
+                "value": "피로",
+                "evidence": "피로"
+              }
+            ],
+            "denied_symptoms": [
+              {
+                "value": "흉통",
+                "evidence": "흉통은 없어요"
+              }
+            ],
+            "medications": [
+              {
+                "value": "로수바스타틴",
+                "evidence": "로수바스타틴"
+              }
+            ],
+            "measurements": [
+              {
+                "value": "110",
+                "unit": "mg/dL",
+                "evidence": "110 mg/dL"
+              }
+            ]
+          }
+        },
+        {
+          "index": 5,
+          "type": "content",
+          "prediction": {
+            "purpose": {
+              "value": "검사 상담",
+              "evidence": "검사 상담"
+            },
+            "symptoms": [],
+            "denied_symptoms": [],
+            "medications": [],
+            "measurements": [
+              {
+                "value": "110",
+                "evidence": "110 mg/dL",
+                "unit": "mg/dL"
+              }
+            ]
+          },
+          "gold": {
+            "purpose": {
+              "value": "검사 상담",
+              "evidence": "검사 상담"
+            },
+            "symptoms": [
+              {
+                "value": "피로",
+                "evidence": "피로"
+              }
+            ],
+            "denied_symptoms": [
+              {
+                "value": "흉통",
+                "evidence": "흉통은 없어요"
+              }
+            ],
+            "medications": [
+              {
+                "value": "로수바스타틴",
+                "evidence": "로수바스타틴"
+              }
+            ],
+            "measurements": [
+              {
+                "value": "110",
+                "unit": "mg/dL",
+                "evidence": "110 mg/dL"
+              }
+            ]
+          }
+        }
+      ],
+      "latency_seconds": [
+        7.789995288476348e-05,
+        5.960004637017846e-05,
+        5.3800002206116915e-05,
+        8.800002979114652e-05,
+        4.75000124424696e-05,
+        0.00012119999155402184
+      ],
+      "generation_calls": 6,
+      "cache_hits": 0
+    },
+    "fixture_B/basic": {
+      "n": 6,
+      "schema_pass_rate": 1.0,
+      "field_f1": {
+        "purpose": 1.0,
+        "symptoms": 0.6666666666666666,
+        "denied_symptoms": 0.6666666666666666,
+        "medications": 0.6666666666666666,
+        "measurements": 0.5
+      },
+      "field_counts": {
+        "purpose": {
+          "tp": 6,
+          "fp": 0,
+          "fn": 0
+        },
+        "symptoms": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 3
+        },
+        "denied_symptoms": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 3
+        },
+        "medications": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 3
+        },
+        "measurements": {
+          "tp": 3,
+          "fp": 3,
+          "fn": 3
+        }
+      },
+      "evidence_match_rate": 1.0,
+      "unsupported_value_rate": 0.0,
+      "extracted_items": 21,
+      "errors": [
+        {
+          "index": 0,
+          "type": "content",
+          "prediction": {
+            "purpose": {
+              "value": "발열 상담",
+              "evidence": "발열 상담"
+            },
+            "symptoms": [
+              {
+                "value": "오한",
+                "evidence": "오한"
+              }
+            ],
+            "denied_symptoms": [
+              {
+                "value": "기침",
+                "evidence": "기침은 없어요"
+              }
+            ],
+            "medications": [
+              {
+                "value": "아세트아미노펜",
+                "evidence": "아세트아미노펜"
+              }
+            ],
+            "measurements": [
+              {
+                "value": "32.8",
+                "evidence": "32.8 도",
+                "unit": "도"
+              }
+            ]
+          },
+          "gold": {
+            "purpose": {
+              "value": "발열 상담",
+              "evidence": "발열 상담"
+            },
+            "symptoms": [
+              {
+                "value": "오한",
+                "evidence": "오한"
+              }
+            ],
+            "denied_symptoms": [
+              {
+                "value": "기침",
+                "evidence": "기침은 없어요"
+              }
+            ],
+            "medications": [
+              {
+                "value": "아세트아미노펜",
+                "evidence": "아세트아미노펜"
+              }
+            ],
+            "measurements": [
+              {
+                "value": "38.2",
+                "unit": "도",
+                "evidence": "38.2 도"
+              }
+            ]
+          }
+        },
+        {
+          "index": 1,
+          "type": "content",
+          "prediction": {
+            "purpose": {
+              "value": "발열 상담",
+              "evidence": "발열 상담"
+            },
+            "symptoms": [
+              {
+                "value": "오한",
+                "evidence": "오한"
+              }
+            ],
+            "denied_symptoms": [
+              {
+                "value": "기침",
+                "evidence": "기침은 없어요"
+              }
+            ],
+            "medications": [
+              {
+                "value": "아세트아미노펜",
+                "evidence": "아세트아미노펜"
+              }
+            ],
+            "measurements": [
+              {
+                "value": "32.8",
+                "evidence": "32.8 도",
+                "unit": "도"
+              }
+            ]
+          },
+          "gold": {
+            "purpose": {
+              "value": "발열 상담",
+              "evidence": "발열 상담"
+            },
+            "symptoms": [
+              {
+                "value": "오한",
+                "evidence": "오한"
+              }
+            ],
+            "denied_symptoms": [
+              {
+                "value": "기침",
+                "evidence": "기침은 없어요"
+              }
+            ],
+            "medications": [
+              {
+                "value": "아세트아미노펜",
+                "evidence": "아세트아미노펜"
+              }
+            ],
+            "measurements": [
+              {
+                "value": "38.2",
+                "unit": "도",
+                "evidence": "38.2 도"
+              }
+            ]
+          }
+        },
+        {
+          "index": 2,
+          "type": "content",
+          "prediction": {
+            "purpose": {
+              "value": "발열 상담",
+              "evidence": "발열 상담"
+            },
+            "symptoms": [
+              {
+                "value": "오한",
+                "evidence": "오한"
+              }
+            ],
+            "denied_symptoms": [
+              {
+                "value": "기침",
+                "evidence": "기침은 없어요"
+              }
+            ],
+            "medications": [
+              {
+                "value": "아세트아미노펜",
+                "evidence": "아세트아미노펜"
+              }
+            ],
+            "measurements": [
+              {
+                "value": "32.8",
+                "evidence": "32.8 도",
+                "unit": "도"
+              }
+            ]
+          },
+          "gold": {
+            "purpose": {
+              "value": "발열 상담",
+              "evidence": "발열 상담"
+            },
+            "symptoms": [
+              {
+                "value": "오한",
+                "evidence": "오한"
+              }
+            ],
+            "denied_symptoms": [
+              {
+                "value": "기침",
+                "evidence": "기침은 없어요"
+              }
+            ],
+            "medications": [
+              {
+                "value": "아세트아미노펜",
+                "evidence": "아세트아미노펜"
+              }
+            ],
+            "measurements": [
+              {
+                "value": "38.2",
+                "unit": "도",
+                "evidence": "38.2 도"
+              }
+            ]
+          }
+        },
+        {
+          "index": 3,
+          "type": "content",
+          "prediction": {
+            "purpose": {
+              "value": "검사 상담",
+              "evidence": "검사 상담"
+            },
+            "symptoms": [],
+            "denied_symptoms": [],
+            "medications": [],
+            "measurements": [
+              {
+                "value": "110",
+                "evidence": "110 mg/dL",
+                "unit": "mg/dL"
+              }
+            ]
+          },
+          "gold": {
+            "purpose": {
+              "value": "검사 상담",
+              "evidence": "검사 상담"
+            },
+            "symptoms": [
+              {
+                "value": "피로",
+                "evidence": "피로"
+              }
+            ],
+            "denied_symptoms": [
+              {
+                "value": "흉통",
+                "evidence": "흉통은 없어요"
+              }
+            ],
+            "medications": [
+              {
+                "value": "로수바스타틴",
+                "evidence": "로수바스타틴"
+              }
+            ],
+            "measurements": [
+              {
+                "value": "110",
+                "unit": "mg/dL",
+                "evidence": "110 mg/dL"
+              }
+            ]
+          }
+        },
+        {
+          "index": 4,
+          "type": "content",
+          "prediction": {
+            "purpose": {
+              "value": "검사 상담",
+              "evidence": "검사 상담"
+            },
+            "symptoms": [],
+            "denied_symptoms": [],
+            "medications": [],
+            "measurements": [
+              {
+                "value": "110",
+                "evidence": "110 mg/dL",
+                "unit": "mg/dL"
+              }
+            ]
+          },
+          "gold": {
+            "purpose": {
+              "value": "검사 상담",
+              "evidence": "검사 상담"
+            },
+            "symptoms": [
+              {
+                "value": "피로",
+                "evidence": "피로"
+              }
+            ],
+            "denied_symptoms": [
+              {
+                "value": "흉통",
+                "evidence": "흉통은 없어요"
+              }
+            ],
+            "medications": [
+              {
+                "value": "로수바스타틴",
+                "evidence": "로수바스타틴"
+              }
+            ],
+            "measurements": [
+              {
+                "value": "110",
+                "unit": "mg/dL",
+                "evidence": "110 mg/dL"
+              }
+            ]
+          }
+        },
+        {
+          "index": 5,
+          "type": "content",
+          "prediction": {
+            "purpose": {
+              "value": "검사 상담",
+              "evidence": "검사 상담"
+            },
+            "symptoms": [],
+            "denied_symptoms": [],
+            "medications": [],
+            "measurements": [
+              {
+                "value": "110",
+                "evidence": "110 mg/dL",
+                "unit": "mg/dL"
+              }
+            ]
+          },
+          "gold": {
+            "purpose": {
+              "value": "검사 상담",
+              "evidence": "검사 상담"
+            },
+            "symptoms": [
+              {
+                "value": "피로",
+                "evidence": "피로"
+              }
+            ],
+            "denied_symptoms": [
+              {
+                "value": "흉통",
+                "evidence": "흉통은 없어요"
+              }
+            ],
+            "medications": [
+              {
+                "value": "로수바스타틴",
+                "evidence": "로수바스타틴"
+              }
+            ],
+            "measurements": [
+              {
+                "value": "110",
+                "unit": "mg/dL",
+                "evidence": "110 mg/dL"
+              }
+            ]
+          }
+        }
+      ],
+      "latency_seconds": [
+        6.859999848529696e-05,
+        6.349995965138078e-05,
+        5.0799979362636805e-05,
+        4.780001472681761e-05,
+        4.730001091957092e-05,
+        4.329998046159744e-05
+      ],
+      "generation_calls": 6,
+      "cache_hits": 0
+    },
+    "fixture_B/grounded": {
+      "n": 6,
+      "schema_pass_rate": 1.0,
+      "field_f1": {
+        "purpose": 1.0,
+        "symptoms": 0.6666666666666666,
+        "denied_symptoms": 0.6666666666666666,
+        "medications": 0.6666666666666666,
+        "measurements": 0.5
+      },
+      "field_counts": {
+        "purpose": {
+          "tp": 6,
+          "fp": 0,
+          "fn": 0
+        },
+        "symptoms": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 3
+        },
+        "denied_symptoms": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 3
+        },
+        "medications": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 3
+        },
+        "measurements": {
+          "tp": 3,
+          "fp": 3,
+          "fn": 3
+        }
+      },
+      "evidence_match_rate": 1.0,
+      "unsupported_value_rate": 0.0,
+      "extracted_items": 21,
+      "errors": [
+        {
+          "index": 0,
+          "type": "content",
+          "prediction": {
+            "purpose": {
+              "value": "발열 상담",
+              "evidence": "발열 상담"
+            },
+            "symptoms": [
+              {
+                "value": "오한",
+                "evidence": "오한"
+              }
+            ],
+            "denied_symptoms": [
+              {
+                "value": "기침",
+                "evidence": "기침은 없어요"
+              }
+            ],
+            "medications": [
+              {
+                "value": "아세트아미노펜",
+                "evidence": "아세트아미노펜"
+              }
+            ],
+            "measurements": [
+              {
+                "value": "32.8",
+                "evidence": "32.8 도",
+                "unit": "도"
+              }
+            ]
+          },
+          "gold": {
+            "purpose": {
+              "value": "발열 상담",
+              "evidence": "발열 상담"
+            },
+            "symptoms": [
+              {
+                "value": "오한",
+                "evidence": "오한"
+              }
+            ],
+            "denied_symptoms": [
+              {
+                "value": "기침",
+                "evidence": "기침은 없어요"
+              }
+            ],
+            "medications": [
+              {
+                "value": "아세트아미노펜",
+                "evidence": "아세트아미노펜"
+              }
+            ],
+            "measurements": [
+              {
+                "value": "38.2",
+                "unit": "도",
+                "evidence": "38.2 도"
+              }
+            ]
+          }
+        },
+        {
+          "index": 1,
+          "type": "content",
+          "prediction": {
+            "purpose": {
+              "value": "발열 상담",
+              "evidence": "발열 상담"
+            },
+            "symptoms": [
+              {
+                "value": "오한",
+                "evidence": "오한"
+              }
+            ],
+            "denied_symptoms": [
+              {
+                "value": "기침",
+                "evidence": "기침은 없어요"
+              }
+            ],
+            "medications": [
+              {
+                "value": "아세트아미노펜",
+                "evidence": "아세트아미노펜"
+              }
+            ],
+            "measurements": [
+              {
+                "value": "32.8",
+                "evidence": "32.8 도",
+                "unit": "도"
+              }
+            ]
+          },
+          "gold": {
+            "purpose": {
+              "value": "발열 상담",
+              "evidence": "발열 상담"
+            },
+            "symptoms": [
+              {
+                "value": "오한",
+                "evidence": "오한"
+              }
+            ],
+            "denied_symptoms": [
+              {
+                "value": "기침",
+                "evidence": "기침은 없어요"
+              }
+            ],
+            "medications": [
+              {
+                "value": "아세트아미노펜",
+                "evidence": "아세트아미노펜"
+              }
+            ],
+            "measurements": [
+              {
+                "value": "38.2",
+                "unit": "도",
+                "evidence": "38.2 도"
+              }
+            ]
+          }
+        },
+        {
+          "index": 2,
+          "type": "content",
+          "prediction": {
+            "purpose": {
+              "value": "발열 상담",
+              "evidence": "발열 상담"
+            },
+            "symptoms": [
+              {
+                "value": "오한",
+                "evidence": "오한"
+              }
+            ],
+            "denied_symptoms": [
+              {
+                "value": "기침",
+                "evidence": "기침은 없어요"
+              }
+            ],
+            "medications": [
+              {
+                "value": "아세트아미노펜",
+                "evidence": "아세트아미노펜"
+              }
+            ],
+            "measurements": [
+              {
+                "value": "32.8",
+                "evidence": "32.8 도",
+                "unit": "도"
+              }
+            ]
+          },
+          "gold": {
+            "purpose": {
+              "value": "발열 상담",
+              "evidence": "발열 상담"
+            },
+            "symptoms": [
+              {
+                "value": "오한",
+                "evidence": "오한"
+              }
+            ],
+            "denied_symptoms": [
+              {
+                "value": "기침",
+                "evidence": "기침은 없어요"
+              }
+            ],
+            "medications": [
+              {
+                "value": "아세트아미노펜",
+                "evidence": "아세트아미노펜"
+              }
+            ],
+            "measurements": [
+              {
+                "value": "38.2",
+                "unit": "도",
+                "evidence": "38.2 도"
+              }
+            ]
+          }
+        },
+        {
+          "index": 3,
+          "type": "content",
+          "prediction": {
+            "purpose": {
+              "value": "검사 상담",
+              "evidence": "검사 상담"
+            },
+            "symptoms": [],
+            "denied_symptoms": [],
+            "medications": [],
+            "measurements": [
+              {
+                "value": "110",
+                "evidence": "110 mg/dL",
+                "unit": "mg/dL"
+              }
+            ]
+          },
+          "gold": {
+            "purpose": {
+              "value": "검사 상담",
+              "evidence": "검사 상담"
+            },
+            "symptoms": [
+              {
+                "value": "피로",
+                "evidence": "피로"
+              }
+            ],
+            "denied_symptoms": [
+              {
+                "value": "흉통",
+                "evidence": "흉통은 없어요"
+              }
+            ],
+            "medications": [
+              {
+                "value": "로수바스타틴",
+                "evidence": "로수바스타틴"
+              }
+            ],
+            "measurements": [
+              {
+                "value": "110",
+                "unit": "mg/dL",
+                "evidence": "110 mg/dL"
+              }
+            ]
+          }
+        },
+        {
+          "index": 4,
+          "type": "content",
+          "prediction": {
+            "purpose": {
+              "value": "검사 상담",
+              "evidence": "검사 상담"
+            },
+            "symptoms": [],
+            "denied_symptoms": [],
+            "medications": [],
+            "measurements": [
+              {
+                "value": "110",
+                "evidence": "110 mg/dL",
+                "unit": "mg/dL"
+              }
+            ]
+          },
+          "gold": {
+            "purpose": {
+              "value": "검사 상담",
+              "evidence": "검사 상담"
+            },
+            "symptoms": [
+              {
+                "value": "피로",
+                "evidence": "피로"
+              }
+            ],
+            "denied_symptoms": [
+              {
+                "value": "흉통",
+                "evidence": "흉통은 없어요"
+              }
+            ],
+            "medications": [
+              {
+                "value": "로수바스타틴",
+                "evidence": "로수바스타틴"
+              }
+            ],
+            "measurements": [
+              {
+                "value": "110",
+                "unit": "mg/dL",
+                "evidence": "110 mg/dL"
+              }
+            ]
+          }
+        },
+        {
+          "index": 5,
+          "type": "content",
+          "prediction": {
+            "purpose": {
+              "value": "검사 상담",
+              "evidence": "검사 상담"
+            },
+            "symptoms": [],
+            "denied_symptoms": [],
+            "medications": [],
+            "measurements": [
+              {
+                "value": "110",
+                "evidence": "110 mg/dL",
+                "unit": "mg/dL"
+              }
+            ]
+          },
+          "gold": {
+            "purpose": {
+              "value": "검사 상담",
+              "evidence": "검사 상담"
+            },
+            "symptoms": [
+              {
+                "value": "피로",
+                "evidence": "피로"
+              }
+            ],
+            "denied_symptoms": [
+              {
+                "value": "흉통",
+                "evidence": "흉통은 없어요"
+              }
+            ],
+            "medications": [
+              {
+                "value": "로수바스타틴",
+                "evidence": "로수바스타틴"
+              }
+            ],
+            "measurements": [
+              {
+                "value": "110",
+                "unit": "mg/dL",
+                "evidence": "110 mg/dL"
+              }
+            ]
+          }
+        }
+      ],
+      "latency_seconds": [
+        7.41000403650105e-05,
+        5.860003875568509e-05,
+        4.6200002543628216e-05,
+        0.0001058999914675951,
+        7.390003884211183e-05,
+        4.290003562346101e-05
+      ],
+      "generation_calls": 6,
+      "cache_hits": 0
+    }
+  },
+  "test_ids": [
+    "s10-clean",
+    "s10-noise20db",
+    "s10-speed1.1",
+    "s11-clean",
+    "s11-noise20db",
+    "s11-speed1.1"
+  ],
+  "rtf_note": "See latency.json for real STT timings; fixture timings are not model performance."
+}

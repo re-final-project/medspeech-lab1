@@ -1,0 +1,19 @@
+{
+  "seed": 42,
+  "data_version": "synthetic-ko-v1",
+  "stt": "openai/whisper-tiny",
+  "tts": "facebook/mms-tts-kor",
+  "llm": "Qwen/Qwen2.5-0.5B-Instruct",
+  "llm_cpu_int8": true,
+  "llm_max_new_tokens": 256,
+  "llm_fail_fast_json": true,
+  "epochs": 3,
+  "learning_rate": 0.0001,
+  "lora_rank": 8,
+  "lora_alpha": 16,
+  "batch_size": 1,
+  "num_beams": 1,
+  "max_new_tokens": 128,
+  "language": "ko",
+  "task": "transcribe"
+}

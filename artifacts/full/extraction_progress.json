@@ -1,0 +1,2660 @@
+{
+  "gold/basic": {
+    "n": 6,
+    "schema_pass_rate": 0.0,
+    "field_f1": {
+      "purpose": 0.0,
+      "symptoms": 0.0,
+      "denied_symptoms": 0.0,
+      "medications": 0.0,
+      "measurements": 0.0
+    },
+    "field_counts": {
+      "purpose": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 6
+      },
+      "symptoms": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 6
+      },
+      "denied_symptoms": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 6
+      },
+      "medications": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 6
+      },
+      "measurements": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 6
+      }
+    },
+    "evidence_match_rate": 0.0,
+    "unsupported_value_rate": 0.0,
+    "extracted_items": 0,
+    "errors": [
+      {
+        "index": 0,
+        "type": "schema",
+        "detail": "1 validation error for Consultation\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='발', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid"
+      },
+      {
+        "index": 0,
+        "type": "content",
+        "prediction": {
+          "purpose": null,
+          "symptoms": [],
+          "denied_symptoms": [],
+          "medications": [],
+          "measurements": []
+        },
+        "gold": {
+          "purpose": {
+            "value": "발열 상담",
+            "evidence": "발열 상담"
+          },
+          "symptoms": [
+            {
+              "value": "오한",
+              "evidence": "오한"
+            }
+          ],
+          "denied_symptoms": [
+            {
+              "value": "기침",
+              "evidence": "기침은 없어요"
+            }
+          ],
+          "medications": [
+            {
+              "value": "아세트아미노펜",
+              "evidence": "아세트아미노펜"
+            }
+          ],
+          "measurements": [
+            {
+              "value": "38.2",
+              "unit": "도",
+              "evidence": "38.2 도"
+            }
+          ]
+        }
+      },
+      {
+        "index": 1,
+        "type": "schema",
+        "detail": "1 validation error for Consultation\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='발', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid"
+      },
+      {
+        "index": 1,
+        "type": "content",
+        "prediction": {
+          "purpose": null,
+          "symptoms": [],
+          "denied_symptoms": [],
+          "medications": [],
+          "measurements": []
+        },
+        "gold": {
+          "purpose": {
+            "value": "발열 상담",
+            "evidence": "발열 상담"
+          },
+          "symptoms": [
+            {
+              "value": "오한",
+              "evidence": "오한"
+            }
+          ],
+          "denied_symptoms": [
+            {
+              "value": "기침",
+              "evidence": "기침은 없어요"
+            }
+          ],
+          "medications": [
+            {
+              "value": "아세트아미노펜",
+              "evidence": "아세트아미노펜"
+            }
+          ],
+          "measurements": [
+            {
+              "value": "38.2",
+              "unit": "도",
+              "evidence": "38.2 도"
+            }
+          ]
+        }
+      },
+      {
+        "index": 2,
+        "type": "schema",
+        "detail": "1 validation error for Consultation\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='발', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid"
+      },
+      {
+        "index": 2,
+        "type": "content",
+        "prediction": {
+          "purpose": null,
+          "symptoms": [],
+          "denied_symptoms": [],
+          "medications": [],
+          "measurements": []
+        },
+        "gold": {
+          "purpose": {
+            "value": "발열 상담",
+            "evidence": "발열 상담"
+          },
+          "symptoms": [
+            {
+              "value": "오한",
+              "evidence": "오한"
+            }
+          ],
+          "denied_symptoms": [
+            {
+              "value": "기침",
+              "evidence": "기침은 없어요"
+            }
+          ],
+          "medications": [
+            {
+              "value": "아세트아미노펜",
+              "evidence": "아세트아미노펜"
+            }
+          ],
+          "measurements": [
+            {
+              "value": "38.2",
+              "unit": "도",
+              "evidence": "38.2 도"
+            }
+          ]
+        }
+      },
+      {
+        "index": 3,
+        "type": "schema",
+        "detail": "1 validation error for Consultation\n  Invalid JSON: EOF while parsing a string at line 1 column 1 [type=json_invalid, input_value='\"', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid"
+      },
+      {
+        "index": 3,
+        "type": "content",
+        "prediction": {
+          "purpose": null,
+          "symptoms": [],
+          "denied_symptoms": [],
+          "medications": [],
+          "measurements": []
+        },
+        "gold": {
+          "purpose": {
+            "value": "검사 상담",
+            "evidence": "검사 상담"
+          },
+          "symptoms": [
+            {
+              "value": "피로",
+              "evidence": "피로"
+            }
+          ],
+          "denied_symptoms": [
+            {
+              "value": "흉통",
+              "evidence": "흉통은 없어요"
+            }
+          ],
+          "medications": [
+            {
+              "value": "로수바스타틴",
+              "evidence": "로수바스타틴"
+            }
+          ],
+          "measurements": [
+            {
+              "value": "110",
+              "unit": "mg/dL",
+              "evidence": "110 mg/dL"
+            }
+          ]
+        }
+      },
+      {
+        "index": 4,
+        "type": "schema",
+        "detail": "1 validation error for Consultation\n  Invalid JSON: EOF while parsing a string at line 1 column 1 [type=json_invalid, input_value='\"', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid"
+      },
+      {
+        "index": 4,
+        "type": "content",
+        "prediction": {
+          "purpose": null,
+          "symptoms": [],
+          "denied_symptoms": [],
+          "medications": [],
+          "measurements": []
+        },
+        "gold": {
+          "purpose": {
+            "value": "검사 상담",
+            "evidence": "검사 상담"
+          },
+          "symptoms": [
+            {
+              "value": "피로",
+              "evidence": "피로"
+            }
+          ],
+          "denied_symptoms": [
+            {
+              "value": "흉통",
+              "evidence": "흉통은 없어요"
+            }
+          ],
+          "medications": [
+            {
+              "value": "로수바스타틴",
+              "evidence": "로수바스타틴"
+            }
+          ],
+          "measurements": [
+            {
+              "value": "110",
+              "unit": "mg/dL",
+              "evidence": "110 mg/dL"
+            }
+          ]
+        }
+      },
+      {
+        "index": 5,
+        "type": "schema",
+        "detail": "1 validation error for Consultation\n  Invalid JSON: EOF while parsing a string at line 1 column 1 [type=json_invalid, input_value='\"', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid"
+      },
+      {
+        "index": 5,
+        "type": "content",
+        "prediction": {
+          "purpose": null,
+          "symptoms": [],
+          "denied_symptoms": [],
+          "medications": [],
+          "measurements": []
+        },
+        "gold": {
+          "purpose": {
+            "value": "검사 상담",
+            "evidence": "검사 상담"
+          },
+          "symptoms": [
+            {
+              "value": "피로",
+              "evidence": "피로"
+            }
+          ],
+          "denied_symptoms": [
+            {
+              "value": "흉통",
+              "evidence": "흉통은 없어요"
+            }
+          ],
+          "medications": [
+            {
+              "value": "로수바스타틴",
+              "evidence": "로수바스타틴"
+            }
+          ],
+          "measurements": [
+            {
+              "value": "110",
+              "unit": "mg/dL",
+              "evidence": "110 mg/dL"
+            }
+          ]
+        }
+      }
+    ],
+    "latency_seconds": [
+      2.1199155999929644,
+      1.4787419000058435
+    ],
+    "generation_calls": 2,
+    "cache_hits": 4
+  },
+  "gold/grounded": {
+    "n": 6,
+    "schema_pass_rate": 0.0,
+    "field_f1": {
+      "purpose": 0.0,
+      "symptoms": 0.0,
+      "denied_symptoms": 0.0,
+      "medications": 0.0,
+      "measurements": 0.0
+    },
+    "field_counts": {
+      "purpose": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 6
+      },
+      "symptoms": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 6
+      },
+      "denied_symptoms": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 6
+      },
+      "medications": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 6
+      },
+      "measurements": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 6
+      }
+    },
+    "evidence_match_rate": 0.0,
+    "unsupported_value_rate": 0.0,
+    "extracted_items": 0,
+    "errors": [
+      {
+        "index": 0,
+        "type": "schema",
+        "detail": "1 validation error for Consultation\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='외', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid"
+      },
+      {
+        "index": 0,
+        "type": "content",
+        "prediction": {
+          "purpose": null,
+          "symptoms": [],
+          "denied_symptoms": [],
+          "medications": [],
+          "measurements": []
+        },
+        "gold": {
+          "purpose": {
+            "value": "발열 상담",
+            "evidence": "발열 상담"
+          },
+          "symptoms": [
+            {
+              "value": "오한",
+              "evidence": "오한"
+            }
+          ],
+          "denied_symptoms": [
+            {
+              "value": "기침",
+              "evidence": "기침은 없어요"
+            }
+          ],
+          "medications": [
+            {
+              "value": "아세트아미노펜",
+              "evidence": "아세트아미노펜"
+            }
+          ],
+          "measurements": [
+            {
+              "value": "38.2",
+              "unit": "도",
+              "evidence": "38.2 도"
+            }
+          ]
+        }
+      },
+      {
+        "index": 1,
+        "type": "schema",
+        "detail": "1 validation error for Consultation\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='외', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid"
+      },
+      {
+        "index": 1,
+        "type": "content",
+        "prediction": {
+          "purpose": null,
+          "symptoms": [],
+          "denied_symptoms": [],
+          "medications": [],
+          "measurements": []
+        },
+        "gold": {
+          "purpose": {
+            "value": "발열 상담",
+            "evidence": "발열 상담"
+          },
+          "symptoms": [
+            {
+              "value": "오한",
+              "evidence": "오한"
+            }
+          ],
+          "denied_symptoms": [
+            {
+              "value": "기침",
+              "evidence": "기침은 없어요"
+            }
+          ],
+          "medications": [
+            {
+              "value": "아세트아미노펜",
+              "evidence": "아세트아미노펜"
+            }
+          ],
+          "measurements": [
+            {
+              "value": "38.2",
+              "unit": "도",
+              "evidence": "38.2 도"
+            }
+          ]
+        }
+      },
+      {
+        "index": 2,
+        "type": "schema",
+        "detail": "1 validation error for Consultation\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='외', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid"
+      },
+      {
+        "index": 2,
+        "type": "content",
+        "prediction": {
+          "purpose": null,
+          "symptoms": [],
+          "denied_symptoms": [],
+          "medications": [],
+          "measurements": []
+        },
+        "gold": {
+          "purpose": {
+            "value": "발열 상담",
+            "evidence": "발열 상담"
+          },
+          "symptoms": [
+            {
+              "value": "오한",
+              "evidence": "오한"
+            }
+          ],
+          "denied_symptoms": [
+            {
+              "value": "기침",
+              "evidence": "기침은 없어요"
+            }
+          ],
+          "medications": [
+            {
+              "value": "아세트아미노펜",
+              "evidence": "아세트아미노펜"
+            }
+          ],
+          "measurements": [
+            {
+              "value": "38.2",
+              "unit": "도",
+              "evidence": "38.2 도"
+            }
+          ]
+        }
+      },
+      {
+        "index": 3,
+        "type": "schema",
+        "detail": "1 validation error for Consultation\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='성', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid"
+      },
+      {
+        "index": 3,
+        "type": "content",
+        "prediction": {
+          "purpose": null,
+          "symptoms": [],
+          "denied_symptoms": [],
+          "medications": [],
+          "measurements": []
+        },
+        "gold": {
+          "purpose": {
+            "value": "검사 상담",
+            "evidence": "검사 상담"
+          },
+          "symptoms": [
+            {
+              "value": "피로",
+              "evidence": "피로"
+            }
+          ],
+          "denied_symptoms": [
+            {
+              "value": "흉통",
+              "evidence": "흉통은 없어요"
+            }
+          ],
+          "medications": [
+            {
+              "value": "로수바스타틴",
+              "evidence": "로수바스타틴"
+            }
+          ],
+          "measurements": [
+            {
+              "value": "110",
+              "unit": "mg/dL",
+              "evidence": "110 mg/dL"
+            }
+          ]
+        }
+      },
+      {
+        "index": 4,
+        "type": "schema",
+        "detail": "1 validation error for Consultation\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='성', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid"
+      },
+      {
+        "index": 4,
+        "type": "content",
+        "prediction": {
+          "purpose": null,
+          "symptoms": [],
+          "denied_symptoms": [],
+          "medications": [],
+          "measurements": []
+        },
+        "gold": {
+          "purpose": {
+            "value": "검사 상담",
+            "evidence": "검사 상담"
+          },
+          "symptoms": [
+            {
+              "value": "피로",
+              "evidence": "피로"
+            }
+          ],
+          "denied_symptoms": [
+            {
+              "value": "흉통",
+              "evidence": "흉통은 없어요"
+            }
+          ],
+          "medications": [
+            {
+              "value": "로수바스타틴",
+              "evidence": "로수바스타틴"
+            }
+          ],
+          "measurements": [
+            {
+              "value": "110",
+              "unit": "mg/dL",
+              "evidence": "110 mg/dL"
+            }
+          ]
+        }
+      },
+      {
+        "index": 5,
+        "type": "schema",
+        "detail": "1 validation error for Consultation\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='성', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid"
+      },
+      {
+        "index": 5,
+        "type": "content",
+        "prediction": {
+          "purpose": null,
+          "symptoms": [],
+          "denied_symptoms": [],
+          "medications": [],
+          "measurements": []
+        },
+        "gold": {
+          "purpose": {
+            "value": "검사 상담",
+            "evidence": "검사 상담"
+          },
+          "symptoms": [
+            {
+              "value": "피로",
+              "evidence": "피로"
+            }
+          ],
+          "denied_symptoms": [
+            {
+              "value": "흉통",
+              "evidence": "흉통은 없어요"
+            }
+          ],
+          "medications": [
+            {
+              "value": "로수바스타틴",
+              "evidence": "로수바스타틴"
+            }
+          ],
+          "measurements": [
+            {
+              "value": "110",
+              "unit": "mg/dL",
+              "evidence": "110 mg/dL"
+            }
+          ]
+        }
+      }
+    ],
+    "latency_seconds": [
+      1.5810772000113502,
+      1.9635297000058927
+    ],
+    "generation_calls": 2,
+    "cache_hits": 4
+  },
+  "A/basic": {
+    "n": 6,
+    "schema_pass_rate": 0.0,
+    "field_f1": {
+      "purpose": 0.0,
+      "symptoms": 0.0,
+      "denied_symptoms": 0.0,
+      "medications": 0.0,
+      "measurements": 0.0
+    },
+    "field_counts": {
+      "purpose": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 6
+      },
+      "symptoms": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 6
+      },
+      "denied_symptoms": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 6
+      },
+      "medications": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 6
+      },
+      "measurements": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 6
+      }
+    },
+    "evidence_match_rate": 0.0,
+    "unsupported_value_rate": 0.0,
+    "extracted_items": 0,
+    "errors": [
+      {
+        "index": 0,
+        "type": "schema",
+        "detail": "1 validation error for Consultation\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='의', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid"
+      },
+      {
+        "index": 0,
+        "type": "content",
+        "prediction": {
+          "purpose": null,
+          "symptoms": [],
+          "denied_symptoms": [],
+          "medications": [],
+          "measurements": []
+        },
+        "gold": {
+          "purpose": {
+            "value": "발열 상담",
+            "evidence": "발열 상담"
+          },
+          "symptoms": [
+            {
+              "value": "오한",
+              "evidence": "오한"
+            }
+          ],
+          "denied_symptoms": [
+            {
+              "value": "기침",
+              "evidence": "기침은 없어요"
+            }
+          ],
+          "medications": [
+            {
+              "value": "아세트아미노펜",
+              "evidence": "아세트아미노펜"
+            }
+          ],
+          "measurements": [
+            {
+              "value": "38.2",
+              "unit": "도",
+              "evidence": "38.2 도"
+            }
+          ]
+        }
+      },
+      {
+        "index": 1,
+        "type": "schema",
+        "detail": "1 validation error for Consultation\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='유', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid"
+      },
+      {
+        "index": 1,
+        "type": "content",
+        "prediction": {
+          "purpose": null,
+          "symptoms": [],
+          "denied_symptoms": [],
+          "medications": [],
+          "measurements": []
+        },
+        "gold": {
+          "purpose": {
+            "value": "발열 상담",
+            "evidence": "발열 상담"
+          },
+          "symptoms": [
+            {
+              "value": "오한",
+              "evidence": "오한"
+            }
+          ],
+          "denied_symptoms": [
+            {
+              "value": "기침",
+              "evidence": "기침은 없어요"
+            }
+          ],
+          "medications": [
+            {
+              "value": "아세트아미노펜",
+              "evidence": "아세트아미노펜"
+            }
+          ],
+          "measurements": [
+            {
+              "value": "38.2",
+              "unit": "도",
+              "evidence": "38.2 도"
+            }
+          ]
+        }
+      },
+      {
+        "index": 2,
+        "type": "schema",
+        "detail": "1 validation error for Consultation\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='이', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid"
+      },
+      {
+        "index": 2,
+        "type": "content",
+        "prediction": {
+          "purpose": null,
+          "symptoms": [],
+          "denied_symptoms": [],
+          "medications": [],
+          "measurements": []
+        },
+        "gold": {
+          "purpose": {
+            "value": "발열 상담",
+            "evidence": "발열 상담"
+          },
+          "symptoms": [
+            {
+              "value": "오한",
+              "evidence": "오한"
+            }
+          ],
+          "denied_symptoms": [
+            {
+              "value": "기침",
+              "evidence": "기침은 없어요"
+            }
+          ],
+          "medications": [
+            {
+              "value": "아세트아미노펜",
+              "evidence": "아세트아미노펜"
+            }
+          ],
+          "measurements": [
+            {
+              "value": "38.2",
+              "unit": "도",
+              "evidence": "38.2 도"
+            }
+          ]
+        }
+      },
+      {
+        "index": 3,
+        "type": "schema",
+        "detail": "1 validation error for Consultation\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='이', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid"
+      },
+      {
+        "index": 3,
+        "type": "content",
+        "prediction": {
+          "purpose": null,
+          "symptoms": [],
+          "denied_symptoms": [],
+          "medications": [],
+          "measurements": []
+        },
+        "gold": {
+          "purpose": {
+            "value": "검사 상담",
+            "evidence": "검사 상담"
+          },
+          "symptoms": [
+            {
+              "value": "피로",
+              "evidence": "피로"
+            }
+          ],
+          "denied_symptoms": [
+            {
+              "value": "흉통",
+              "evidence": "흉통은 없어요"
+            }
+          ],
+          "medications": [
+            {
+              "value": "로수바스타틴",
+              "evidence": "로수바스타틴"
+            }
+          ],
+          "measurements": [
+            {
+              "value": "110",
+              "unit": "mg/dL",
+              "evidence": "110 mg/dL"
+            }
+          ]
+        }
+      },
+      {
+        "index": 4,
+        "type": "schema",
+        "detail": "1 validation error for Consultation\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='검', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid"
+      },
+      {
+        "index": 4,
+        "type": "content",
+        "prediction": {
+          "purpose": null,
+          "symptoms": [],
+          "denied_symptoms": [],
+          "medications": [],
+          "measurements": []
+        },
+        "gold": {
+          "purpose": {
+            "value": "검사 상담",
+            "evidence": "검사 상담"
+          },
+          "symptoms": [
+            {
+              "value": "피로",
+              "evidence": "피로"
+            }
+          ],
+          "denied_symptoms": [
+            {
+              "value": "흉통",
+              "evidence": "흉통은 없어요"
+            }
+          ],
+          "medications": [
+            {
+              "value": "로수바스타틴",
+              "evidence": "로수바스타틴"
+            }
+          ],
+          "measurements": [
+            {
+              "value": "110",
+              "unit": "mg/dL",
+              "evidence": "110 mg/dL"
+            }
+          ]
+        }
+      },
+      {
+        "index": 5,
+        "type": "schema",
+        "detail": "1 validation error for Consultation\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='검', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid"
+      },
+      {
+        "index": 5,
+        "type": "content",
+        "prediction": {
+          "purpose": null,
+          "symptoms": [],
+          "denied_symptoms": [],
+          "medications": [],
+          "measurements": []
+        },
+        "gold": {
+          "purpose": {
+            "value": "검사 상담",
+            "evidence": "검사 상담"
+          },
+          "symptoms": [
+            {
+              "value": "피로",
+              "evidence": "피로"
+            }
+          ],
+          "denied_symptoms": [
+            {
+              "value": "흉통",
+              "evidence": "흉통은 없어요"
+            }
+          ],
+          "medications": [
+            {
+              "value": "로수바스타틴",
+              "evidence": "로수바스타틴"
+            }
+          ],
+          "measurements": [
+            {
+              "value": "110",
+              "unit": "mg/dL",
+              "evidence": "110 mg/dL"
+            }
+          ]
+        }
+      }
+    ],
+    "latency_seconds": [
+      2.789927000005264,
+      1.3916328999912366,
+      2.0947895999997854,
+      1.7772806999855675,
+      2.364691299968399,
+      2.425485600018874
+    ],
+    "generation_calls": 6,
+    "cache_hits": 0
+  },
+  "A/grounded": {
+    "n": 6,
+    "schema_pass_rate": 0.0,
+    "field_f1": {
+      "purpose": 0.0,
+      "symptoms": 0.0,
+      "denied_symptoms": 0.0,
+      "medications": 0.0,
+      "measurements": 0.0
+    },
+    "field_counts": {
+      "purpose": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 6
+      },
+      "symptoms": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 6
+      },
+      "denied_symptoms": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 6
+      },
+      "medications": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 6
+      },
+      "measurements": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 6
+      }
+    },
+    "evidence_match_rate": 0.0,
+    "unsupported_value_rate": 0.0,
+    "extracted_items": 0,
+    "errors": [
+      {
+        "index": 0,
+        "type": "schema",
+        "detail": "1 validation error for Consultation\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='``', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid"
+      },
+      {
+        "index": 0,
+        "type": "content",
+        "prediction": {
+          "purpose": null,
+          "symptoms": [],
+          "denied_symptoms": [],
+          "medications": [],
+          "measurements": []
+        },
+        "gold": {
+          "purpose": {
+            "value": "발열 상담",
+            "evidence": "발열 상담"
+          },
+          "symptoms": [
+            {
+              "value": "오한",
+              "evidence": "오한"
+            }
+          ],
+          "denied_symptoms": [
+            {
+              "value": "기침",
+              "evidence": "기침은 없어요"
+            }
+          ],
+          "medications": [
+            {
+              "value": "아세트아미노펜",
+              "evidence": "아세트아미노펜"
+            }
+          ],
+          "measurements": [
+            {
+              "value": "38.2",
+              "unit": "도",
+              "evidence": "38.2 도"
+            }
+          ]
+        }
+      },
+      {
+        "index": 1,
+        "type": "schema",
+        "detail": "1 validation error for Consultation\n  Invalid JSON: expected ident at line 1 column 2 [type=json_invalid, input_value='to', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid"
+      },
+      {
+        "index": 1,
+        "type": "content",
+        "prediction": {
+          "purpose": null,
+          "symptoms": [],
+          "denied_symptoms": [],
+          "medications": [],
+          "measurements": []
+        },
+        "gold": {
+          "purpose": {
+            "value": "발열 상담",
+            "evidence": "발열 상담"
+          },
+          "symptoms": [
+            {
+              "value": "오한",
+              "evidence": "오한"
+            }
+          ],
+          "denied_symptoms": [
+            {
+              "value": "기침",
+              "evidence": "기침은 없어요"
+            }
+          ],
+          "medications": [
+            {
+              "value": "아세트아미노펜",
+              "evidence": "아세트아미노펜"
+            }
+          ],
+          "measurements": [
+            {
+              "value": "38.2",
+              "unit": "도",
+              "evidence": "38.2 도"
+            }
+          ]
+        }
+      },
+      {
+        "index": 2,
+        "type": "schema",
+        "detail": "1 validation error for Consultation\n  Invalid JSON: EOF while parsing a string at line 1 column 1 [type=json_invalid, input_value='\"', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid"
+      },
+      {
+        "index": 2,
+        "type": "content",
+        "prediction": {
+          "purpose": null,
+          "symptoms": [],
+          "denied_symptoms": [],
+          "medications": [],
+          "measurements": []
+        },
+        "gold": {
+          "purpose": {
+            "value": "발열 상담",
+            "evidence": "발열 상담"
+          },
+          "symptoms": [
+            {
+              "value": "오한",
+              "evidence": "오한"
+            }
+          ],
+          "denied_symptoms": [
+            {
+              "value": "기침",
+              "evidence": "기침은 없어요"
+            }
+          ],
+          "medications": [
+            {
+              "value": "아세트아미노펜",
+              "evidence": "아세트아미노펜"
+            }
+          ],
+          "measurements": [
+            {
+              "value": "38.2",
+              "unit": "도",
+              "evidence": "38.2 도"
+            }
+          ]
+        }
+      },
+      {
+        "index": 3,
+        "type": "schema",
+        "detail": "1 validation error for Consultation\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='과', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid"
+      },
+      {
+        "index": 3,
+        "type": "content",
+        "prediction": {
+          "purpose": null,
+          "symptoms": [],
+          "denied_symptoms": [],
+          "medications": [],
+          "measurements": []
+        },
+        "gold": {
+          "purpose": {
+            "value": "검사 상담",
+            "evidence": "검사 상담"
+          },
+          "symptoms": [
+            {
+              "value": "피로",
+              "evidence": "피로"
+            }
+          ],
+          "denied_symptoms": [
+            {
+              "value": "흉통",
+              "evidence": "흉통은 없어요"
+            }
+          ],
+          "medications": [
+            {
+              "value": "로수바스타틴",
+              "evidence": "로수바스타틴"
+            }
+          ],
+          "measurements": [
+            {
+              "value": "110",
+              "unit": "mg/dL",
+              "evidence": "110 mg/dL"
+            }
+          ]
+        }
+      },
+      {
+        "index": 4,
+        "type": "schema",
+        "detail": "1 validation error for Consultation\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='검', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid"
+      },
+      {
+        "index": 4,
+        "type": "content",
+        "prediction": {
+          "purpose": null,
+          "symptoms": [],
+          "denied_symptoms": [],
+          "medications": [],
+          "measurements": []
+        },
+        "gold": {
+          "purpose": {
+            "value": "검사 상담",
+            "evidence": "검사 상담"
+          },
+          "symptoms": [
+            {
+              "value": "피로",
+              "evidence": "피로"
+            }
+          ],
+          "denied_symptoms": [
+            {
+              "value": "흉통",
+              "evidence": "흉통은 없어요"
+            }
+          ],
+          "medications": [
+            {
+              "value": "로수바스타틴",
+              "evidence": "로수바스타틴"
+            }
+          ],
+          "measurements": [
+            {
+              "value": "110",
+              "unit": "mg/dL",
+              "evidence": "110 mg/dL"
+            }
+          ]
+        }
+      },
+      {
+        "index": 5,
+        "type": "schema",
+        "detail": "1 validation error for Consultation\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='To', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid"
+      },
+      {
+        "index": 5,
+        "type": "content",
+        "prediction": {
+          "purpose": null,
+          "symptoms": [],
+          "denied_symptoms": [],
+          "medications": [],
+          "measurements": []
+        },
+        "gold": {
+          "purpose": {
+            "value": "검사 상담",
+            "evidence": "검사 상담"
+          },
+          "symptoms": [
+            {
+              "value": "피로",
+              "evidence": "피로"
+            }
+          ],
+          "denied_symptoms": [
+            {
+              "value": "흉통",
+              "evidence": "흉통은 없어요"
+            }
+          ],
+          "medications": [
+            {
+              "value": "로수바스타틴",
+              "evidence": "로수바스타틴"
+            }
+          ],
+          "measurements": [
+            {
+              "value": "110",
+              "unit": "mg/dL",
+              "evidence": "110 mg/dL"
+            }
+          ]
+        }
+      }
+    ],
+    "latency_seconds": [
+      2.9898530999780633,
+      2.428465300006792,
+      2.010648700001184,
+      2.2172306000138633,
+      1.8808140000328422,
+      1.5046557000023313
+    ],
+    "generation_calls": 6,
+    "cache_hits": 0
+  },
+  "B/basic": {
+    "n": 6,
+    "schema_pass_rate": 0.0,
+    "field_f1": {
+      "purpose": 0.0,
+      "symptoms": 0.0,
+      "denied_symptoms": 0.0,
+      "medications": 0.0,
+      "measurements": 0.0
+    },
+    "field_counts": {
+      "purpose": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 6
+      },
+      "symptoms": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 6
+      },
+      "denied_symptoms": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 6
+      },
+      "medications": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 6
+      },
+      "measurements": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 6
+      }
+    },
+    "evidence_match_rate": 0.0,
+    "unsupported_value_rate": 0.0,
+    "extracted_items": 0,
+    "errors": [
+      {
+        "index": 0,
+        "type": "schema",
+        "detail": "1 validation error for Consultation\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='의', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid"
+      },
+      {
+        "index": 0,
+        "type": "content",
+        "prediction": {
+          "purpose": null,
+          "symptoms": [],
+          "denied_symptoms": [],
+          "medications": [],
+          "measurements": []
+        },
+        "gold": {
+          "purpose": {
+            "value": "발열 상담",
+            "evidence": "발열 상담"
+          },
+          "symptoms": [
+            {
+              "value": "오한",
+              "evidence": "오한"
+            }
+          ],
+          "denied_symptoms": [
+            {
+              "value": "기침",
+              "evidence": "기침은 없어요"
+            }
+          ],
+          "medications": [
+            {
+              "value": "아세트아미노펜",
+              "evidence": "아세트아미노펜"
+            }
+          ],
+          "measurements": [
+            {
+              "value": "38.2",
+              "unit": "도",
+              "evidence": "38.2 도"
+            }
+          ]
+        }
+      },
+      {
+        "index": 1,
+        "type": "schema",
+        "detail": "1 validation error for Consultation\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='유', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid"
+      },
+      {
+        "index": 1,
+        "type": "content",
+        "prediction": {
+          "purpose": null,
+          "symptoms": [],
+          "denied_symptoms": [],
+          "medications": [],
+          "measurements": []
+        },
+        "gold": {
+          "purpose": {
+            "value": "발열 상담",
+            "evidence": "발열 상담"
+          },
+          "symptoms": [
+            {
+              "value": "오한",
+              "evidence": "오한"
+            }
+          ],
+          "denied_symptoms": [
+            {
+              "value": "기침",
+              "evidence": "기침은 없어요"
+            }
+          ],
+          "medications": [
+            {
+              "value": "아세트아미노펜",
+              "evidence": "아세트아미노펜"
+            }
+          ],
+          "measurements": [
+            {
+              "value": "38.2",
+              "unit": "도",
+              "evidence": "38.2 도"
+            }
+          ]
+        }
+      },
+      {
+        "index": 2,
+        "type": "schema",
+        "detail": "1 validation error for Consultation\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='이', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid"
+      },
+      {
+        "index": 2,
+        "type": "content",
+        "prediction": {
+          "purpose": null,
+          "symptoms": [],
+          "denied_symptoms": [],
+          "medications": [],
+          "measurements": []
+        },
+        "gold": {
+          "purpose": {
+            "value": "발열 상담",
+            "evidence": "발열 상담"
+          },
+          "symptoms": [
+            {
+              "value": "오한",
+              "evidence": "오한"
+            }
+          ],
+          "denied_symptoms": [
+            {
+              "value": "기침",
+              "evidence": "기침은 없어요"
+            }
+          ],
+          "medications": [
+            {
+              "value": "아세트아미노펜",
+              "evidence": "아세트아미노펜"
+            }
+          ],
+          "measurements": [
+            {
+              "value": "38.2",
+              "unit": "도",
+              "evidence": "38.2 도"
+            }
+          ]
+        }
+      },
+      {
+        "index": 3,
+        "type": "schema",
+        "detail": "1 validation error for Consultation\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='이', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid"
+      },
+      {
+        "index": 3,
+        "type": "content",
+        "prediction": {
+          "purpose": null,
+          "symptoms": [],
+          "denied_symptoms": [],
+          "medications": [],
+          "measurements": []
+        },
+        "gold": {
+          "purpose": {
+            "value": "검사 상담",
+            "evidence": "검사 상담"
+          },
+          "symptoms": [
+            {
+              "value": "피로",
+              "evidence": "피로"
+            }
+          ],
+          "denied_symptoms": [
+            {
+              "value": "흉통",
+              "evidence": "흉통은 없어요"
+            }
+          ],
+          "medications": [
+            {
+              "value": "로수바스타틴",
+              "evidence": "로수바스타틴"
+            }
+          ],
+          "measurements": [
+            {
+              "value": "110",
+              "unit": "mg/dL",
+              "evidence": "110 mg/dL"
+            }
+          ]
+        }
+      },
+      {
+        "index": 4,
+        "type": "schema",
+        "detail": "1 validation error for Consultation\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='검', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid"
+      },
+      {
+        "index": 4,
+        "type": "content",
+        "prediction": {
+          "purpose": null,
+          "symptoms": [],
+          "denied_symptoms": [],
+          "medications": [],
+          "measurements": []
+        },
+        "gold": {
+          "purpose": {
+            "value": "검사 상담",
+            "evidence": "검사 상담"
+          },
+          "symptoms": [
+            {
+              "value": "피로",
+              "evidence": "피로"
+            }
+          ],
+          "denied_symptoms": [
+            {
+              "value": "흉통",
+              "evidence": "흉통은 없어요"
+            }
+          ],
+          "medications": [
+            {
+              "value": "로수바스타틴",
+              "evidence": "로수바스타틴"
+            }
+          ],
+          "measurements": [
+            {
+              "value": "110",
+              "unit": "mg/dL",
+              "evidence": "110 mg/dL"
+            }
+          ]
+        }
+      },
+      {
+        "index": 5,
+        "type": "schema",
+        "detail": "1 validation error for Consultation\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='검', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid"
+      },
+      {
+        "index": 5,
+        "type": "content",
+        "prediction": {
+          "purpose": null,
+          "symptoms": [],
+          "denied_symptoms": [],
+          "medications": [],
+          "measurements": []
+        },
+        "gold": {
+          "purpose": {
+            "value": "검사 상담",
+            "evidence": "검사 상담"
+          },
+          "symptoms": [
+            {
+              "value": "피로",
+              "evidence": "피로"
+            }
+          ],
+          "denied_symptoms": [
+            {
+              "value": "흉통",
+              "evidence": "흉통은 없어요"
+            }
+          ],
+          "medications": [
+            {
+              "value": "로수바스타틴",
+              "evidence": "로수바스타틴"
+            }
+          ],
+          "measurements": [
+            {
+              "value": "110",
+              "unit": "mg/dL",
+              "evidence": "110 mg/dL"
+            }
+          ]
+        }
+      }
+    ],
+    "latency_seconds": [],
+    "generation_calls": 0,
+    "cache_hits": 6
+  },
+  "B/grounded": {
+    "n": 6,
+    "schema_pass_rate": 0.0,
+    "field_f1": {
+      "purpose": 0.0,
+      "symptoms": 0.0,
+      "denied_symptoms": 0.0,
+      "medications": 0.0,
+      "measurements": 0.0
+    },
+    "field_counts": {
+      "purpose": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 6
+      },
+      "symptoms": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 6
+      },
+      "denied_symptoms": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 6
+      },
+      "medications": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 6
+      },
+      "measurements": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 6
+      }
+    },
+    "evidence_match_rate": 0.0,
+    "unsupported_value_rate": 0.0,
+    "extracted_items": 0,
+    "errors": [
+      {
+        "index": 0,
+        "type": "schema",
+        "detail": "1 validation error for Consultation\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='``', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid"
+      },
+      {
+        "index": 0,
+        "type": "content",
+        "prediction": {
+          "purpose": null,
+          "symptoms": [],
+          "denied_symptoms": [],
+          "medications": [],
+          "measurements": []
+        },
+        "gold": {
+          "purpose": {
+            "value": "발열 상담",
+            "evidence": "발열 상담"
+          },
+          "symptoms": [
+            {
+              "value": "오한",
+              "evidence": "오한"
+            }
+          ],
+          "denied_symptoms": [
+            {
+              "value": "기침",
+              "evidence": "기침은 없어요"
+            }
+          ],
+          "medications": [
+            {
+              "value": "아세트아미노펜",
+              "evidence": "아세트아미노펜"
+            }
+          ],
+          "measurements": [
+            {
+              "value": "38.2",
+              "unit": "도",
+              "evidence": "38.2 도"
+            }
+          ]
+        }
+      },
+      {
+        "index": 1,
+        "type": "schema",
+        "detail": "1 validation error for Consultation\n  Invalid JSON: expected ident at line 1 column 2 [type=json_invalid, input_value='to', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid"
+      },
+      {
+        "index": 1,
+        "type": "content",
+        "prediction": {
+          "purpose": null,
+          "symptoms": [],
+          "denied_symptoms": [],
+          "medications": [],
+          "measurements": []
+        },
+        "gold": {
+          "purpose": {
+            "value": "발열 상담",
+            "evidence": "발열 상담"
+          },
+          "symptoms": [
+            {
+              "value": "오한",
+              "evidence": "오한"
+            }
+          ],
+          "denied_symptoms": [
+            {
+              "value": "기침",
+              "evidence": "기침은 없어요"
+            }
+          ],
+          "medications": [
+            {
+              "value": "아세트아미노펜",
+              "evidence": "아세트아미노펜"
+            }
+          ],
+          "measurements": [
+            {
+              "value": "38.2",
+              "unit": "도",
+              "evidence": "38.2 도"
+            }
+          ]
+        }
+      },
+      {
+        "index": 2,
+        "type": "schema",
+        "detail": "1 validation error for Consultation\n  Invalid JSON: EOF while parsing a string at line 1 column 1 [type=json_invalid, input_value='\"', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid"
+      },
+      {
+        "index": 2,
+        "type": "content",
+        "prediction": {
+          "purpose": null,
+          "symptoms": [],
+          "denied_symptoms": [],
+          "medications": [],
+          "measurements": []
+        },
+        "gold": {
+          "purpose": {
+            "value": "발열 상담",
+            "evidence": "발열 상담"
+          },
+          "symptoms": [
+            {
+              "value": "오한",
+              "evidence": "오한"
+            }
+          ],
+          "denied_symptoms": [
+            {
+              "value": "기침",
+              "evidence": "기침은 없어요"
+            }
+          ],
+          "medications": [
+            {
+              "value": "아세트아미노펜",
+              "evidence": "아세트아미노펜"
+            }
+          ],
+          "measurements": [
+            {
+              "value": "38.2",
+              "unit": "도",
+              "evidence": "38.2 도"
+            }
+          ]
+        }
+      },
+      {
+        "index": 3,
+        "type": "schema",
+        "detail": "1 validation error for Consultation\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='과', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid"
+      },
+      {
+        "index": 3,
+        "type": "content",
+        "prediction": {
+          "purpose": null,
+          "symptoms": [],
+          "denied_symptoms": [],
+          "medications": [],
+          "measurements": []
+        },
+        "gold": {
+          "purpose": {
+            "value": "검사 상담",
+            "evidence": "검사 상담"
+          },
+          "symptoms": [
+            {
+              "value": "피로",
+              "evidence": "피로"
+            }
+          ],
+          "denied_symptoms": [
+            {
+              "value": "흉통",
+              "evidence": "흉통은 없어요"
+            }
+          ],
+          "medications": [
+            {
+              "value": "로수바스타틴",
+              "evidence": "로수바스타틴"
+            }
+          ],
+          "measurements": [
+            {
+              "value": "110",
+              "unit": "mg/dL",
+              "evidence": "110 mg/dL"
+            }
+          ]
+        }
+      },
+      {
+        "index": 4,
+        "type": "schema",
+        "detail": "1 validation error for Consultation\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='검', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid"
+      },
+      {
+        "index": 4,
+        "type": "content",
+        "prediction": {
+          "purpose": null,
+          "symptoms": [],
+          "denied_symptoms": [],
+          "medications": [],
+          "measurements": []
+        },
+        "gold": {
+          "purpose": {
+            "value": "검사 상담",
+            "evidence": "검사 상담"
+          },
+          "symptoms": [
+            {
+              "value": "피로",
+              "evidence": "피로"
+            }
+          ],
+          "denied_symptoms": [
+            {
+              "value": "흉통",
+              "evidence": "흉통은 없어요"
+            }
+          ],
+          "medications": [
+            {
+              "value": "로수바스타틴",
+              "evidence": "로수바스타틴"
+            }
+          ],
+          "measurements": [
+            {
+              "value": "110",
+              "unit": "mg/dL",
+              "evidence": "110 mg/dL"
+            }
+          ]
+        }
+      },
+      {
+        "index": 5,
+        "type": "schema",
+        "detail": "1 validation error for Consultation\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='To', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid"
+      },
+      {
+        "index": 5,
+        "type": "content",
+        "prediction": {
+          "purpose": null,
+          "symptoms": [],
+          "denied_symptoms": [],
+          "medications": [],
+          "measurements": []
+        },
+        "gold": {
+          "purpose": {
+            "value": "검사 상담",
+            "evidence": "검사 상담"
+          },
+          "symptoms": [
+            {
+              "value": "피로",
+              "evidence": "피로"
+            }
+          ],
+          "denied_symptoms": [
+            {
+              "value": "흉통",
+              "evidence": "흉통은 없어요"
+            }
+          ],
+          "medications": [
+            {
+              "value": "로수바스타틴",
+              "evidence": "로수바스타틴"
+            }
+          ],
+          "measurements": [
+            {
+              "value": "110",
+              "unit": "mg/dL",
+              "evidence": "110 mg/dL"
+            }
+          ]
+        }
+      }
+    ],
+    "latency_seconds": [],
+    "generation_calls": 0,
+    "cache_hits": 6
+  },
+  "C/basic": {
+    "n": 6,
+    "schema_pass_rate": 0.0,
+    "field_f1": {
+      "purpose": 0.0,
+      "symptoms": 0.0,
+      "denied_symptoms": 0.0,
+      "medications": 0.0,
+      "measurements": 0.0
+    },
+    "field_counts": {
+      "purpose": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 6
+      },
+      "symptoms": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 6
+      },
+      "denied_symptoms": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 6
+      },
+      "medications": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 6
+      },
+      "measurements": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 6
+      }
+    },
+    "evidence_match_rate": 0.0,
+    "unsupported_value_rate": 0.0,
+    "extracted_items": 0,
+    "errors": [
+      {
+        "index": 0,
+        "type": "schema",
+        "detail": "1 validation error for Consultation\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='전', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid"
+      },
+      {
+        "index": 0,
+        "type": "content",
+        "prediction": {
+          "purpose": null,
+          "symptoms": [],
+          "denied_symptoms": [],
+          "medications": [],
+          "measurements": []
+        },
+        "gold": {
+          "purpose": {
+            "value": "발열 상담",
+            "evidence": "발열 상담"
+          },
+          "symptoms": [
+            {
+              "value": "오한",
+              "evidence": "오한"
+            }
+          ],
+          "denied_symptoms": [
+            {
+              "value": "기침",
+              "evidence": "기침은 없어요"
+            }
+          ],
+          "medications": [
+            {
+              "value": "아세트아미노펜",
+              "evidence": "아세트아미노펜"
+            }
+          ],
+          "measurements": [
+            {
+              "value": "38.2",
+              "unit": "도",
+              "evidence": "38.2 도"
+            }
+          ]
+        }
+      },
+      {
+        "index": 1,
+        "type": "schema",
+        "detail": "1 validation error for Consultation\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='유', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid"
+      },
+      {
+        "index": 1,
+        "type": "content",
+        "prediction": {
+          "purpose": null,
+          "symptoms": [],
+          "denied_symptoms": [],
+          "medications": [],
+          "measurements": []
+        },
+        "gold": {
+          "purpose": {
+            "value": "발열 상담",
+            "evidence": "발열 상담"
+          },
+          "symptoms": [
+            {
+              "value": "오한",
+              "evidence": "오한"
+            }
+          ],
+          "denied_symptoms": [
+            {
+              "value": "기침",
+              "evidence": "기침은 없어요"
+            }
+          ],
+          "medications": [
+            {
+              "value": "아세트아미노펜",
+              "evidence": "아세트아미노펜"
+            }
+          ],
+          "measurements": [
+            {
+              "value": "38.2",
+              "unit": "도",
+              "evidence": "38.2 도"
+            }
+          ]
+        }
+      },
+      {
+        "index": 2,
+        "type": "schema",
+        "detail": "1 validation error for Consultation\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='주', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid"
+      },
+      {
+        "index": 2,
+        "type": "content",
+        "prediction": {
+          "purpose": null,
+          "symptoms": [],
+          "denied_symptoms": [],
+          "medications": [],
+          "measurements": []
+        },
+        "gold": {
+          "purpose": {
+            "value": "발열 상담",
+            "evidence": "발열 상담"
+          },
+          "symptoms": [
+            {
+              "value": "오한",
+              "evidence": "오한"
+            }
+          ],
+          "denied_symptoms": [
+            {
+              "value": "기침",
+              "evidence": "기침은 없어요"
+            }
+          ],
+          "medications": [
+            {
+              "value": "아세트아미노펜",
+              "evidence": "아세트아미노펜"
+            }
+          ],
+          "measurements": [
+            {
+              "value": "38.2",
+              "unit": "도",
+              "evidence": "38.2 도"
+            }
+          ]
+        }
+      },
+      {
+        "index": 3,
+        "type": "schema",
+        "detail": "1 validation error for Consultation\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='주', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid"
+      },
+      {
+        "index": 3,
+        "type": "content",
+        "prediction": {
+          "purpose": null,
+          "symptoms": [],
+          "denied_symptoms": [],
+          "medications": [],
+          "measurements": []
+        },
+        "gold": {
+          "purpose": {
+            "value": "검사 상담",
+            "evidence": "검사 상담"
+          },
+          "symptoms": [
+            {
+              "value": "피로",
+              "evidence": "피로"
+            }
+          ],
+          "denied_symptoms": [
+            {
+              "value": "흉통",
+              "evidence": "흉통은 없어요"
+            }
+          ],
+          "medications": [
+            {
+              "value": "로수바스타틴",
+              "evidence": "로수바스타틴"
+            }
+          ],
+          "measurements": [
+            {
+              "value": "110",
+              "unit": "mg/dL",
+              "evidence": "110 mg/dL"
+            }
+          ]
+        }
+      },
+      {
+        "index": 4,
+        "type": "schema",
+        "detail": "1 validation error for Consultation\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='검', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid"
+      },
+      {
+        "index": 4,
+        "type": "content",
+        "prediction": {
+          "purpose": null,
+          "symptoms": [],
+          "denied_symptoms": [],
+          "medications": [],
+          "measurements": []
+        },
+        "gold": {
+          "purpose": {
+            "value": "검사 상담",
+            "evidence": "검사 상담"
+          },
+          "symptoms": [
+            {
+              "value": "피로",
+              "evidence": "피로"
+            }
+          ],
+          "denied_symptoms": [
+            {
+              "value": "흉통",
+              "evidence": "흉통은 없어요"
+            }
+          ],
+          "medications": [
+            {
+              "value": "로수바스타틴",
+              "evidence": "로수바스타틴"
+            }
+          ],
+          "measurements": [
+            {
+              "value": "110",
+              "unit": "mg/dL",
+              "evidence": "110 mg/dL"
+            }
+          ]
+        }
+      },
+      {
+        "index": 5,
+        "type": "schema",
+        "detail": "1 validation error for Consultation\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='이', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid"
+      },
+      {
+        "index": 5,
+        "type": "content",
+        "prediction": {
+          "purpose": null,
+          "symptoms": [],
+          "denied_symptoms": [],
+          "medications": [],
+          "measurements": []
+        },
+        "gold": {
+          "purpose": {
+            "value": "검사 상담",
+            "evidence": "검사 상담"
+          },
+          "symptoms": [
+            {
+              "value": "피로",
+              "evidence": "피로"
+            }
+          ],
+          "denied_symptoms": [
+            {
+              "value": "흉통",
+              "evidence": "흉통은 없어요"
+            }
+          ],
+          "medications": [
+            {
+              "value": "로수바스타틴",
+              "evidence": "로수바스타틴"
+            }
+          ],
+          "measurements": [
+            {
+              "value": "110",
+              "unit": "mg/dL",
+              "evidence": "110 mg/dL"
+            }
+          ]
+        }
+      }
+    ],
+    "latency_seconds": [
+      1.4805210000486113,
+      1.8183695999905467,
+      1.634048200037796,
+      1.6609011000255123,
+      1.5951156000373885,
+      1.666283700033091
+    ],
+    "generation_calls": 6,
+    "cache_hits": 0
+  },
+  "C/grounded": {
+    "n": 6,
+    "schema_pass_rate": 0.0,
+    "field_f1": {
+      "purpose": 0.0,
+      "symptoms": 0.0,
+      "denied_symptoms": 0.0,
+      "medications": 0.0,
+      "measurements": 0.0
+    },
+    "field_counts": {
+      "purpose": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 6
+      },
+      "symptoms": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 6
+      },
+      "denied_symptoms": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 6
+      },
+      "medications": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 6
+      },
+      "measurements": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 6
+      }
+    },
+    "evidence_match_rate": 0.0,
+    "unsupported_value_rate": 0.0,
+    "extracted_items": 0,
+    "errors": [
+      {
+        "index": 0,
+        "type": "schema",
+        "detail": "1 validation error for Consultation\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='이', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid"
+      },
+      {
+        "index": 0,
+        "type": "content",
+        "prediction": {
+          "purpose": null,
+          "symptoms": [],
+          "denied_symptoms": [],
+          "medications": [],
+          "measurements": []
+        },
+        "gold": {
+          "purpose": {
+            "value": "발열 상담",
+            "evidence": "발열 상담"
+          },
+          "symptoms": [
+            {
+              "value": "오한",
+              "evidence": "오한"
+            }
+          ],
+          "denied_symptoms": [
+            {
+              "value": "기침",
+              "evidence": "기침은 없어요"
+            }
+          ],
+          "medications": [
+            {
+              "value": "아세트아미노펜",
+              "evidence": "아세트아미노펜"
+            }
+          ],
+          "measurements": [
+            {
+              "value": "38.2",
+              "unit": "도",
+              "evidence": "38.2 도"
+            }
+          ]
+        }
+      },
+      {
+        "index": 1,
+        "type": "schema",
+        "detail": "1 validation error for Consultation\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='주', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid"
+      },
+      {
+        "index": 1,
+        "type": "content",
+        "prediction": {
+          "purpose": null,
+          "symptoms": [],
+          "denied_symptoms": [],
+          "medications": [],
+          "measurements": []
+        },
+        "gold": {
+          "purpose": {
+            "value": "발열 상담",
+            "evidence": "발열 상담"
+          },
+          "symptoms": [
+            {
+              "value": "오한",
+              "evidence": "오한"
+            }
+          ],
+          "denied_symptoms": [
+            {
+              "value": "기침",
+              "evidence": "기침은 없어요"
+            }
+          ],
+          "medications": [
+            {
+              "value": "아세트아미노펜",
+              "evidence": "아세트아미노펜"
+            }
+          ],
+          "measurements": [
+            {
+              "value": "38.2",
+              "unit": "도",
+              "evidence": "38.2 도"
+            }
+          ]
+        }
+      },
+      {
+        "index": 2,
+        "type": "schema",
+        "detail": "1 validation error for Consultation\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='의', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid"
+      },
+      {
+        "index": 2,
+        "type": "content",
+        "prediction": {
+          "purpose": null,
+          "symptoms": [],
+          "denied_symptoms": [],
+          "medications": [],
+          "measurements": []
+        },
+        "gold": {
+          "purpose": {
+            "value": "발열 상담",
+            "evidence": "발열 상담"
+          },
+          "symptoms": [
+            {
+              "value": "오한",
+              "evidence": "오한"
+            }
+          ],
+          "denied_symptoms": [
+            {
+              "value": "기침",
+              "evidence": "기침은 없어요"
+            }
+          ],
+          "medications": [
+            {
+              "value": "아세트아미노펜",
+              "evidence": "아세트아미노펜"
+            }
+          ],
+          "measurements": [
+            {
+              "value": "38.2",
+              "unit": "도",
+              "evidence": "38.2 도"
+            }
+          ]
+        }
+      },
+      {
+        "index": 3,
+        "type": "schema",
+        "detail": "1 validation error for Consultation\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='유', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid"
+      },
+      {
+        "index": 3,
+        "type": "content",
+        "prediction": {
+          "purpose": null,
+          "symptoms": [],
+          "denied_symptoms": [],
+          "medications": [],
+          "measurements": []
+        },
+        "gold": {
+          "purpose": {
+            "value": "검사 상담",
+            "evidence": "검사 상담"
+          },
+          "symptoms": [
+            {
+              "value": "피로",
+              "evidence": "피로"
+            }
+          ],
+          "denied_symptoms": [
+            {
+              "value": "흉통",
+              "evidence": "흉통은 없어요"
+            }
+          ],
+          "medications": [
+            {
+              "value": "로수바스타틴",
+              "evidence": "로수바스타틴"
+            }
+          ],
+          "measurements": [
+            {
+              "value": "110",
+              "unit": "mg/dL",
+              "evidence": "110 mg/dL"
+            }
+          ]
+        }
+      },
+      {
+        "index": 4,
+        "type": "schema",
+        "detail": "1 validation error for Consultation\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='기', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid"
+      },
+      {
+        "index": 4,
+        "type": "content",
+        "prediction": {
+          "purpose": null,
+          "symptoms": [],
+          "denied_symptoms": [],
+          "medications": [],
+          "measurements": []
+        },
+        "gold": {
+          "purpose": {
+            "value": "검사 상담",
+            "evidence": "검사 상담"
+          },
+          "symptoms": [
+            {
+              "value": "피로",
+              "evidence": "피로"
+            }
+          ],
+          "denied_symptoms": [
+            {
+              "value": "흉통",
+              "evidence": "흉통은 없어요"
+            }
+          ],
+          "medications": [
+            {
+              "value": "로수바스타틴",
+              "evidence": "로수바스타틴"
+            }
+          ],
+          "measurements": [
+            {
+              "value": "110",
+              "unit": "mg/dL",
+              "evidence": "110 mg/dL"
+            }
+          ]
+        }
+      },
+      {
+        "index": 5,
+        "type": "schema",
+        "detail": "1 validation error for Consultation\n  Invalid JSON: EOF while parsing a string at line 1 column 1 [type=json_invalid, input_value='\"', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid"
+      },
+      {
+        "index": 5,
+        "type": "content",
+        "prediction": {
+          "purpose": null,
+          "symptoms": [],
+          "denied_symptoms": [],
+          "medications": [],
+          "measurements": []
+        },
+        "gold": {
+          "purpose": {
+            "value": "검사 상담",
+            "evidence": "검사 상담"
+          },
+          "symptoms": [
+            {
+              "value": "피로",
+              "evidence": "피로"
+            }
+          ],
+          "denied_symptoms": [
+            {
+              "value": "흉통",
+              "evidence": "흉통은 없어요"
+            }
+          ],
+          "medications": [
+            {
+              "value": "로수바스타틴",
+              "evidence": "로수바스타틴"
+            }
+          ],
+          "measurements": [
+            {
+              "value": "110",
+              "unit": "mg/dL",
+              "evidence": "110 mg/dL"
+            }
+          ]
+        }
+      }
+    ],
+    "latency_seconds": [
+      1.6782660000026226,
+      1.6078931999509223,
+      1.7821730999858119,
+      1.9308655000058934,
+      1.7969976000022143,
+      1.735106199979782
+    ],
+    "generation_calls": 6,
+    "cache_hits": 0
+  }
+}

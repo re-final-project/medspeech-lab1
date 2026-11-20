@@ -1,0 +1,290 @@
+[
+  {
+    "sample_id": "s10-clean",
+    "source": "gold",
+    "prompt": "basic",
+    "input": "발열 상담 때문에 왔어요. 오한이 있고 기침은 없어요. 아세트아미노펜 복용했고 체온은 38.2 도예요.",
+    "raw": "{\"purpose\": {\"value\": \"발열 상담\", \"evidence\": \"발열 상담\"}, \"symptoms\": [{\"value\": \"오한\", \"evidence\": \"오한\"}], \"denied_symptoms\": [{\"value\": \"기침\", \"evidence\": \"기침은 없어요\"}], \"medications\": [{\"value\": \"아세트아미노펜\", \"evidence\": \"아세트아미노펜\"}], \"measurements\": [{\"value\": \"38.2\", \"unit\": \"도\", \"evidence\": \"38.2 도\"}]}",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s10-noise20db",
+    "source": "gold",
+    "prompt": "basic",
+    "input": "발열 상담 때문에 왔어요. 오한이 있고 기침은 없어요. 아세트아미노펜 복용했고 체온은 38.2 도예요.",
+    "raw": "{\"purpose\": {\"value\": \"발열 상담\", \"evidence\": \"발열 상담\"}, \"symptoms\": [{\"value\": \"오한\", \"evidence\": \"오한\"}], \"denied_symptoms\": [{\"value\": \"기침\", \"evidence\": \"기침은 없어요\"}], \"medications\": [{\"value\": \"아세트아미노펜\", \"evidence\": \"아세트아미노펜\"}], \"measurements\": [{\"value\": \"38.2\", \"unit\": \"도\", \"evidence\": \"38.2 도\"}]}",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s10-speed1.1",
+    "source": "gold",
+    "prompt": "basic",
+    "input": "발열 상담 때문에 왔어요. 오한이 있고 기침은 없어요. 아세트아미노펜 복용했고 체온은 38.2 도예요.",
+    "raw": "{\"purpose\": {\"value\": \"발열 상담\", \"evidence\": \"발열 상담\"}, \"symptoms\": [{\"value\": \"오한\", \"evidence\": \"오한\"}], \"denied_symptoms\": [{\"value\": \"기침\", \"evidence\": \"기침은 없어요\"}], \"medications\": [{\"value\": \"아세트아미노펜\", \"evidence\": \"아세트아미노펜\"}], \"measurements\": [{\"value\": \"38.2\", \"unit\": \"도\", \"evidence\": \"38.2 도\"}]}",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s11-clean",
+    "source": "gold",
+    "prompt": "basic",
+    "input": "검사 상담 때문에 왔어요. 피로가 있고 흉통은 없어요. 로수바스타틴 복용하고 LDL은 110 mg/dL예요.",
+    "raw": "{\"purpose\": {\"value\": \"검사 상담\", \"evidence\": \"검사 상담\"}, \"symptoms\": [{\"value\": \"피로\", \"evidence\": \"피로\"}], \"denied_symptoms\": [{\"value\": \"흉통\", \"evidence\": \"흉통은 없어요\"}], \"medications\": [{\"value\": \"로수바스타틴\", \"evidence\": \"로수바스타틴\"}], \"measurements\": [{\"value\": \"110\", \"unit\": \"mg/dL\", \"evidence\": \"110 mg/dL\"}]}",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s11-noise20db",
+    "source": "gold",
+    "prompt": "basic",
+    "input": "검사 상담 때문에 왔어요. 피로가 있고 흉통은 없어요. 로수바스타틴 복용하고 LDL은 110 mg/dL예요.",
+    "raw": "{\"purpose\": {\"value\": \"검사 상담\", \"evidence\": \"검사 상담\"}, \"symptoms\": [{\"value\": \"피로\", \"evidence\": \"피로\"}], \"denied_symptoms\": [{\"value\": \"흉통\", \"evidence\": \"흉통은 없어요\"}], \"medications\": [{\"value\": \"로수바스타틴\", \"evidence\": \"로수바스타틴\"}], \"measurements\": [{\"value\": \"110\", \"unit\": \"mg/dL\", \"evidence\": \"110 mg/dL\"}]}",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s11-speed1.1",
+    "source": "gold",
+    "prompt": "basic",
+    "input": "검사 상담 때문에 왔어요. 피로가 있고 흉통은 없어요. 로수바스타틴 복용하고 LDL은 110 mg/dL예요.",
+    "raw": "{\"purpose\": {\"value\": \"검사 상담\", \"evidence\": \"검사 상담\"}, \"symptoms\": [{\"value\": \"피로\", \"evidence\": \"피로\"}], \"denied_symptoms\": [{\"value\": \"흉통\", \"evidence\": \"흉통은 없어요\"}], \"medications\": [{\"value\": \"로수바스타틴\", \"evidence\": \"로수바스타틴\"}], \"measurements\": [{\"value\": \"110\", \"unit\": \"mg/dL\", \"evidence\": \"110 mg/dL\"}]}",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s10-clean",
+    "source": "gold",
+    "prompt": "grounded",
+    "input": "발열 상담 때문에 왔어요. 오한이 있고 기침은 없어요. 아세트아미노펜 복용했고 체온은 38.2 도예요.",
+    "raw": "{\"purpose\": {\"value\": \"발열 상담\", \"evidence\": \"발열 상담\"}, \"symptoms\": [{\"value\": \"오한\", \"evidence\": \"오한\"}], \"denied_symptoms\": [{\"value\": \"기침\", \"evidence\": \"기침은 없어요\"}], \"medications\": [{\"value\": \"아세트아미노펜\", \"evidence\": \"아세트아미노펜\"}], \"measurements\": [{\"value\": \"38.2\", \"unit\": \"도\", \"evidence\": \"38.2 도\"}]}",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s10-noise20db",
+    "source": "gold",
+    "prompt": "grounded",
+    "input": "발열 상담 때문에 왔어요. 오한이 있고 기침은 없어요. 아세트아미노펜 복용했고 체온은 38.2 도예요.",
+    "raw": "{\"purpose\": {\"value\": \"발열 상담\", \"evidence\": \"발열 상담\"}, \"symptoms\": [{\"value\": \"오한\", \"evidence\": \"오한\"}], \"denied_symptoms\": [{\"value\": \"기침\", \"evidence\": \"기침은 없어요\"}], \"medications\": [{\"value\": \"아세트아미노펜\", \"evidence\": \"아세트아미노펜\"}], \"measurements\": [{\"value\": \"38.2\", \"unit\": \"도\", \"evidence\": \"38.2 도\"}]}",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s10-speed1.1",
+    "source": "gold",
+    "prompt": "grounded",
+    "input": "발열 상담 때문에 왔어요. 오한이 있고 기침은 없어요. 아세트아미노펜 복용했고 체온은 38.2 도예요.",
+    "raw": "{\"purpose\": {\"value\": \"발열 상담\", \"evidence\": \"발열 상담\"}, \"symptoms\": [{\"value\": \"오한\", \"evidence\": \"오한\"}], \"denied_symptoms\": [{\"value\": \"기침\", \"evidence\": \"기침은 없어요\"}], \"medications\": [{\"value\": \"아세트아미노펜\", \"evidence\": \"아세트아미노펜\"}], \"measurements\": [{\"value\": \"38.2\", \"unit\": \"도\", \"evidence\": \"38.2 도\"}]}",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s11-clean",
+    "source": "gold",
+    "prompt": "grounded",
+    "input": "검사 상담 때문에 왔어요. 피로가 있고 흉통은 없어요. 로수바스타틴 복용하고 LDL은 110 mg/dL예요.",
+    "raw": "{\"purpose\": {\"value\": \"검사 상담\", \"evidence\": \"검사 상담\"}, \"symptoms\": [{\"value\": \"피로\", \"evidence\": \"피로\"}], \"denied_symptoms\": [{\"value\": \"흉통\", \"evidence\": \"흉통은 없어요\"}], \"medications\": [{\"value\": \"로수바스타틴\", \"evidence\": \"로수바스타틴\"}], \"measurements\": [{\"value\": \"110\", \"unit\": \"mg/dL\", \"evidence\": \"110 mg/dL\"}]}",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s11-noise20db",
+    "source": "gold",
+    "prompt": "grounded",
+    "input": "검사 상담 때문에 왔어요. 피로가 있고 흉통은 없어요. 로수바스타틴 복용하고 LDL은 110 mg/dL예요.",
+    "raw": "{\"purpose\": {\"value\": \"검사 상담\", \"evidence\": \"검사 상담\"}, \"symptoms\": [{\"value\": \"피로\", \"evidence\": \"피로\"}], \"denied_symptoms\": [{\"value\": \"흉통\", \"evidence\": \"흉통은 없어요\"}], \"medications\": [{\"value\": \"로수바스타틴\", \"evidence\": \"로수바스타틴\"}], \"measurements\": [{\"value\": \"110\", \"unit\": \"mg/dL\", \"evidence\": \"110 mg/dL\"}]}",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s11-speed1.1",
+    "source": "gold",
+    "prompt": "grounded",
+    "input": "검사 상담 때문에 왔어요. 피로가 있고 흉통은 없어요. 로수바스타틴 복용하고 LDL은 110 mg/dL예요.",
+    "raw": "{\"purpose\": {\"value\": \"검사 상담\", \"evidence\": \"검사 상담\"}, \"symptoms\": [{\"value\": \"피로\", \"evidence\": \"피로\"}], \"denied_symptoms\": [{\"value\": \"흉통\", \"evidence\": \"흉통은 없어요\"}], \"medications\": [{\"value\": \"로수바스타틴\", \"evidence\": \"로수바스타틴\"}], \"measurements\": [{\"value\": \"110\", \"unit\": \"mg/dL\", \"evidence\": \"110 mg/dL\"}]}",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s10-clean",
+    "source": "fixture_A",
+    "prompt": "basic",
+    "input": "발열 상담 때문에 왔어요. 오한이 있고 기침은 없어요. 아세트아미노펜 복용했고 체온은 32.8 도예요.",
+    "raw": "{\"purpose\": {\"value\": \"발열 상담\", \"evidence\": \"발열 상담\"}, \"symptoms\": [{\"value\": \"오한\", \"evidence\": \"오한\"}], \"denied_symptoms\": [{\"value\": \"기침\", \"evidence\": \"기침은 없어요\"}], \"medications\": [{\"value\": \"아세트아미노펜\", \"evidence\": \"아세트아미노펜\"}], \"measurements\": [{\"value\": \"32.8\", \"unit\": \"도\", \"evidence\": \"32.8 도\"}]}",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s10-noise20db",
+    "source": "fixture_A",
+    "prompt": "basic",
+    "input": "발열 상담 때문에 왔어요. 오한이 있고 기침은 없어요. 아세트아미노펜 복용했고 체온은 32.8 도예요.",
+    "raw": "{\"purpose\": {\"value\": \"발열 상담\", \"evidence\": \"발열 상담\"}, \"symptoms\": [{\"value\": \"오한\", \"evidence\": \"오한\"}], \"denied_symptoms\": [{\"value\": \"기침\", \"evidence\": \"기침은 없어요\"}], \"medications\": [{\"value\": \"아세트아미노펜\", \"evidence\": \"아세트아미노펜\"}], \"measurements\": [{\"value\": \"32.8\", \"unit\": \"도\", \"evidence\": \"32.8 도\"}]}",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s10-speed1.1",
+    "source": "fixture_A",
+    "prompt": "basic",
+    "input": "발열 상담 때문에 왔어요. 오한이 있고 기침은 없어요. 아세트아미노펜 복용했고 체온은 32.8 도예요.",
+    "raw": "{\"purpose\": {\"value\": \"발열 상담\", \"evidence\": \"발열 상담\"}, \"symptoms\": [{\"value\": \"오한\", \"evidence\": \"오한\"}], \"denied_symptoms\": [{\"value\": \"기침\", \"evidence\": \"기침은 없어요\"}], \"medications\": [{\"value\": \"아세트아미노펜\", \"evidence\": \"아세트아미노펜\"}], \"measurements\": [{\"value\": \"32.8\", \"unit\": \"도\", \"evidence\": \"32.8 도\"}]}",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s11-clean",
+    "source": "fixture_A",
+    "prompt": "basic",
+    "input": "검사 상담 때문에 왔어요. 피로가 있고 흉통이 있어요. 로수 바스타틴 복용하고 LDL은 110 mg/dL예요.",
+    "raw": "{\"purpose\": {\"value\": \"검사 상담\", \"evidence\": \"검사 상담\"}, \"symptoms\": [], \"denied_symptoms\": [], \"medications\": [], \"measurements\": [{\"value\": \"110\", \"unit\": \"mg/dL\", \"evidence\": \"110 mg/dL\"}]}",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s11-noise20db",
+    "source": "fixture_A",
+    "prompt": "basic",
+    "input": "검사 상담 때문에 왔어요. 피로가 있고 흉통이 있어요. 로수 바스타틴 복용하고 LDL은 110 mg/dL예요.",
+    "raw": "{\"purpose\": {\"value\": \"검사 상담\", \"evidence\": \"검사 상담\"}, \"symptoms\": [], \"denied_symptoms\": [], \"medications\": [], \"measurements\": [{\"value\": \"110\", \"unit\": \"mg/dL\", \"evidence\": \"110 mg/dL\"}]}",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s11-speed1.1",
+    "source": "fixture_A",
+    "prompt": "basic",
+    "input": "검사 상담 때문에 왔어요. 피로가 있고 흉통이 있어요. 로수 바스타틴 복용하고 LDL은 110 mg/dL예요.",
+    "raw": "{\"purpose\": {\"value\": \"검사 상담\", \"evidence\": \"검사 상담\"}, \"symptoms\": [], \"denied_symptoms\": [], \"medications\": [], \"measurements\": [{\"value\": \"110\", \"unit\": \"mg/dL\", \"evidence\": \"110 mg/dL\"}]}",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s10-clean",
+    "source": "fixture_A",
+    "prompt": "grounded",
+    "input": "발열 상담 때문에 왔어요. 오한이 있고 기침은 없어요. 아세트아미노펜 복용했고 체온은 32.8 도예요.",
+    "raw": "{\"purpose\": {\"value\": \"발열 상담\", \"evidence\": \"발열 상담\"}, \"symptoms\": [{\"value\": \"오한\", \"evidence\": \"오한\"}], \"denied_symptoms\": [{\"value\": \"기침\", \"evidence\": \"기침은 없어요\"}], \"medications\": [{\"value\": \"아세트아미노펜\", \"evidence\": \"아세트아미노펜\"}], \"measurements\": [{\"value\": \"32.8\", \"unit\": \"도\", \"evidence\": \"32.8 도\"}]}",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s10-noise20db",
+    "source": "fixture_A",
+    "prompt": "grounded",
+    "input": "발열 상담 때문에 왔어요. 오한이 있고 기침은 없어요. 아세트아미노펜 복용했고 체온은 32.8 도예요.",
+    "raw": "{\"purpose\": {\"value\": \"발열 상담\", \"evidence\": \"발열 상담\"}, \"symptoms\": [{\"value\": \"오한\", \"evidence\": \"오한\"}], \"denied_symptoms\": [{\"value\": \"기침\", \"evidence\": \"기침은 없어요\"}], \"medications\": [{\"value\": \"아세트아미노펜\", \"evidence\": \"아세트아미노펜\"}], \"measurements\": [{\"value\": \"32.8\", \"unit\": \"도\", \"evidence\": \"32.8 도\"}]}",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s10-speed1.1",
+    "source": "fixture_A",
+    "prompt": "grounded",
+    "input": "발열 상담 때문에 왔어요. 오한이 있고 기침은 없어요. 아세트아미노펜 복용했고 체온은 32.8 도예요.",
+    "raw": "{\"purpose\": {\"value\": \"발열 상담\", \"evidence\": \"발열 상담\"}, \"symptoms\": [{\"value\": \"오한\", \"evidence\": \"오한\"}], \"denied_symptoms\": [{\"value\": \"기침\", \"evidence\": \"기침은 없어요\"}], \"medications\": [{\"value\": \"아세트아미노펜\", \"evidence\": \"아세트아미노펜\"}], \"measurements\": [{\"value\": \"32.8\", \"unit\": \"도\", \"evidence\": \"32.8 도\"}]}",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s11-clean",
+    "source": "fixture_A",
+    "prompt": "grounded",
+    "input": "검사 상담 때문에 왔어요. 피로가 있고 흉통이 있어요. 로수 바스타틴 복용하고 LDL은 110 mg/dL예요.",
+    "raw": "{\"purpose\": {\"value\": \"검사 상담\", \"evidence\": \"검사 상담\"}, \"symptoms\": [], \"denied_symptoms\": [], \"medications\": [], \"measurements\": [{\"value\": \"110\", \"unit\": \"mg/dL\", \"evidence\": \"110 mg/dL\"}]}",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s11-noise20db",
+    "source": "fixture_A",
+    "prompt": "grounded",
+    "input": "검사 상담 때문에 왔어요. 피로가 있고 흉통이 있어요. 로수 바스타틴 복용하고 LDL은 110 mg/dL예요.",
+    "raw": "{\"purpose\": {\"value\": \"검사 상담\", \"evidence\": \"검사 상담\"}, \"symptoms\": [], \"denied_symptoms\": [], \"medications\": [], \"measurements\": [{\"value\": \"110\", \"unit\": \"mg/dL\", \"evidence\": \"110 mg/dL\"}]}",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s11-speed1.1",
+    "source": "fixture_A",
+    "prompt": "grounded",
+    "input": "검사 상담 때문에 왔어요. 피로가 있고 흉통이 있어요. 로수 바스타틴 복용하고 LDL은 110 mg/dL예요.",
+    "raw": "{\"purpose\": {\"value\": \"검사 상담\", \"evidence\": \"검사 상담\"}, \"symptoms\": [], \"denied_symptoms\": [], \"medications\": [], \"measurements\": [{\"value\": \"110\", \"unit\": \"mg/dL\", \"evidence\": \"110 mg/dL\"}]}",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s10-clean",
+    "source": "fixture_B",
+    "prompt": "basic",
+    "input": "발열 상담 때문에 왔어요. 오한이 있고 기침은 없어요. 아세트아미노펜 복용했고 체온은 32.8 도예요.",
+    "raw": "{\"purpose\": {\"value\": \"발열 상담\", \"evidence\": \"발열 상담\"}, \"symptoms\": [{\"value\": \"오한\", \"evidence\": \"오한\"}], \"denied_symptoms\": [{\"value\": \"기침\", \"evidence\": \"기침은 없어요\"}], \"medications\": [{\"value\": \"아세트아미노펜\", \"evidence\": \"아세트아미노펜\"}], \"measurements\": [{\"value\": \"32.8\", \"unit\": \"도\", \"evidence\": \"32.8 도\"}]}",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s10-noise20db",
+    "source": "fixture_B",
+    "prompt": "basic",
+    "input": "발열 상담 때문에 왔어요. 오한이 있고 기침은 없어요. 아세트아미노펜 복용했고 체온은 32.8 도예요.",
+    "raw": "{\"purpose\": {\"value\": \"발열 상담\", \"evidence\": \"발열 상담\"}, \"symptoms\": [{\"value\": \"오한\", \"evidence\": \"오한\"}], \"denied_symptoms\": [{\"value\": \"기침\", \"evidence\": \"기침은 없어요\"}], \"medications\": [{\"value\": \"아세트아미노펜\", \"evidence\": \"아세트아미노펜\"}], \"measurements\": [{\"value\": \"32.8\", \"unit\": \"도\", \"evidence\": \"32.8 도\"}]}",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s10-speed1.1",
+    "source": "fixture_B",
+    "prompt": "basic",
+    "input": "발열 상담 때문에 왔어요. 오한이 있고 기침은 없어요. 아세트아미노펜 복용했고 체온은 32.8 도예요.",
+    "raw": "{\"purpose\": {\"value\": \"발열 상담\", \"evidence\": \"발열 상담\"}, \"symptoms\": [{\"value\": \"오한\", \"evidence\": \"오한\"}], \"denied_symptoms\": [{\"value\": \"기침\", \"evidence\": \"기침은 없어요\"}], \"medications\": [{\"value\": \"아세트아미노펜\", \"evidence\": \"아세트아미노펜\"}], \"measurements\": [{\"value\": \"32.8\", \"unit\": \"도\", \"evidence\": \"32.8 도\"}]}",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s11-clean",
+    "source": "fixture_B",
+    "prompt": "basic",
+    "input": "검사 상담 때문에 왔어요. 피로가 있고 흉통이 있어요. 로수 바스타틴 복용하고 LDL은 110 mg/dL예요.",
+    "raw": "{\"purpose\": {\"value\": \"검사 상담\", \"evidence\": \"검사 상담\"}, \"symptoms\": [], \"denied_symptoms\": [], \"medications\": [], \"measurements\": [{\"value\": \"110\", \"unit\": \"mg/dL\", \"evidence\": \"110 mg/dL\"}]}",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s11-noise20db",
+    "source": "fixture_B",
+    "prompt": "basic",
+    "input": "검사 상담 때문에 왔어요. 피로가 있고 흉통이 있어요. 로수 바스타틴 복용하고 LDL은 110 mg/dL예요.",
+    "raw": "{\"purpose\": {\"value\": \"검사 상담\", \"evidence\": \"검사 상담\"}, \"symptoms\": [], \"denied_symptoms\": [], \"medications\": [], \"measurements\": [{\"value\": \"110\", \"unit\": \"mg/dL\", \"evidence\": \"110 mg/dL\"}]}",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s11-speed1.1",
+    "source": "fixture_B",
+    "prompt": "basic",
+    "input": "검사 상담 때문에 왔어요. 피로가 있고 흉통이 있어요. 로수 바스타틴 복용하고 LDL은 110 mg/dL예요.",
+    "raw": "{\"purpose\": {\"value\": \"검사 상담\", \"evidence\": \"검사 상담\"}, \"symptoms\": [], \"denied_symptoms\": [], \"medications\": [], \"measurements\": [{\"value\": \"110\", \"unit\": \"mg/dL\", \"evidence\": \"110 mg/dL\"}]}",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s10-clean",
+    "source": "fixture_B",
+    "prompt": "grounded",
+    "input": "발열 상담 때문에 왔어요. 오한이 있고 기침은 없어요. 아세트아미노펜 복용했고 체온은 32.8 도예요.",
+    "raw": "{\"purpose\": {\"value\": \"발열 상담\", \"evidence\": \"발열 상담\"}, \"symptoms\": [{\"value\": \"오한\", \"evidence\": \"오한\"}], \"denied_symptoms\": [{\"value\": \"기침\", \"evidence\": \"기침은 없어요\"}], \"medications\": [{\"value\": \"아세트아미노펜\", \"evidence\": \"아세트아미노펜\"}], \"measurements\": [{\"value\": \"32.8\", \"unit\": \"도\", \"evidence\": \"32.8 도\"}]}",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s10-noise20db",
+    "source": "fixture_B",
+    "prompt": "grounded",
+    "input": "발열 상담 때문에 왔어요. 오한이 있고 기침은 없어요. 아세트아미노펜 복용했고 체온은 32.8 도예요.",
+    "raw": "{\"purpose\": {\"value\": \"발열 상담\", \"evidence\": \"발열 상담\"}, \"symptoms\": [{\"value\": \"오한\", \"evidence\": \"오한\"}], \"denied_symptoms\": [{\"value\": \"기침\", \"evidence\": \"기침은 없어요\"}], \"medications\": [{\"value\": \"아세트아미노펜\", \"evidence\": \"아세트아미노펜\"}], \"measurements\": [{\"value\": \"32.8\", \"unit\": \"도\", \"evidence\": \"32.8 도\"}]}",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s10-speed1.1",
+    "source": "fixture_B",
+    "prompt": "grounded",
+    "input": "발열 상담 때문에 왔어요. 오한이 있고 기침은 없어요. 아세트아미노펜 복용했고 체온은 32.8 도예요.",
+    "raw": "{\"purpose\": {\"value\": \"발열 상담\", \"evidence\": \"발열 상담\"}, \"symptoms\": [{\"value\": \"오한\", \"evidence\": \"오한\"}], \"denied_symptoms\": [{\"value\": \"기침\", \"evidence\": \"기침은 없어요\"}], \"medications\": [{\"value\": \"아세트아미노펜\", \"evidence\": \"아세트아미노펜\"}], \"measurements\": [{\"value\": \"32.8\", \"unit\": \"도\", \"evidence\": \"32.8 도\"}]}",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s11-clean",
+    "source": "fixture_B",
+    "prompt": "grounded",
+    "input": "검사 상담 때문에 왔어요. 피로가 있고 흉통이 있어요. 로수 바스타틴 복용하고 LDL은 110 mg/dL예요.",
+    "raw": "{\"purpose\": {\"value\": \"검사 상담\", \"evidence\": \"검사 상담\"}, \"symptoms\": [], \"denied_symptoms\": [], \"medications\": [], \"measurements\": [{\"value\": \"110\", \"unit\": \"mg/dL\", \"evidence\": \"110 mg/dL\"}]}",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s11-noise20db",
+    "source": "fixture_B",
+    "prompt": "grounded",
+    "input": "검사 상담 때문에 왔어요. 피로가 있고 흉통이 있어요. 로수 바스타틴 복용하고 LDL은 110 mg/dL예요.",
+    "raw": "{\"purpose\": {\"value\": \"검사 상담\", \"evidence\": \"검사 상담\"}, \"symptoms\": [], \"denied_symptoms\": [], \"medications\": [], \"measurements\": [{\"value\": \"110\", \"unit\": \"mg/dL\", \"evidence\": \"110 mg/dL\"}]}",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s11-speed1.1",
+    "source": "fixture_B",
+    "prompt": "grounded",
+    "input": "검사 상담 때문에 왔어요. 피로가 있고 흉통이 있어요. 로수 바스타틴 복용하고 LDL은 110 mg/dL예요.",
+    "raw": "{\"purpose\": {\"value\": \"검사 상담\", \"evidence\": \"검사 상담\"}, \"symptoms\": [], \"denied_symptoms\": [], \"medications\": [], \"measurements\": [{\"value\": \"110\", \"unit\": \"mg/dL\", \"evidence\": \"110 mg/dL\"}]}",
+    "cache_hit": false
+  }
+]

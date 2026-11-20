@@ -1,0 +1,7 @@
+{
+  "status": "completed",
+  "stage": "structure",
+  "llm_warmup": true,
+  "llm_quantization": "torch-dynamic-int8-linear",
+  "stt_reused": true
+}

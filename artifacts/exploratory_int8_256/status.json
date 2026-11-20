@@ -1,0 +1,1 @@
+{"status":"interrupted","reason":"Added validity-preserving fail-fast for non-JSON-object prefixes. All intermediate generations are separate from final metrics.","included_in_final_metrics":false}

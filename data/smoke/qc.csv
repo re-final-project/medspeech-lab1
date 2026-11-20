@@ -1,0 +1,290 @@
+﻿sample_id,error_type,criterion,verdict,action_status
+s00-clean,duplicate_id,sample_id unique,PASS,none
+s00-clean,empty_transcript,nonempty stripped transcript,PASS,none
+s00-clean,gold_schema,Pydantic strict schema,PASS,none
+s00-clean,missing_file,audio exists,PASS,none
+s00-clean,sample_rate,16000 Hz,PASS,none
+s00-clean,corrupt_audio,mono finite nonempty audio,PASS,none
+s00-clean,duplicate_audio,unique PCM file hash,PASS,none
+s00-noise20db,duplicate_id,sample_id unique,PASS,none
+s00-noise20db,empty_transcript,nonempty stripped transcript,PASS,none
+s00-noise20db,gold_schema,Pydantic strict schema,PASS,none
+s00-noise20db,missing_file,audio exists,PASS,none
+s00-noise20db,sample_rate,16000 Hz,PASS,none
+s00-noise20db,corrupt_audio,mono finite nonempty audio,PASS,none
+s00-noise20db,duplicate_audio,unique PCM file hash,PASS,none
+s00-speed1.1,duplicate_id,sample_id unique,PASS,none
+s00-speed1.1,empty_transcript,nonempty stripped transcript,PASS,none
+s00-speed1.1,gold_schema,Pydantic strict schema,PASS,none
+s00-speed1.1,missing_file,audio exists,PASS,none
+s00-speed1.1,sample_rate,16000 Hz,PASS,none
+s00-speed1.1,corrupt_audio,mono finite nonempty audio,PASS,none
+s00-speed1.1,duplicate_audio,unique PCM file hash,PASS,none
+s01-clean,duplicate_id,sample_id unique,PASS,none
+s01-clean,empty_transcript,nonempty stripped transcript,PASS,none
+s01-clean,gold_schema,Pydantic strict schema,PASS,none
+s01-clean,missing_file,audio exists,PASS,none
+s01-clean,sample_rate,16000 Hz,PASS,none
+s01-clean,corrupt_audio,mono finite nonempty audio,PASS,none
+s01-clean,duplicate_audio,unique PCM file hash,PASS,none
+s01-noise20db,duplicate_id,sample_id unique,PASS,none
+s01-noise20db,empty_transcript,nonempty stripped transcript,PASS,none
+s01-noise20db,gold_schema,Pydantic strict schema,PASS,none
+s01-noise20db,missing_file,audio exists,PASS,none
+s01-noise20db,sample_rate,16000 Hz,PASS,none
+s01-noise20db,corrupt_audio,mono finite nonempty audio,PASS,none
+s01-noise20db,duplicate_audio,unique PCM file hash,PASS,none
+s01-speed1.1,duplicate_id,sample_id unique,PASS,none
+s01-speed1.1,empty_transcript,nonempty stripped transcript,PASS,none
+s01-speed1.1,gold_schema,Pydantic strict schema,PASS,none
+s01-speed1.1,missing_file,audio exists,PASS,none
+s01-speed1.1,sample_rate,16000 Hz,PASS,none
+s01-speed1.1,corrupt_audio,mono finite nonempty audio,PASS,none
+s01-speed1.1,duplicate_audio,unique PCM file hash,PASS,none
+s02-clean,duplicate_id,sample_id unique,PASS,none
+s02-clean,empty_transcript,nonempty stripped transcript,PASS,none
+s02-clean,gold_schema,Pydantic strict schema,PASS,none
+s02-clean,missing_file,audio exists,PASS,none
+s02-clean,sample_rate,16000 Hz,PASS,none
+s02-clean,corrupt_audio,mono finite nonempty audio,PASS,none
+s02-clean,duplicate_audio,unique PCM file hash,PASS,none
+s02-noise20db,duplicate_id,sample_id unique,PASS,none
+s02-noise20db,empty_transcript,nonempty stripped transcript,PASS,none
+s02-noise20db,gold_schema,Pydantic strict schema,PASS,none
+s02-noise20db,missing_file,audio exists,PASS,none
+s02-noise20db,sample_rate,16000 Hz,PASS,none
+s02-noise20db,corrupt_audio,mono finite nonempty audio,PASS,none
+s02-noise20db,duplicate_audio,unique PCM file hash,PASS,none
+s02-speed1.1,duplicate_id,sample_id unique,PASS,none
+s02-speed1.1,empty_transcript,nonempty stripped transcript,PASS,none
+s02-speed1.1,gold_schema,Pydantic strict schema,PASS,none
+s02-speed1.1,missing_file,audio exists,PASS,none
+s02-speed1.1,sample_rate,16000 Hz,PASS,none
+s02-speed1.1,corrupt_audio,mono finite nonempty audio,PASS,none
+s02-speed1.1,duplicate_audio,unique PCM file hash,PASS,none
+s03-clean,duplicate_id,sample_id unique,PASS,none
+s03-clean,empty_transcript,nonempty stripped transcript,PASS,none
+s03-clean,gold_schema,Pydantic strict schema,PASS,none
+s03-clean,missing_file,audio exists,PASS,none
+s03-clean,sample_rate,16000 Hz,PASS,none
+s03-clean,corrupt_audio,mono finite nonempty audio,PASS,none
+s03-clean,duplicate_audio,unique PCM file hash,PASS,none
+s03-noise20db,duplicate_id,sample_id unique,PASS,none
+s03-noise20db,empty_transcript,nonempty stripped transcript,PASS,none
+s03-noise20db,gold_schema,Pydantic strict schema,PASS,none
+s03-noise20db,missing_file,audio exists,PASS,none
+s03-noise20db,sample_rate,16000 Hz,PASS,none
+s03-noise20db,corrupt_audio,mono finite nonempty audio,PASS,none
+s03-noise20db,duplicate_audio,unique PCM file hash,PASS,none
+s03-speed1.1,duplicate_id,sample_id unique,PASS,none
+s03-speed1.1,empty_transcript,nonempty stripped transcript,PASS,none
+s03-speed1.1,gold_schema,Pydantic strict schema,PASS,none
+s03-speed1.1,missing_file,audio exists,PASS,none
+s03-speed1.1,sample_rate,16000 Hz,PASS,none
+s03-speed1.1,corrupt_audio,mono finite nonempty audio,PASS,none
+s03-speed1.1,duplicate_audio,unique PCM file hash,PASS,none
+s04-clean,duplicate_id,sample_id unique,PASS,none
+s04-clean,empty_transcript,nonempty stripped transcript,PASS,none
+s04-clean,gold_schema,Pydantic strict schema,PASS,none
+s04-clean,missing_file,audio exists,PASS,none
+s04-clean,sample_rate,16000 Hz,PASS,none
+s04-clean,corrupt_audio,mono finite nonempty audio,PASS,none
+s04-clean,duplicate_audio,unique PCM file hash,PASS,none
+s04-noise20db,duplicate_id,sample_id unique,PASS,none
+s04-noise20db,empty_transcript,nonempty stripped transcript,PASS,none
+s04-noise20db,gold_schema,Pydantic strict schema,PASS,none
+s04-noise20db,missing_file,audio exists,PASS,none
+s04-noise20db,sample_rate,16000 Hz,PASS,none
+s04-noise20db,corrupt_audio,mono finite nonempty audio,PASS,none
+s04-noise20db,duplicate_audio,unique PCM file hash,PASS,none
+s04-speed1.1,duplicate_id,sample_id unique,PASS,none
+s04-speed1.1,empty_transcript,nonempty stripped transcript,PASS,none
+s04-speed1.1,gold_schema,Pydantic strict schema,PASS,none
+s04-speed1.1,missing_file,audio exists,PASS,none
+s04-speed1.1,sample_rate,16000 Hz,PASS,none
+s04-speed1.1,corrupt_audio,mono finite nonempty audio,PASS,none
+s04-speed1.1,duplicate_audio,unique PCM file hash,PASS,none
+s05-clean,duplicate_id,sample_id unique,PASS,none
+s05-clean,empty_transcript,nonempty stripped transcript,PASS,none
+s05-clean,gold_schema,Pydantic strict schema,PASS,none
+s05-clean,missing_file,audio exists,PASS,none
+s05-clean,sample_rate,16000 Hz,PASS,none
+s05-clean,corrupt_audio,mono finite nonempty audio,PASS,none
+s05-clean,duplicate_audio,unique PCM file hash,PASS,none
+s05-noise20db,duplicate_id,sample_id unique,PASS,none
+s05-noise20db,empty_transcript,nonempty stripped transcript,PASS,none
+s05-noise20db,gold_schema,Pydantic strict schema,PASS,none
+s05-noise20db,missing_file,audio exists,PASS,none
+s05-noise20db,sample_rate,16000 Hz,PASS,none
+s05-noise20db,corrupt_audio,mono finite nonempty audio,PASS,none
+s05-noise20db,duplicate_audio,unique PCM file hash,PASS,none
+s05-speed1.1,duplicate_id,sample_id unique,PASS,none
+s05-speed1.1,empty_transcript,nonempty stripped transcript,PASS,none
+s05-speed1.1,gold_schema,Pydantic strict schema,PASS,none
+s05-speed1.1,missing_file,audio exists,PASS,none
+s05-speed1.1,sample_rate,16000 Hz,PASS,none
+s05-speed1.1,corrupt_audio,mono finite nonempty audio,PASS,none
+s05-speed1.1,duplicate_audio,unique PCM file hash,PASS,none
+s06-clean,duplicate_id,sample_id unique,PASS,none
+s06-clean,empty_transcript,nonempty stripped transcript,PASS,none
+s06-clean,gold_schema,Pydantic strict schema,PASS,none
+s06-clean,missing_file,audio exists,PASS,none
+s06-clean,sample_rate,16000 Hz,PASS,none
+s06-clean,corrupt_audio,mono finite nonempty audio,PASS,none
+s06-clean,duplicate_audio,unique PCM file hash,PASS,none
+s06-noise20db,duplicate_id,sample_id unique,PASS,none
+s06-noise20db,empty_transcript,nonempty stripped transcript,PASS,none
+s06-noise20db,gold_schema,Pydantic strict schema,PASS,none
+s06-noise20db,missing_file,audio exists,PASS,none
+s06-noise20db,sample_rate,16000 Hz,PASS,none
+s06-noise20db,corrupt_audio,mono finite nonempty audio,PASS,none
+s06-noise20db,duplicate_audio,unique PCM file hash,PASS,none
+s06-speed1.1,duplicate_id,sample_id unique,PASS,none
+s06-speed1.1,empty_transcript,nonempty stripped transcript,PASS,none
+s06-speed1.1,gold_schema,Pydantic strict schema,PASS,none
+s06-speed1.1,missing_file,audio exists,PASS,none
+s06-speed1.1,sample_rate,16000 Hz,PASS,none
+s06-speed1.1,corrupt_audio,mono finite nonempty audio,PASS,none
+s06-speed1.1,duplicate_audio,unique PCM file hash,PASS,none
+s07-clean,duplicate_id,sample_id unique,PASS,none
+s07-clean,empty_transcript,nonempty stripped transcript,PASS,none
+s07-clean,gold_schema,Pydantic strict schema,PASS,none
+s07-clean,missing_file,audio exists,PASS,none
+s07-clean,sample_rate,16000 Hz,PASS,none
+s07-clean,corrupt_audio,mono finite nonempty audio,PASS,none
+s07-clean,duplicate_audio,unique PCM file hash,PASS,none
+s07-noise20db,duplicate_id,sample_id unique,PASS,none
+s07-noise20db,empty_transcript,nonempty stripped transcript,PASS,none
+s07-noise20db,gold_schema,Pydantic strict schema,PASS,none
+s07-noise20db,missing_file,audio exists,PASS,none
+s07-noise20db,sample_rate,16000 Hz,PASS,none
+s07-noise20db,corrupt_audio,mono finite nonempty audio,PASS,none
+s07-noise20db,duplicate_audio,unique PCM file hash,PASS,none
+s07-speed1.1,duplicate_id,sample_id unique,PASS,none
+s07-speed1.1,empty_transcript,nonempty stripped transcript,PASS,none
+s07-speed1.1,gold_schema,Pydantic strict schema,PASS,none
+s07-speed1.1,missing_file,audio exists,PASS,none
+s07-speed1.1,sample_rate,16000 Hz,PASS,none
+s07-speed1.1,corrupt_audio,mono finite nonempty audio,PASS,none
+s07-speed1.1,duplicate_audio,unique PCM file hash,PASS,none
+s08-clean,duplicate_id,sample_id unique,PASS,none
+s08-clean,empty_transcript,nonempty stripped transcript,PASS,none
+s08-clean,gold_schema,Pydantic strict schema,PASS,none
+s08-clean,missing_file,audio exists,PASS,none
+s08-clean,sample_rate,16000 Hz,PASS,none
+s08-clean,corrupt_audio,mono finite nonempty audio,PASS,none
+s08-clean,duplicate_audio,unique PCM file hash,PASS,none
+s08-noise20db,duplicate_id,sample_id unique,PASS,none
+s08-noise20db,empty_transcript,nonempty stripped transcript,PASS,none
+s08-noise20db,gold_schema,Pydantic strict schema,PASS,none
+s08-noise20db,missing_file,audio exists,PASS,none
+s08-noise20db,sample_rate,16000 Hz,PASS,none
+s08-noise20db,corrupt_audio,mono finite nonempty audio,PASS,none
+s08-noise20db,duplicate_audio,unique PCM file hash,PASS,none
+s08-speed1.1,duplicate_id,sample_id unique,PASS,none
+s08-speed1.1,empty_transcript,nonempty stripped transcript,PASS,none
+s08-speed1.1,gold_schema,Pydantic strict schema,PASS,none
+s08-speed1.1,missing_file,audio exists,PASS,none
+s08-speed1.1,sample_rate,16000 Hz,PASS,none
+s08-speed1.1,corrupt_audio,mono finite nonempty audio,PASS,none
+s08-speed1.1,duplicate_audio,unique PCM file hash,PASS,none
+s09-clean,duplicate_id,sample_id unique,PASS,none
+s09-clean,empty_transcript,nonempty stripped transcript,PASS,none
+s09-clean,gold_schema,Pydantic strict schema,PASS,none
+s09-clean,missing_file,audio exists,PASS,none
+s09-clean,sample_rate,16000 Hz,PASS,none
+s09-clean,corrupt_audio,mono finite nonempty audio,PASS,none
+s09-clean,duplicate_audio,unique PCM file hash,PASS,none
+s09-noise20db,duplicate_id,sample_id unique,PASS,none
+s09-noise20db,empty_transcript,nonempty stripped transcript,PASS,none
+s09-noise20db,gold_schema,Pydantic strict schema,PASS,none
+s09-noise20db,missing_file,audio exists,PASS,none
+s09-noise20db,sample_rate,16000 Hz,PASS,none
+s09-noise20db,corrupt_audio,mono finite nonempty audio,PASS,none
+s09-noise20db,duplicate_audio,unique PCM file hash,PASS,none
+s09-speed1.1,duplicate_id,sample_id unique,PASS,none
+s09-speed1.1,empty_transcript,nonempty stripped transcript,PASS,none
+s09-speed1.1,gold_schema,Pydantic strict schema,PASS,none
+s09-speed1.1,missing_file,audio exists,PASS,none
+s09-speed1.1,sample_rate,16000 Hz,PASS,none
+s09-speed1.1,corrupt_audio,mono finite nonempty audio,PASS,none
+s09-speed1.1,duplicate_audio,unique PCM file hash,PASS,none
+s10-clean,duplicate_id,sample_id unique,PASS,none
+s10-clean,empty_transcript,nonempty stripped transcript,PASS,none
+s10-clean,gold_schema,Pydantic strict schema,PASS,none
+s10-clean,missing_file,audio exists,PASS,none
+s10-clean,sample_rate,16000 Hz,PASS,none
+s10-clean,corrupt_audio,mono finite nonempty audio,PASS,none
+s10-clean,duplicate_audio,unique PCM file hash,PASS,none
+s10-noise20db,duplicate_id,sample_id unique,PASS,none
+s10-noise20db,empty_transcript,nonempty stripped transcript,PASS,none
+s10-noise20db,gold_schema,Pydantic strict schema,PASS,none
+s10-noise20db,missing_file,audio exists,PASS,none
+s10-noise20db,sample_rate,16000 Hz,PASS,none
+s10-noise20db,corrupt_audio,mono finite nonempty audio,PASS,none
+s10-noise20db,duplicate_audio,unique PCM file hash,PASS,none
+s10-speed1.1,duplicate_id,sample_id unique,PASS,none
+s10-speed1.1,empty_transcript,nonempty stripped transcript,PASS,none
+s10-speed1.1,gold_schema,Pydantic strict schema,PASS,none
+s10-speed1.1,missing_file,audio exists,PASS,none
+s10-speed1.1,sample_rate,16000 Hz,PASS,none
+s10-speed1.1,corrupt_audio,mono finite nonempty audio,PASS,none
+s10-speed1.1,duplicate_audio,unique PCM file hash,PASS,none
+s11-clean,duplicate_id,sample_id unique,PASS,none
+s11-clean,empty_transcript,nonempty stripped transcript,PASS,none
+s11-clean,gold_schema,Pydantic strict schema,PASS,none
+s11-clean,missing_file,audio exists,PASS,none
+s11-clean,sample_rate,16000 Hz,PASS,none
+s11-clean,corrupt_audio,mono finite nonempty audio,PASS,none
+s11-clean,duplicate_audio,unique PCM file hash,PASS,none
+s11-noise20db,duplicate_id,sample_id unique,PASS,none
+s11-noise20db,empty_transcript,nonempty stripped transcript,PASS,none
+s11-noise20db,gold_schema,Pydantic strict schema,PASS,none
+s11-noise20db,missing_file,audio exists,PASS,none
+s11-noise20db,sample_rate,16000 Hz,PASS,none
+s11-noise20db,corrupt_audio,mono finite nonempty audio,PASS,none
+s11-noise20db,duplicate_audio,unique PCM file hash,PASS,none
+s11-speed1.1,duplicate_id,sample_id unique,PASS,none
+s11-speed1.1,empty_transcript,nonempty stripped transcript,PASS,none
+s11-speed1.1,gold_schema,Pydantic strict schema,PASS,none
+s11-speed1.1,missing_file,audio exists,PASS,none
+s11-speed1.1,sample_rate,16000 Hz,PASS,none
+s11-speed1.1,corrupt_audio,mono finite nonempty audio,PASS,none
+s11-speed1.1,duplicate_audio,unique PCM file hash,PASS,none
+s00-clean,split_leakage,scenario/source/transcript do not cross splits,PASS,none
+s00-noise20db,split_leakage,scenario/source/transcript do not cross splits,PASS,none
+s00-speed1.1,split_leakage,scenario/source/transcript do not cross splits,PASS,none
+s01-clean,split_leakage,scenario/source/transcript do not cross splits,PASS,none
+s01-noise20db,split_leakage,scenario/source/transcript do not cross splits,PASS,none
+s01-speed1.1,split_leakage,scenario/source/transcript do not cross splits,PASS,none
+s02-clean,split_leakage,scenario/source/transcript do not cross splits,PASS,none
+s02-noise20db,split_leakage,scenario/source/transcript do not cross splits,PASS,none
+s02-speed1.1,split_leakage,scenario/source/transcript do not cross splits,PASS,none
+s03-clean,split_leakage,scenario/source/transcript do not cross splits,PASS,none
+s03-noise20db,split_leakage,scenario/source/transcript do not cross splits,PASS,none
+s03-speed1.1,split_leakage,scenario/source/transcript do not cross splits,PASS,none
+s04-clean,split_leakage,scenario/source/transcript do not cross splits,PASS,none
+s04-noise20db,split_leakage,scenario/source/transcript do not cross splits,PASS,none
+s04-speed1.1,split_leakage,scenario/source/transcript do not cross splits,PASS,none
+s05-clean,split_leakage,scenario/source/transcript do not cross splits,PASS,none
+s05-noise20db,split_leakage,scenario/source/transcript do not cross splits,PASS,none
+s05-speed1.1,split_leakage,scenario/source/transcript do not cross splits,PASS,none
+s06-clean,split_leakage,scenario/source/transcript do not cross splits,PASS,none
+s06-noise20db,split_leakage,scenario/source/transcript do not cross splits,PASS,none
+s06-speed1.1,split_leakage,scenario/source/transcript do not cross splits,PASS,none
+s07-clean,split_leakage,scenario/source/transcript do not cross splits,PASS,none
+s07-noise20db,split_leakage,scenario/source/transcript do not cross splits,PASS,none
+s07-speed1.1,split_leakage,scenario/source/transcript do not cross splits,PASS,none
+s08-clean,split_leakage,scenario/source/transcript do not cross splits,PASS,none
+s08-noise20db,split_leakage,scenario/source/transcript do not cross splits,PASS,none
+s08-speed1.1,split_leakage,scenario/source/transcript do not cross splits,PASS,none
+s09-clean,split_leakage,scenario/source/transcript do not cross splits,PASS,none
+s09-noise20db,split_leakage,scenario/source/transcript do not cross splits,PASS,none
+s09-speed1.1,split_leakage,scenario/source/transcript do not cross splits,PASS,none
+s10-clean,split_leakage,scenario/source/transcript do not cross splits,PASS,none
+s10-noise20db,split_leakage,scenario/source/transcript do not cross splits,PASS,none
+s10-speed1.1,split_leakage,scenario/source/transcript do not cross splits,PASS,none
+s11-clean,split_leakage,scenario/source/transcript do not cross splits,PASS,none
+s11-noise20db,split_leakage,scenario/source/transcript do not cross splits,PASS,none
+s11-speed1.1,split_leakage,scenario/source/transcript do not cross splits,PASS,none
+ALL,audio_leakage,audio hashes do not cross splits,PASS,none

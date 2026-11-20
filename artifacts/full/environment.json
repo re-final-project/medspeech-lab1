@@ -1,0 +1,22 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.22621-SP0",
+  "processor": "Intel64 Family 6 Model 140 Stepping 1, GenuineIntel",
+  "logical_cpus": 8,
+  "packages": {
+    "numpy": "2.3.5",
+    "pydantic": "2.14.3",
+    "fastapi": "0.115.12",
+    "pytest": "8.3.5",
+    "torch": "2.6.0",
+    "transformers": "4.49.0",
+    "peft": "0.14.0",
+    "soundfile": "0.13.1"
+  },
+  "cpu_model": "11th Gen Intel(R) Core(TM) i5-1130G7 @ 1.10GHz",
+  "torch_runtime": "2.6.0+cpu",
+  "quantization_engine": "x86",
+  "cuda_available": false,
+  "cuda_device": null,
+  "cpu_threads": 2
+}

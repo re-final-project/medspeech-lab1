@@ -1,0 +1,146 @@
+[
+  {
+    "sample_id": "s10-clean",
+    "source": "gold",
+    "prompt": "basic",
+    "input": "발열 상담 때문에 왔어요. 오한이 있고 기침은 없어요. 아세트아미노펜 복용했고 체온은 38.2 도예요.",
+    "raw": "발열 상담 주요 요소는 명령어. 진열상황과 동일한 방식으로 주어진 데이터를 처리하고 결과를 반환합니다. 주어진 데이터의 형태는 다음과 같습니다.\n\n| $defs | string |\n| --- | --- |\n| string | string |\n\n| string | string |\n| string | string |\n\n| string | string |\n| string | string |\n\n| string | string |\n| string | string |\n\n| string | string |\n| string | string |\n\n| string | string |\n| string | string |\n\n| string | string |\n| string | string |\n\n| string | string |\n| string | string |\n\n| string | string |\n| string | string |\n\n| string | string |\n| string | string |\n\n| string | string |\n| string | string |\n\n| string | string |\n| string | string |\n\n| string | string |\n| string | string |\n\n| string | string |\n| string | string |\n\n| string | string |\n| string | string |\n\n| string | string |\n| string | string |\n\n| string | string |\n| string | string |\n\n| string | string |\n| string | string |\n\n| string | string |\n| string | string |\n\n| string | string |\n| string | string |\n\n| string | string",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s10-noise20db",
+    "source": "gold",
+    "prompt": "basic",
+    "input": "발열 상담 때문에 왔어요. 오한이 있고 기침은 없어요. 아세트아미노펜 복용했고 체온은 38.2 도예요.",
+    "raw": "발열 상담 주요 요소는 명령어. 진열상황과 동일한 방식으로 주어진 데이터를 처리하고 결과를 반환합니다. 주어진 데이터의 형태는 다음과 같습니다.\n\n| $defs | string |\n| --- | --- |\n| string | string |\n\n| string | string |\n| string | string |\n\n| string | string |\n| string | string |\n\n| string | string |\n| string | string |\n\n| string | string |\n| string | string |\n\n| string | string |\n| string | string |\n\n| string | string |\n| string | string |\n\n| string | string |\n| string | string |\n\n| string | string |\n| string | string |\n\n| string | string |\n| string | string |\n\n| string | string |\n| string | string |\n\n| string | string |\n| string | string |\n\n| string | string |\n| string | string |\n\n| string | string |\n| string | string |\n\n| string | string |\n| string | string |\n\n| string | string |\n| string | string |\n\n| string | string |\n| string | string |\n\n| string | string |\n| string | string |\n\n| string | string |\n| string | string |\n\n| string | string |\n| string | string |\n\n| string | string",
+    "cache_hit": true
+  },
+  {
+    "sample_id": "s10-speed1.1",
+    "source": "gold",
+    "prompt": "basic",
+    "input": "발열 상담 때문에 왔어요. 오한이 있고 기침은 없어요. 아세트아미노펜 복용했고 체온은 38.2 도예요.",
+    "raw": "발열 상담 주요 요소는 명령어. 진열상황과 동일한 방식으로 주어진 데이터를 처리하고 결과를 반환합니다. 주어진 데이터의 형태는 다음과 같습니다.\n\n| $defs | string |\n| --- | --- |\n| string | string |\n\n| string | string |\n| string | string |\n\n| string | string |\n| string | string |\n\n| string | string |\n| string | string |\n\n| string | string |\n| string | string |\n\n| string | string |\n| string | string |\n\n| string | string |\n| string | string |\n\n| string | string |\n| string | string |\n\n| string | string |\n| string | string |\n\n| string | string |\n| string | string |\n\n| string | string |\n| string | string |\n\n| string | string |\n| string | string |\n\n| string | string |\n| string | string |\n\n| string | string |\n| string | string |\n\n| string | string |\n| string | string |\n\n| string | string |\n| string | string |\n\n| string | string |\n| string | string |\n\n| string | string |\n| string | string |\n\n| string | string |\n| string | string |\n\n| string | string |\n| string | string |\n\n| string | string",
+    "cache_hit": true
+  },
+  {
+    "sample_id": "s11-clean",
+    "source": "gold",
+    "prompt": "basic",
+    "input": "검사 상담 때문에 왔어요. 피로가 있고 흉통은 없어요. 로수바스타틴 복용하고 LDL은 110 mg/dL예요.",
+    "raw": "\"무료\"는 없어요. 이건 \"무료\"의 의미를 가진 방문 목적을 찾으려면 무엇인가를 입력하세요. \"무료\"의 type: object 형태로 입력해 주세요. 예를 들어 \"무료\"의 type: object 형태로 입력해 주시면 됩니다. \"무료\"의 type: object 형태로 입력해 주시면 됩니다. \"무료\"의 type: object 형태로 입력해 주시면 됩니다. \"무료\"의 type: object 형태로 입력해 주시면 됩니다. \"무료\"의 type: object 형태로 입력해 주시면 됩니다. \"무료\"의 type: object 형태로 입력해 주시면 됩니다. \"무료\"의 type: object 형태로 입력해 주시면 됩니다. \"무료\"의 type: object 형태로 입력해 주시면 됩니다. \"무료\"의 type: object 형태로 입력해 주시면 됩니다. \"무료\"의 type: object 형태로 입력해 주시면 됩니다. \"무료\"의 type: object 형태로 입력해 주시면 됩니다. \"무료\"의 type:",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s11-noise20db",
+    "source": "gold",
+    "prompt": "basic",
+    "input": "검사 상담 때문에 왔어요. 피로가 있고 흉통은 없어요. 로수바스타틴 복용하고 LDL은 110 mg/dL예요.",
+    "raw": "\"무료\"는 없어요. 이건 \"무료\"의 의미를 가진 방문 목적을 찾으려면 무엇인가를 입력하세요. \"무료\"의 type: object 형태로 입력해 주세요. 예를 들어 \"무료\"의 type: object 형태로 입력해 주시면 됩니다. \"무료\"의 type: object 형태로 입력해 주시면 됩니다. \"무료\"의 type: object 형태로 입력해 주시면 됩니다. \"무료\"의 type: object 형태로 입력해 주시면 됩니다. \"무료\"의 type: object 형태로 입력해 주시면 됩니다. \"무료\"의 type: object 형태로 입력해 주시면 됩니다. \"무료\"의 type: object 형태로 입력해 주시면 됩니다. \"무료\"의 type: object 형태로 입력해 주시면 됩니다. \"무료\"의 type: object 형태로 입력해 주시면 됩니다. \"무료\"의 type: object 형태로 입력해 주시면 됩니다. \"무료\"의 type: object 형태로 입력해 주시면 됩니다. \"무료\"의 type:",
+    "cache_hit": true
+  },
+  {
+    "sample_id": "s11-speed1.1",
+    "source": "gold",
+    "prompt": "basic",
+    "input": "검사 상담 때문에 왔어요. 피로가 있고 흉통은 없어요. 로수바스타틴 복용하고 LDL은 110 mg/dL예요.",
+    "raw": "\"무료\"는 없어요. 이건 \"무료\"의 의미를 가진 방문 목적을 찾으려면 무엇인가를 입력하세요. \"무료\"의 type: object 형태로 입력해 주세요. 예를 들어 \"무료\"의 type: object 형태로 입력해 주시면 됩니다. \"무료\"의 type: object 형태로 입력해 주시면 됩니다. \"무료\"의 type: object 형태로 입력해 주시면 됩니다. \"무료\"의 type: object 형태로 입력해 주시면 됩니다. \"무료\"의 type: object 형태로 입력해 주시면 됩니다. \"무료\"의 type: object 형태로 입력해 주시면 됩니다. \"무료\"의 type: object 형태로 입력해 주시면 됩니다. \"무료\"의 type: object 형태로 입력해 주시면 됩니다. \"무료\"의 type: object 형태로 입력해 주시면 됩니다. \"무료\"의 type: object 형태로 입력해 주시면 됩니다. \"무료\"의 type: object 형태로 입력해 주시면 됩니다. \"무료\"의 type:",
+    "cache_hit": true
+  },
+  {
+    "sample_id": "s10-clean",
+    "source": "gold",
+    "prompt": "grounded",
+    "input": "발열 상담 때문에 왔어요. 오한이 있고 기침은 없어요. 아세트아미노펜 복용했고 체온은 38.2 도예요.",
+    "raw": "외장 주제는 \"명시된 방문 목적\"에 대한 정보를 제공합니다. 이는 \"증상\"에 대해 설명하는 것이 아니라, \"명시된 방문 목적\"에 대한 정보를 제공합니다. 이는 \"증상\"에 대해 설명하는 것이 아니라, \"명시된 방문 목적\"에 대한 정보를 제공합니다. 이는 \"증상\"에 대해 설명하는 것이 아니라, \"명시된 방문 목적\"에 대한 정보를 제공합니다. 이는 \"증상\"에 대해 설명하는 것이 아니라, \"명시된 방문 목적\"에 대한 정보를 제공합니다. 이는 \"증상\"에 대해 설명하는 것이 아니라, \"명시된 방문 목적\"에 대한 정보를 제공합니다. 이는 \"증상\"에 대해 설명하는 것이 아니라, \"명시된 방문 목적\"에 대한 정보를 제공합니다. 이는 \"증상\"에 대해 설명하는 것이 아니라, \"명시된 방문 목적\"에 대한 정보를 제공합니다. 이는 \"증상\"에 대해 설명하는 것이 아니라, \"명시된 방문 목적\"에 대한 정보를 제공합니다. 이는 \"증상\"에 대해 설명하는 것이 아니라, \"명시된 방문 목적\"에",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s10-noise20db",
+    "source": "gold",
+    "prompt": "grounded",
+    "input": "발열 상담 때문에 왔어요. 오한이 있고 기침은 없어요. 아세트아미노펜 복용했고 체온은 38.2 도예요.",
+    "raw": "외장 주제는 \"명시된 방문 목적\"에 대한 정보를 제공합니다. 이는 \"증상\"에 대해 설명하는 것이 아니라, \"명시된 방문 목적\"에 대한 정보를 제공합니다. 이는 \"증상\"에 대해 설명하는 것이 아니라, \"명시된 방문 목적\"에 대한 정보를 제공합니다. 이는 \"증상\"에 대해 설명하는 것이 아니라, \"명시된 방문 목적\"에 대한 정보를 제공합니다. 이는 \"증상\"에 대해 설명하는 것이 아니라, \"명시된 방문 목적\"에 대한 정보를 제공합니다. 이는 \"증상\"에 대해 설명하는 것이 아니라, \"명시된 방문 목적\"에 대한 정보를 제공합니다. 이는 \"증상\"에 대해 설명하는 것이 아니라, \"명시된 방문 목적\"에 대한 정보를 제공합니다. 이는 \"증상\"에 대해 설명하는 것이 아니라, \"명시된 방문 목적\"에 대한 정보를 제공합니다. 이는 \"증상\"에 대해 설명하는 것이 아니라, \"명시된 방문 목적\"에 대한 정보를 제공합니다. 이는 \"증상\"에 대해 설명하는 것이 아니라, \"명시된 방문 목적\"에",
+    "cache_hit": true
+  },
+  {
+    "sample_id": "s10-speed1.1",
+    "source": "gold",
+    "prompt": "grounded",
+    "input": "발열 상담 때문에 왔어요. 오한이 있고 기침은 없어요. 아세트아미노펜 복용했고 체온은 38.2 도예요.",
+    "raw": "외장 주제는 \"명시된 방문 목적\"에 대한 정보를 제공합니다. 이는 \"증상\"에 대해 설명하는 것이 아니라, \"명시된 방문 목적\"에 대한 정보를 제공합니다. 이는 \"증상\"에 대해 설명하는 것이 아니라, \"명시된 방문 목적\"에 대한 정보를 제공합니다. 이는 \"증상\"에 대해 설명하는 것이 아니라, \"명시된 방문 목적\"에 대한 정보를 제공합니다. 이는 \"증상\"에 대해 설명하는 것이 아니라, \"명시된 방문 목적\"에 대한 정보를 제공합니다. 이는 \"증상\"에 대해 설명하는 것이 아니라, \"명시된 방문 목적\"에 대한 정보를 제공합니다. 이는 \"증상\"에 대해 설명하는 것이 아니라, \"명시된 방문 목적\"에 대한 정보를 제공합니다. 이는 \"증상\"에 대해 설명하는 것이 아니라, \"명시된 방문 목적\"에 대한 정보를 제공합니다. 이는 \"증상\"에 대해 설명하는 것이 아니라, \"명시된 방문 목적\"에 대한 정보를 제공합니다. 이는 \"증상\"에 대해 설명하는 것이 아니라, \"명시된 방문 목적\"에",
+    "cache_hit": true
+  },
+  {
+    "sample_id": "s11-clean",
+    "source": "gold",
+    "prompt": "grounded",
+    "input": "검사 상담 때문에 왔어요. 피로가 있고 흉통은 없어요. 로수바스타틴 복용하고 LDL은 110 mg/dL예요.",
+    "raw": "성공적으로 검사하면 됩니다. 성공적으로 검사하면 안됩니다.",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s11-noise20db",
+    "source": "gold",
+    "prompt": "grounded",
+    "input": "검사 상담 때문에 왔어요. 피로가 있고 흉통은 없어요. 로수바스타틴 복용하고 LDL은 110 mg/dL예요.",
+    "raw": "성공적으로 검사하면 됩니다. 성공적으로 검사하면 안됩니다.",
+    "cache_hit": true
+  },
+  {
+    "sample_id": "s11-speed1.1",
+    "source": "gold",
+    "prompt": "grounded",
+    "input": "검사 상담 때문에 왔어요. 피로가 있고 흉통은 없어요. 로수바스타틴 복용하고 LDL은 110 mg/dL예요.",
+    "raw": "성공적으로 검사하면 됩니다. 성공적으로 검사하면 안됩니다.",
+    "cache_hit": true
+  },
+  {
+    "sample_id": "s10-clean",
+    "source": "A",
+    "prompt": "basic",
+    "input": " 발엘 선단때문에 왔어요. 오안이 있고 기침은 없어요. 아세트암인 오펜 폭영에 있고, 천은 38.2 도이예요.",
+    "raw": "의 유형과 사용법을 설명해 주세요.",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s10-noise20db",
+    "source": "A",
+    "prompt": "basic",
+    "input": " 발엘 선담때문에 왔어요. 오안이 있고 기침은 없어요. 아세트암인 후팬 폭영했고, 천은 38.2 도이예요.",
+    "raw": "유아의 경우, 유아의 경우, 유아의 경우, 유아의 경우, 유아의 경우, 유아의 경우, 유아의 경우, 유아의 경우, 유아의 경우, 유아의 경우, 유아의 경우, 유아의 경우, 유아의 경우, 유아의 경우, 유아의 경우, 유아의 경우, 유아의 경우, 유아의 경우, 유아의 경우, 유아의 경우, 유아의 경우, 유아의 경우, 유아의 경우, 유아의 경우, 유아의 경우, 유아의 경우, 유아의 경우, 유아의 경우, 유아의 경우, 유아의 경우, 유아의 경우, 유아의 경우, 유아의 경우, 유아의 경우, 유아의 경우, 유아의 경우, 유아의 경우, 유아의 경우, 유아의 경우, 유아의 경우, 유아의 경우, 유아의 경우, 유아의 경우, 유아의 경우, 유아의 경우, 유아의 경우, 유아의 경우, 유아의 경우, 유아의 경우, 유아의 경우, 유아의 경우, 유",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s10-speed1.1",
+    "source": "A",
+    "prompt": "basic",
+    "input": " 발엘 선간때문에 왔어요. 오안이 있고 기침은 없어요. 아세트의 미는 펜 폭영했고, 천은 38.2 도이예요.",
+    "raw": "이진 검증을 통해 정확한 결과를 얻기 위해 필요한 모든 정보를 포함하는 JSON 형식의 데이터베이스를 제공합니다. 이러한 데이터베이스에는 각각의 데이터가 포함되어 있으며, 각 데이터는 해당 데이터의 이름, 값, 그리고 이진 검증을 통해 정확하게 결정된 결과를 나타냅니다. 이러한 데이터베이스는 JSON으로 구성되며, 각 데이터는 JSON로 구성되어 있으며, 각 데이터는 해당 데이터의 이름, 값, 그리고 이진 검증을 통해 정확하게 결정된 결과를 나타냅니다. 이러한 데이터베이스는 JSON으로 구성되며, 각 데이터는 해당 데이터의 이름, 값, 그리고 이진 검증을 통해 정확하게 결정된 결과를 나타냅니다. 이러한 데이터베이스는 JSON으로 구성되며, 각 데이터는 해당 데이터의 이름, 값, 그리고 이진 검증을 통해 정확하게 결정된 결과를 나타냅니다. 이러한 데이터베이스는 JSON으로 구성되며, 각 데이터는 해당 데이터의 이름, 값, 그리고 이진 검증을 통해 정확하게 결정된 결과를 나타냅니다. 이러한 데이터베이스는 JSON으로 구성되며",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s11-clean",
+    "source": "A",
+    "prompt": "basic",
+    "input": " 검사 상담때문에 왔어요. 필요가 있고, 형통은 없어요. 노수바 스피친 보기와 엘지에 른 1001g 버텨 시리터예요.",
+    "raw": "이름의 $defs는 최신 데이터를 가진 JSON으로 변환합니다. 이 이름의 $defs는 최신 데이터를 가진 JSON로 변환합니다. 이 이름의 $defs는 최신 데이터를 가진 JSON으로 변환합니다. 이 이름의 $defs는 최신 데이터를 가진 JSON으로 변환합니다. 이 이름의 $defs는 최신 데이터를 가진 JSON으로 변환합니다. 이 이름의 $defs는 최신 데이터를 가진 JSON으로 변환합니다. 이 이름의 $defs는 최신 데이터를 가진 JSON으로 변환합니다. 이 이름의 $defs는 최신 데이터를 가진 JSON으로 변환합니다. 이 이름의 $defs는 최신 데이터를 가진 JSON으로 변환합니다. 이 이름의 $defs는 최신 데이터를 가진 JSON으로 변환합니다. 이 이름의 $defs는 최신 데이터를 가진 JSON으로 변환합니다. 이 이름의 $defs는 최신 데이터를 가진 JSON으로 변환합니다. 이 이름의 $defs는 최신 데이터를 가진 JSON으로 변환합니다. 이 이름의 $defs는 최신 데이터를 가진 JSON으로 변환합니다. 이 이름의 $",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s11-noise20db",
+    "source": "A",
+    "prompt": "basic",
+    "input": " 검사 상담때문에 왔어요. 필요가 있고, 툭통은 높어요. 로수바 스피친 보기화고 LG에는 10000mAh 버텨 시리터예요.",
+    "raw": "검사 상담의 전자기기에 오는 편의성, 푸른색이 있는 전자기기에 대한 전자기기의 전자기기의 전자기기의 전자기기의 전자기기의 전자기기의 전자기기의 전자기기의 전자기기의 전자기기의 전자기기의 전자기기의 전자기기의 전자기기의 전자기기의 전자기기의 전자기기의 전자기기의 전자기기의 전자기기의 전자기기의 전자기기의 전자기기의 전자기기의 전자기기의 전자기기의 전자기기의 전자기기의 전자기기의 전자기기의 전자기기의 전자기기의 전자기기의 전자기기의 전자기기의 전자기기의 전자기기의 전자기기의 전자기기의 전자기기의 전자기기의 전자기기의 전자기기의 전자기기의 전자기기의 전",
+    "cache_hit": false
+  },
+  {
+    "sample_id": "s11-speed1.1",
+    "source": "A",
+    "prompt": "basic",
+    "input": " 검사 상담때문에 왔어요. 필요가 있고, 형통은 없어요. 이 수바스 피친 보기와 엘리에 른 100mm의 버텨 시리터예요.",
+    "raw": "검사 주어지 수의 표면과 유입, 증상, 부정 증상, 수치와 단위로 제공하는 정보를 받아들이고, 검사 결과와 유입, 증상, 부정 증상이 일치하는지 확인하시오. 검사 결과는 '검사'라는 이름으로 정의되었습니다.\n\n검사의 주어지는 다음과 같습니다:\n\n- $defs: 지식에 대한 용도를 나타내는 문법을 사용합니다.\n- $defs/Evidence: 검사의 주어지는 추가적인 정보를 나타냅니다.\n- $Evidence: 검사의 결과를 나타냅니다.\n- $Evidence/Type: 검사의 결과의 종류를 나타냅니다.\n- $Evidence/Property: 검사의 주어지는 주어지를 나타냅니다.\n- $Evidence/AdditionalProperties: 검사의 주어지는 추가적인 정보를 나타냅니다.\n- $Evidence/Property/Type: 검사의 주어지는 주어지를 추가적인 정보를 나타냅니다.\n- $Evident: 검사의 결과를 나타낼 수 있는 문법을 나타냅니다.\n- $Evident/Type: 검사",
+    "cache_hit": false
+  }
+]
