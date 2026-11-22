@@ -1,0 +1,8 @@
+{
+  "reference_transcript": "머리가 계속 아프고 구토는 안 했어요.",
+  "model": "facebook/mms-tts-kor",
+  "revision": "1b6491366d2ed6ea8e4e735607155d9f0110df29",
+  "kind": "synthetic_tts_not_patient_audio",
+  "duration_seconds": 4.144,
+  "license": "CC-BY-NC-4.0; see reports/data_license.md"
+}

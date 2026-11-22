@@ -1,0 +1,38 @@
+[
+  {
+    "normal": {
+      "downstreamHidden": false,
+      "expanded": "false",
+      "massHidden": true,
+      "state": "normal"
+    }
+  },
+  {
+    "mriHidden": {
+      "comparisonImaging": null,
+      "diagram": "blocked",
+      "imaging": "영상 정보 없음",
+      "report": "",
+      "toggle": "가상 MRI 판독문 표시하기"
+    }
+  },
+  {
+    "emptyTranscript": {
+      "imaging": "영상 정보 없음",
+      "label": "빈 전사문 · STT 미실행",
+      "result": "예시 정답 · 한정 문자열 주석 · 모델 결과 아님빈 전사문 · 예시 정답도 평가하지 않습니다.빈 전사문 · 구조화 미실행",
+      "structure": "empty_transcript"
+    }
+  },
+  {
+    "restoredMock": {
+      "imaging": "폐쇄 관련 위치 · 판독문은 '압박'을 기술중뇌수도관근거: 송과체 부위 종괴가 중뇌수도관을 압박한다.확장된 뇌실측뇌실근거: 측뇌실과 제3뇌실이 확장되어 폐쇄성 수두증을 시사한다.확장된 뇌실제3뇌실근거: 측뇌실과 제3뇌실이 확장되어 폐쇄성 수두증을 시사한다.",
+      "label": "모의 전사 오류 · STT 미실행",
+      "left": "예시 정답 · 한정 문자열 주석 · 모델 결과 아님두통있음근거: 머리가 계속 아프고구토없음근거: 구토는 안 했어요구조화 모델 미실행",
+      "marks": [
+        "는 안"
+      ],
+      "right": "예시 정답 · 한정 문자열 주석 · 모델 결과 아님두통있음근거: 머리가 계속 아프고구토있음근거: 구토를 했어요구조화 모델 미실행"
+    }
+  }
+]

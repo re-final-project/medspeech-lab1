@@ -44,7 +44,7 @@ py -3.12 -m venv .venv
 
 UI의 ‘합성 음성으로 STT·LLM 실행’도 같은 경로를 호출합니다. `MEDSPEECH_MODE=smoke`인 서버는 대역 모델을 실제 STT로 표시하지 않고 모델 미실행 상태를 반환합니다. 모델 환경이 없거나 실행에 실패해도 예시 정답을 실제 출력으로 채우지 않습니다. LLM 스키마 오류 시 실제 STT는 유지하고 음성 구조화는 null로 반환합니다. `/demo/api/run`의 HTTP 200은 실행 상태 envelope 수신을 뜻하며, 구조화 성공은 반드시 `execution.structure == "completed"`로 판단합니다. 웹 요청은 사례 원음이나 전사를 파일로 저장하지 않고, `demo run` CLI만 가상 사례의 실험 기록을 저장합니다.
 
-새 데모는 [실행·검증 보고서](reports/demo_report.md)에 정리했습니다. 실제 클릭에 대한 브라우저 시각 검증은 자동화 정책 차단으로 미완료이며, 전환·숨김·실패 상태의 동작은 실제 HTML/JS를 실행하는 DOM 단위 테스트로 검증했습니다. 선택적인 DOM 테스트는 Node.js와 개발 의존성이 필요합니다.
+기본 데모의 초기 검증은 [실행·검증 보고서](reports/demo_report.md)에 정리했습니다. 당시 브라우저 검증은 정책 차단으로 미완료였으며, 2026-11-22 전사 비교 확장에서는 실제 브라우저 연결·클릭 검증도 완료했습니다([비교 기능 보고서](reports/comparison_report.md)). 선택적인 DOM 테스트는 Node.js와 개발 의존성이 필요합니다.
 
 ```powershell
 npm install
@@ -58,6 +58,27 @@ npm run test:ui
 .\.venv\Scripts\python.exe tools\run_demo_windows_copy_cache.py generate-audio
 .\.venv\Scripts\python.exe tools\run_demo_windows_copy_cache.py run
 ```
+
+### 전사 오류 비교
+
+같은 페이지의 **전사 오류 비교** 영역에서 원본과 전사를 비교합니다. 넓은 화면에서는 두 열, 좁은 화면에서는 읽기 쉬운 세로 배열입니다. 서로 다른 문자 구간을 강조하고 두통·구토의 「있음 / 없음 / 언급 없음」과 근거 문구를 표시합니다. 비교용 원본은 `머리가 계속 아프고 구토는 안 했어요.`이며, 기존 긍정 발화·합성 음성을 덮어쓰지 않습니다.
+
+- full 모델 의존성과 저장된 실제 실행 결과가 있으면 그 전사를 표시하고 **저장된 결과 · 현재 요청에서 재실행 안 함**을 알립니다. 실제 STT 실행 버튼으로 다시 실행할 수 있습니다.
+- 모델 환경/실행 결과가 없으면 `머리가 계속 아프고 구토를 했어요.`를 **모의 전사 오류 · STT 미실행**으로 표시합니다. ‘모의 전사 오류 보기’ 버튼으로 언제든 이 예시를 선택할 수 있습니다. 이때 `stt_transcript`는 null입니다.
+- 실제 구조화에는 기존 `LocalLLM`, `Consultation`, `grounded()`를 재사용합니다. 실패한 모델 결과는 null로 두고, 별도 **예시 정답 · 한정 문자열 주석 · 모델 결과 아님**으로 시연용 상태를 표시합니다. 예시에서는 두통 양쪽 있음, 구토 원본 없음/모의 전사 있음입니다.
+- 직접 수정한 전사는 실제 STT로 표시하지 않습니다. 빈 전사는 ‘언급 없음’으로 채우지 않고 **빈 전사문 · 평가 불가**로 처리합니다. 규칙 주석은 이 가상 발화의 한정된 표현만 다루며, 일반 한국어 부정 해석이나 맞춤법 복원 모델이 아닙니다.
+- 전사문 편집과 MRI 소견은 독립적입니다. 판독문을 끄면 기존 소견과 비교 JSON 모두 ‘영상 정보 없음’/null이고, **가상 시나리오 · 교육용 개념도**는 남습니다. 증상에서 폐쇄·종양 종류를 추정하지 않습니다.
+
+```powershell
+# full 설치 및 모델 SHA 설정은 위 절차와 동일합니다.
+.\.venv\Scripts\python.exe -m medspeech.comparison generate-audio
+.\.venv\Scripts\python.exe -m medspeech.comparison run
+.\.venv\Scripts\python.exe -m medspeech.demo serve --port 8765
+# 선택적 Windows 복사 캐시 경로:
+.\.venv\Scripts\python.exe tools\run_comparison_windows_copy_cache.py run
+```
+
+비교용 합성 음성은 `data/demo/comparison_patient.wav`, 실제 결과는 `artifacts/comparison/model_run.json`에 기록합니다. 웹 요청은 새 결과를 파일로 보관하지 않습니다. CLI만 가상 사례의 실험 기록을 저장합니다. [전체 검증·실제 모델 실행 범위](reports/comparison_report.md)와 [화면 예시](reports/comparison-preview.jpg)를 확인하세요.
 
 실제 모델 설치와 데이터 생성·QC·학습·평가 순서:
 

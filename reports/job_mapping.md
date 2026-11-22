@@ -15,6 +15,7 @@
 | 음성→텍스트→구조화 오류 전파 | `runner.py:evaluate` | gold vs fixture_A/B 결과, full 실행 시 gold vs A/B/C | 수치 오인식·부정 반전 사례 |
 | 추론 서비스 | `api.py:create_app` | `artifacts/smoke/api_smoke.json`, API pytest | API 검증과 보관 정책 |
 | 교육용 사례 UI·출처 분리 | `demo.py`, `web/`, `tests/test_demo.py`, `tests/demo_dom.test.cjs` | `artifacts/demo/model_run.json`, `reports/demo_verification.json` | `demo_report.md`: 모델 미실행/실패·MRI 숨김·근거 경계 |
+| 부정 표현 전사 오류·증상 상태 비교 | `comparison.py`, `web/comparison.js`, `tests/test_comparison.py` | `artifacts/comparison/model_run.json`, `reports/comparison_verification.json` | `comparison_report.md`: 실제/모의 전사·예시 정답·MRI 독립성 |
 | 재현 가능한 실험 관리 | `cli.py`, `configs/full.json`, `adapters.py:resolve` | 환경·설정·모델 SHA·샘플 ID·실패 증거 | 실행 기록과 미실행 항목 |
 
 면접에서 설명할 핵심: 스키마 통과와 원문 근거 존재가 정답 보존을 보증하지 않는다. 38.2→32.8처럼 STT가 수치를 바꾸면 추출기는 잘못된 수치를 근거 있게 반환할 수 있다. 따라서 STT 오류와 추출기 자체 오류를 별도 입력 조건으로 측정해야 한다.

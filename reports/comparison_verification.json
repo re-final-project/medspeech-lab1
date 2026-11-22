@@ -1,0 +1,85 @@
+{
+  "date": "2026-11-22",
+  "commands": [
+    {
+      "name": "pytest",
+      "command": [
+        "C:\\Users\\정준하\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-m",
+        "pytest",
+        "-q",
+        "-s",
+        "-p",
+        "no:cacheprovider",
+        "-p",
+        "no:tmpdir",
+        "tests"
+      ],
+      "exit_code": 0,
+      "seconds": 3.67922109994106
+    },
+    {
+      "name": "existing_dom",
+      "command": [
+        "node",
+        "tests/demo_dom.test.cjs"
+      ],
+      "exit_code": 0,
+      "seconds": 1.722378799924627
+    },
+    {
+      "name": "comparison_dom",
+      "command": [
+        "node",
+        "tests/comparison_dom.test.cjs"
+      ],
+      "exit_code": 0,
+      "seconds": 1.0683932999381796
+    },
+    {
+      "name": "smoke",
+      "command": [
+        "C:\\Users\\정준하\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-m",
+        "medspeech.cli",
+        "smoke",
+        "--base",
+        "C:\\Users\\정준하\\Documents\\Codex\\2026-11-20\\llm-medspeech-lab-stt-llm-qc\\work\\publish-medspeech-lab1\\work\\comparison-smoke-check"
+      ],
+      "exit_code": 0,
+      "seconds": 1.6098102000541985
+    }
+  ],
+  "http": {
+    "/demo/aqueduct": {
+      "status": 200,
+      "bytes": 10586
+    },
+    "/demo/assets/comparison.js": {
+      "status": 200,
+      "bytes": 6973
+    },
+    "/demo/api/compare": {
+      "status": 200,
+      "bytes": 2022
+    },
+    "/demo/api/compare?source=simulated": {
+      "status": 200,
+      "bytes": 1715
+    },
+    "/demo/api/compare?include_mri=false": {
+      "status": 200,
+      "bytes": 1525
+    },
+    "/docs": {
+      "status": 200,
+      "bytes": 937
+    }
+  },
+  "actual_stt": " 머리가 계속 아프고, 구톤은 안 했어요.",
+  "actual_structure": [
+    "schema_error",
+    "schema_error"
+  ],
+  "browser": "Real IAB click/DOM/screenshot verification completed; see comparison-browser-checks.json and comparison-preview.jpg"
+}

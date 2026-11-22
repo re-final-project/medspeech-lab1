@@ -4,7 +4,9 @@
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <title>뇌실 통로 폐쇄 가상 사례 | medspeech-lab</title>
   <link rel="stylesheet" href="/demo/assets/style.css">
+  <link rel="stylesheet" href="/demo/assets/comparison.css">
   <script src="/demo/assets/app.js" defer></script>
+  <script src="/demo/assets/comparison.js" defer></script>
 </head>
 <body>
   <header class="topbar"><a class="brand" href="/demo/aqueduct"><span class="brand-mark">m</span> medspeech<span class="brand-light">-lab</span></a><span class="eyebrow">KOREAN MEDICAL SPEECH LAB</span><a href="/docs">API 문서</a></header>
@@ -18,7 +20,7 @@
       <div class="section-heading"><div><span class="mini-label">SCENARIO FLOW</span><h2 id="diagram-heading">뇌척수액 통로 <span class="chip">개념도</span></h2></div>
         <div class="segmented" aria-label="개념도 상태"><button id="normal-button" type="button" aria-pressed="false">정상 흐름</button><button id="blocked-button" class="selected" type="button" aria-pressed="true">수도관 폐쇄</button></div>
       </div>
-      <p class="diagram-scope">시나리오 개념도 · 입력에서 추출한 소견과 별개이며, 실제 해부학적 위치·크기·비율을 재현하지 않습니다.</p>
+      <p class="diagram-scope">가상 시나리오 · 교육용 개념도 · 입력에서 추출한 소견과 별개이며, 실제 해부학적 위치·크기·비율을 재현하지 않습니다.</p>
       <div class="diagram-layout">
         <div class="diagram-scroll" tabindex="0" aria-label="뇌실 흐름 개념도. 좁은 화면에서는 좌우로 이동할 수 있습니다.">
           <svg id="flow-diagram" viewBox="0 0 1000 315" role="img" aria-labelledby="svg-title svg-desc" data-state="blocked">
@@ -43,6 +45,23 @@
         </div>
         <aside class="flow-explainer" aria-live="polite"><span id="flow-tag" class="flow-tag blocked">수도관 폐쇄</span><h3 id="flow-title">좁은 통로에서 흐름이 멈춥니다.</h3><p id="flow-description">종괴의 압박 지점에서 흐름을 중단하고, 상류인 측뇌실과 제3뇌실의 확장을 강조했습니다.</p><div class="legend"><span><i class="legend-flow"></i>뇌척수액 흐름</span><span><i class="legend-stop"></i>압박 · 상류 확장</span></div><small>제4뇌실의 크기에 대한 입력 소견은 제공되지 않았습니다.</small></aside>
       </div>
+    </section>
+
+    <section class="comparison-card" aria-labelledby="comparison-heading">
+      <div class="evidence-heading"><div><span class="mini-label">TRANSCRIPT COMPARISON</span><h2 id="comparison-heading">전사 오류 비교</h2></div><span class="chip-light">부정 표현 확인</span></div>
+      <p class="muted">같은 가상 시나리오의 비교용 부정 발화입니다. 아래 기본 사례 발화·음성과는 별도 입력이며, 증상으로 종양이나 폐쇄 여부를 추정하지 않습니다.</p>
+      <p id="comparison-status" class="execution-banner" role="status" aria-live="polite">비교 데이터 불러오는 중</p>
+      <div class="comparison-grid">
+        <article><h3>원본 발화</h3><p class="field-label">비교용 정답 · reference_transcript</p><div id="comparison-reference" class="diff-text"></div><div id="comparison-reference-states"></div></article>
+        <article><h3>전사문</h3><p id="comparison-transcript-source" class="field-label">모의 전사문</p><div id="comparison-transcript" class="diff-text"></div><div id="comparison-transcript-states"></div></article>
+      </div>
+      <p class="diff-key"><mark>강조</mark> 달라진 문자 구간 · ∅ 해당 쪽에 문자가 없는 구간</p>
+      <p id="negation-summary" class="negation-summary" aria-live="polite"></p>
+      <label class="field-label" for="comparison-editor">전사문 수정 · 적용하면 직접 수정한 입력으로 표시됩니다.</label>
+      <textarea id="comparison-editor" maxlength="2000" rows="2" placeholder="비교할 전사문을 입력하세요."></textarea>
+      <div class="comparison-actions"><button id="comparison-run" class="primary" type="button">비교용 합성 음성으로 실제 STT 실행</button><button id="comparison-simulated" class="secondary" type="button">모의 전사 오류 보기</button><button id="comparison-apply" class="secondary" type="button">전사문 적용 · 구조화 실행</button></div>
+      <p id="comparison-models" class="muted"></p>
+      <details><summary>비교 결과 JSON · 모델 결과와 예시 정답 구분</summary><pre id="comparison-json"></pre></details>
     </section>
 
     <div class="evidence-heading"><div><span class="mini-label">INPUT & EVIDENCE</span><h2>입력과 근거 확인</h2></div><button id="mri-toggle" class="secondary" type="button" aria-expanded="true" aria-controls="mri-panel">가상 MRI 판독문 숨기기</button></div>

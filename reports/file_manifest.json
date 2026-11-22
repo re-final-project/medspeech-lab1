@@ -11,8 +11,13 @@
   },
   {
     "path": "README.md",
-    "bytes": 15109,
-    "sha256": "755bac76586d108f4fd343176c31b1818d1485428cdeaa6847a2380fffe0ab28"
+    "bytes": 17942,
+    "sha256": "0c5a99f7177865aea90a3bddd5815ff4f6646436920ba2075c8fa6c145627416"
+  },
+  {
+    "path": "artifacts/comparison/model_run.json",
+    "bytes": 2652,
+    "sha256": "dae786ffdd9c82bf5d1d6963ff1cb06e9fac92f100a443966538766b69691023"
   },
   {
     "path": "artifacts/demo/example_no_mri.json",
@@ -298,6 +303,16 @@
     "path": "data/demo/aqueduct_patient.wav",
     "bytes": 114220,
     "sha256": "bb64816cff4eced84d45943dde34fb61b4683fa2591ea0d8bc87160922753798"
+  },
+  {
+    "path": "data/demo/comparison_patient.metadata.json",
+    "bytes": 315,
+    "sha256": "adbb90b1a6365e690bd38d73cebd4570062e40536caceae98a93faca30ee9a8d"
+  },
+  {
+    "path": "data/demo/comparison_patient.wav",
+    "bytes": 132652,
+    "sha256": "ad580be9bc67335f8b3185c6d19cdfec045727969862dc13e4a652b165eb6589"
   },
   {
     "path": "data/full/audio/clean/s00-clean.wav",
@@ -715,14 +730,19 @@
     "sha256": "75285f46596231bcea8fb5cb74586439ee5d349a23d93b825084a6533bbe0670"
   },
   {
+    "path": "medspeech/comparison.py",
+    "bytes": 11728,
+    "sha256": "1c379ac3b8ef100fffe3702b7fedbab8bdd9dc66184b8eef2bc7892634d73125"
+  },
+  {
     "path": "medspeech/data.py",
     "bytes": 8327,
     "sha256": "2a6029dd8d7152a4f3ae7be61adc5dbe11fc184e9f0c8f92bdd194efcea39dfc"
   },
   {
     "path": "medspeech/demo.py",
-    "bytes": 11149,
-    "sha256": "eb42a8ab046ab2a7669d8d55827a295aafa8df4dbb3d37c18a8b18b64e292244"
+    "bytes": 11236,
+    "sha256": "9e6d3c7d0bd337cbedc17e746de056d10ea26dcd970d1616ddb104f42d59d76a"
   },
   {
     "path": "medspeech/metrics.py",
@@ -760,9 +780,19 @@
     "sha256": "58d310b3f60c4abb510c795bc61cfb50d60ac93fb5507e350ba9f5418216ba92"
   },
   {
+    "path": "medspeech/web/comparison.css",
+    "bytes": 2491,
+    "sha256": "93362e4ed0ab22c7d0e7bdb64648db178bc6e4e9c8a4a173bf2547a065c67f85"
+  },
+  {
+    "path": "medspeech/web/comparison.js",
+    "bytes": 6973,
+    "sha256": "8806989737e1c2557fee10d7ae79a48d5ed364713a24bf6b1080c6bdfb64b421"
+  },
+  {
     "path": "medspeech/web/index.html",
-    "bytes": 8272,
-    "sha256": "09d16d898f0ed9ef80119e2fede738d95f1e5a980141d948756811e8ebc1b5b7"
+    "bytes": 10586,
+    "sha256": "cf06a91125d49c6bb6cb8b7804c71596e2153aecafbce9596baf787a3d2bae19"
   },
   {
     "path": "medspeech/web/style.css",
@@ -771,8 +801,8 @@
   },
   {
     "path": "package.json",
-    "bytes": 160,
-    "sha256": "dd5d47d3b1c617e36f4e0dd5ba8245e4d1e88b4d558d06258f0e3606f24cdb5a"
+    "bytes": 198,
+    "sha256": "eb06567b1ba26acddef2eb46fd2dcfd38ca82443fda9215e556a9bc252a31403"
   },
   {
     "path": "pnpm-lock.yaml",
@@ -783,6 +813,51 @@
     "path": "pyproject.toml",
     "bytes": 791,
     "sha256": "2cf1eb6d0ffab1fafba7a2fb6a2f766b236b60f1d76a5f1485ecd9d5dd6f5907"
+  },
+  {
+    "path": "reports/comparison-browser-checks.json",
+    "bytes": 1603,
+    "sha256": "8f6f233f81375ac59808452b3b93445ebee5b33aebb3cb0e7c899d016cbd40b2"
+  },
+  {
+    "path": "reports/comparison-detail.jpg",
+    "bytes": 34195,
+    "sha256": "e9fc6c0faa5cdfa5c985f37b22d40ef83e528c9d19efde8549da005edb0897fd"
+  },
+  {
+    "path": "reports/comparison-preview.jpg",
+    "bytes": 227902,
+    "sha256": "21040b8b9ad94cabac81fa29c3fcf36525076fc9a94d159c348f9c4bd6db0ecc"
+  },
+  {
+    "path": "reports/comparison_comparison_dom.txt",
+    "bytes": 622,
+    "sha256": "25ec7b26078f09881907b55f213f33e532e8ead06e7bc28edf8d0e8957e67ad6"
+  },
+  {
+    "path": "reports/comparison_existing_dom.txt",
+    "bytes": 582,
+    "sha256": "31ba435e1630862c786e9e6ef6ce18dd64290261ed07782e012d6efcfcc76d03"
+  },
+  {
+    "path": "reports/comparison_pytest.txt",
+    "bytes": 1614,
+    "sha256": "4ffa560078fdd4982abd3bd29532843666c6442a096a5c210ca241ceaca81a78"
+  },
+  {
+    "path": "reports/comparison_report.md",
+    "bytes": 9583,
+    "sha256": "f8724e652b806710483da4a5df3e7e87fa8737ddd280643ae83749840c72a08a"
+  },
+  {
+    "path": "reports/comparison_smoke.txt",
+    "bytes": 2383,
+    "sha256": "16aba07be6403b8b4842e42b7ebcdff127c04a46e4a83c3beac84d36cce6ecea"
+  },
+  {
+    "path": "reports/comparison_verification.json",
+    "bytes": 2110,
+    "sha256": "451a644e05419bfd9aeae64d898e668ffde94e3cb85f39306757a44bb04c064f"
   },
   {
     "path": "reports/completion_summary.json",
@@ -841,8 +916,8 @@
   },
   {
     "path": "reports/job_mapping.md",
-    "bytes": 2901,
-    "sha256": "cc1282a9db09a4f38736d5d90eba0f2a04d430113266b0335c71688e9050bd9a"
+    "bytes": 3179,
+    "sha256": "ca634a372dc67acc22ea10b559b0a76c5c9ee7105a9dd53c0f472958316c359a"
   },
   {
     "path": "reports/pytest.txt",
@@ -870,6 +945,11 @@
     "sha256": "9bd04cbcd6f3b039eab41f499105acfbc0aee827e223210c0a1004aad6f26cc3"
   },
   {
+    "path": "tests/comparison_dom.test.cjs",
+    "bytes": 6571,
+    "sha256": "9ff93950621b42b19cb2540c18ce79ada3f8ef3b81dbacf8283f9ce653b494c7"
+  },
+  {
     "path": "tests/conftest.py",
     "bytes": 284,
     "sha256": "45afa06ce9a8230b586905535c00966aef35d26cb9a9dac2177133ec729d1784"
@@ -885,6 +965,16 @@
     "sha256": "099e850e7ad70807780607fe4863615562a1e6f1aa54f84daa28c553b2fa48bb"
   },
   {
+    "path": "tests/fixtures/transcription_comparison.json",
+    "bytes": 2278,
+    "sha256": "e68789abae7f2ff8588a26fb21c0b5b7c5e02ef6f9d21a9fd3053c545d88afa6"
+  },
+  {
+    "path": "tests/test_comparison.py",
+    "bytes": 7022,
+    "sha256": "7b838a641dfa4f39f75b76a1737f6c3f4574bb57c2637c0c1d6c25c0ea175bb1"
+  },
+  {
     "path": "tests/test_core.py",
     "bytes": 5162,
     "sha256": "f8357c85dc3ea974170d933d4facbbd614ba5e17f01170581b4348ba7dc66f4c"
@@ -893,6 +983,11 @@
     "path": "tests/test_demo.py",
     "bytes": 6010,
     "sha256": "d00b4fbb39b4978b4f571bbf21b1139922b50dabdef4df680a4077b989a98ee7"
+  },
+  {
+    "path": "tools/run_comparison_windows_copy_cache.py",
+    "bytes": 507,
+    "sha256": "35d6e25475fafc81998fc3f6ceeaab1bb11eb9405050570624eff42c7c49ddca"
   },
   {
     "path": "tools/run_demo_windows_copy_cache.py",
