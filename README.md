@@ -6,6 +6,18 @@
 
 실제 실행 결과: pytest 21개와 smoke 통과, 실제 합성 음성 36개 QC 실패 0, CPU LoRA 3 epochs 완료. 고정 테스트 6개에서 실제 CER는 A 36.56%, B 36.56%, C 31.90%였습니다. 로컬 Qwen의 JSON 통과율은 8개 조건 모두 0%여서 구조화 품질은 해결되지 않았습니다. API는 이런 모델 출력을 502로 거부하도록 구현되어 있습니다. 이 한계와 실패 원문을 보고서에 포함했으며, smoke 대역 모델의 성공을 실제 LLM 성능으로 제시하지 않습니다.
 
+## 목차
+
+- [설치 (Windows PowerShell)](#설치-windows-powershell)
+- [뇌실 통로 폐쇄 가상 사례 데모](#뇌실-통로-폐쇄-가상-사례-데모)
+- [전사 검토 및 수정](#전사-검토-및-수정)
+- [API](#api)
+- [데이터와 평가 규약](#데이터와-평가-규약)
+- [코드와 산출물](#코드와-산출물)
+- [ERD](#erd)
+- [DB 설계](#db-설계)
+- [요구사항 정의서](#요구사항-정의서)
+
 ## 설치 (Windows PowerShell)
 
 Python 3.11 또는 3.12, 디스크 여유 약 8 GB 이상을 권장합니다. CUDA는 필수가 아니지만 실제 학습과 LLM 추론은 CPU에서 느릴 수 있습니다. 아래 명령은 프로젝트 폴더에서 실행합니다. 활성화 스크립트를 사용하지 않아 실행 정책 변경이 필요 없습니다.
@@ -172,3 +184,103 @@ LLM은 최대 256 tokens를 생성합니다(train/dev 정답은 동일 tokenizer
 | `reports/` | 연구 보고서, 업무 매핑, 라이선스, QC 예시, 실행 기록 |
 
 MMS 음성 사용·공유 조건은 [data_license.md](reports/data_license.md), 오류 검수 기준은 [qc_examples.md](reports/qc_examples.md)를 확인하세요. [Whisper 모델 카드](https://huggingface.co/openai/whisper-tiny), [Qwen 모델 카드](https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct)의 모델 명칭·라이선스를 확인했습니다.
+
+## ERD
+
+**구현됨 — 현재 저장 구조:** 관계형 DB, ORM, SQL DDL 및 DB 마이그레이션은 없습니다. `pyproject.toml`에도 DB 의존성은 없습니다. Pydantic 모델은 요청·응답과 파일 내용의 검증용이며 DB 테이블이 아닙니다. 데모는 `medspeech/demo.py:main` → `medspeech.api:create_app` → `mount_demo`/`mount_review`로 실행됩니다.
+
+| 현재 데이터 | 저장 위치와 구현 근거 | 보존 범위 |
+|---|---|---|
+| 가상 사례·판독문·시나리오 설정 | `medspeech/cases/aqueduct_obstruction.json`, `demo.py:CaseData` | 기준 전사와 실제 STT 필드를 분리한 정적 JSON. 기준 파일의 `stt_transcript`는 null |
+| 합성 데이터·검수 | `data/{smoke,full}/manifest.jsonl`, WAV, `qc.csv`, `qc_summary.json`; `data.py` | 배치 실행의 파일 저장. DB 트랜잭션·버전 이력 테이블 없음 |
+| 모델·평가·가상 사례 실행 결과 | `artifacts/{smoke,full}/`, `artifacts/demo/model_run.json`, `artifacts/comparison/model_run.json`, `artifacts/review/`; 각 CLI의 `dump()` | 오프라인 실험 JSON·로그·체크포인트. 동일 출력 경로 재실행은 덮어쓸 수 있음 |
+| 전사 검토 상태 | `web/review.js`의 `session`, `latest`, `failure`, 편집 초안; `review.py:ReviewSession`, `ReviewAnalysis` | 브라우저 메모리에서 초기 스냅샷·마지막 분석 입력을 비교. 새로고침을 넘는 전체 버전 이력은 없음 |
+| 웹 API 입력·출력 | `api.py`, `demo.py`, `comparison.py`, `review.py` | 애플리케이션에서 원음·전사·수정문을 지속 저장하지 않음. CLI의 실험 파일 저장과 구분 |
+
+**설계안 — 제안 관계형 ERD:** 아래 다섯 테이블은 아직 생성되지 않았습니다. 향후 선택적인 가상 사례 이력 저장소를 도입할 때의 구조이며, 현재 API의 기본 무보관 정책을 변경하는 구현은 이번 문서 범위에 포함하지 않습니다.
+
+```mermaid
+erDiagram
+    DEMO_CASE ||--o{ TRANSCRIPT_VERSION : has_versions
+    DEMO_CASE ||--o{ SIMULATED_MRI_REPORT : has_reports
+    TRANSCRIPT_VERSION o|--o| TRANSCRIPT_VERSION : precedes
+    TRANSCRIPT_VERSION ||--o{ EXTRACTION_RUN : used_by
+    EXTRACTION_RUN ||--o{ SYMPTOM_FINDING : yields_when_valid
+
+    DEMO_CASE {
+        uuid case_id PK
+        string title
+        string scenario_diagnosis
+    }
+    TRANSCRIPT_VERSION {
+        uuid transcript_id PK
+        uuid case_id FK
+        uuid parent_transcript_id FK
+        int version_no
+        string source
+        text transcript_text
+        datetime created_at
+    }
+    EXTRACTION_RUN {
+        uuid run_id PK
+        uuid transcript_id FK
+        string execution_mode
+        string status
+        string schema_version
+        string model_id
+        string error_code
+        datetime executed_at
+    }
+    SYMPTOM_FINDING {
+        uuid finding_id PK
+        uuid run_id FK
+        string symptom_code
+        string mention_status
+        text evidence
+    }
+    SIMULATED_MRI_REPORT {
+        uuid report_id PK
+        uuid case_id FK
+        text report_text
+        string obstruction_site
+        string obstruction_evidence
+        json enlarged_ventricles
+        string extraction_method
+    }
+```
+
+관계 읽기: 각 자식 행의 부모는 반드시 1개이고, 부모의 자식은 0개 이상입니다. 전사 자기 참조는 직전 버전→다음 버전의 선형 이력으로 0개 또는 1개입니다. 성공 조건은 ERD 선만으로 강제할 수 없으므로 아래 제약으로 보완합니다.
+
+## DB 설계
+
+**설계안 — 아래 테이블과 제약은 모두 미구현입니다.** PK는 기본키, FK는 외래키입니다. 필수 열은 NOT NULL이며 시각은 UTC로 기록합니다. 이번 작업은 문서 변경이며 DB 도입이나 현재 API 무보관 정책 변경은 포함하지 않습니다.
+
+| 테이블 | 주요 필드와 관계 | 필수 여부와 제약 (설계안) |
+|---|---|---|
+| DEMO_CASE | `case_id` PK, `title`, `scenario_diagnosis` (가상 시나리오 설정) | 모두 필수·빈 문자열 불가. 질환명은 설정값이며 추출 결과로 전환하지 않음 |
+| TRANSCRIPT_VERSION | `transcript_id` PK, `case_id` FK, `parent_transcript_id` 자기 참조 FK, `version_no`, `source`, `transcript_text`, `created_at` | 부모 ID 외 모두 필수. `UNIQUE(case_id, version_no)`, 버전 1 이상, 공백뿐인 전사 불가. 출처는 `reference`/`actual_stt`/`simulated_stt`/`human_edit`. 버전 1만 부모 NULL, 이후는 같은 사례의 직전 버전 참조 필수 |
+| EXTRACTION_RUN | `run_id` PK, `transcript_id` FK, `execution_mode`, `status`, `schema_version`, `model_id`, `error_code`, `executed_at` | 모델 ID·오류 코드 외 모두 필수. 방식 `model`/`example`, 상태 `completed`/`example`/`failed`/`unavailable`. 실제 모델 호출 시 모델 식별자(이름·revision·양자화 설정) 필수, 미실행·예시는 NULL. 성공 시 오류 NULL, 실패·사용 불가 시 오류 코드 필수 |
+| SYMPTOM_FINDING | `finding_id` PK, `run_id` FK, `symptom_code`, `mention_status`, `evidence` | 근거 외 모두 필수. `UNIQUE(run_id, symptom_code)`. 코드는 `headache`/`vomiting`, 상태는 「있음」「없음」「언급 없음」. 있음·없음은 해당 전사 버전에 포함된 비어 있지 않은 근거 필수, 언급 없음은 근거 NULL |
+| SIMULATED_MRI_REPORT | `report_id` PK, `case_id` FK, `report_text`, `obstruction_site`, `obstruction_evidence`, `enlarged_ventricles`, `extraction_method` | ID·사례 FK·비어 있지 않은 판독문·배열·방법 필수. 위치와 위치 근거는 모두 NULL 또는 모두 비어 있지 않은 값. 확장 배열은 빈 배열 허용, 원소는 `value`/`evidence`. 근거는 판독문 안에 존재해야 함. 방법은 `report_text_rule`로 명시하여 영상 분석과 구분 |
+
+추가 무결성 및 저장 흐름도 모두 **설계안**입니다.
+
+1. **같은 사례의 직전 버전:** `UNIQUE(case_id, transcript_id)`와 복합 FK `(case_id, parent_transcript_id)`로 다른 사례 참조를 막습니다. 트리거에서 부모의 `version_no = 자식의 version_no - 1`을 검사합니다. 부모 ID에 NULL을 제외한 유일 제약을 적용하여 분기를 막고, 사례 행을 잠근 트랜잭션에서 순번을 배정합니다. 연속 버전 조건으로 자기 참조·순환도 막습니다. 버전 1은 기준 발화, 버전 2는 초기 실제/모의 전사, 버전 3부터는 직전 버전의 수정본입니다.
+2. **초기 전사와 수정본 보존:** 저장된 본문·버전·출처·부모는 변경하지 않고 새 버전을 추가합니다. 분석의 입력 `transcript_id`도 고정하고 재시도마다 새 `run_id`를 추가합니다. FK 삭제는 RESTRICT로 설정합니다. 결과→실행→입력 버전→사례로 돌아갈 수 있으며, 분석 전 편집 초안은 저장 버전 및 성공 결과와 구분합니다.
+3. **모델과 예시 출처:** 모델 성공은 `execution_mode=model`, `status=completed`, 지정 시연 예시는 `execution_mode=example`, `status=example`로 제한합니다. 예시는 모델 미실행 상태를 유지하고 실제 모델 성능 집계에서 제외합니다. 현재 `analysis_mode`/`llm_model`/`Side.example_answer`를 이 필드들에 대응시킵니다. `schema_version`은 저장 시 명시적인 스키마 버전이나 해시를 기록하는 제안이며, 현재 코드에 영구적인 스키마 버전 관리가 있는 것은 아닙니다.
+4. **성공 결과와 실패 이력:** JSON·근거·내용 검증 실패는 실행 행에 `failed`와 `schema_error`/`grounding_error`/`content_error` 등을 기록합니다. 모델 준비 불가는 `unavailable`로 남깁니다. 실패·미실행을 증상의 「언급 없음」으로 바꾸지 않습니다. 실행과 증상 행을 한 트랜잭션에서 확정하고, 성공 또는 명시적 예시에만 증상 행을 허용하는 트리거를 둡니다. 실패 실행의 증상 행은 0개이며 검증된 증상 결과를 생성하지 않습니다. 예시 증상은 실행 방식으로 구분되며 실제 모델의 검증된 결과로 취급하지 않습니다.
+5. **근거와 MRI 경계:** 증상 근거는 실행에 연결된 전사 본문에서, MRI 위치·확장 근거는 해당 `report_id`의 판독문에서 검증합니다. 전사 수정으로 MRI를 생성·갱신하지 않습니다. 판독문 숨김은 표시 제어이며 저장 문서 삭제와 다릅니다. 판독문 개정도 새 ID로 추가하고 기존 행을 보존합니다. 현재는 판독문 선택·개정 이력 UI도 없습니다.
+
+## 요구사항 정의서
+
+아래는 실제 코드·테스트 확인 결과입니다. 「구현됨」은 기능 경로의 존재를 뜻하며 실제 모델의 추출 성공을 보장하지 않습니다. 저장된 실제 Qwen 수정문 실행은 `schema_error`였고, 부정 수정의 성공 시연은 별도 예시 결과입니다.
+
+| ID | 요구사항 | 완료 기준 | 구현 상태 | 근거 파일 또는 테스트 |
+|---|---|---|---|---|
+| FR-01 | 가상 사례 시각화 | 교육용 표시와 함께 정상 흐름과 수도관 폐쇄 개념도를 전환할 수 있다. | **구현됨** | `medspeech/web/index.html`, `medspeech/web/app.js`; `tests/demo_dom.test.cjs`의 초기 폐쇄·정상 전환 테스트 |
+| FR-02 | 전사 출처 표시 | 기준 발화, 초기 전사문, 수정본이 구분되고 실제 STT와 모의 전사문이 식별된다. | **구현됨** | `medspeech/review.py:review_session`, `medspeech/web/review.js`; `tests/test_review.py:test_mock_session_copies_initial_with_explicit_provenance`, `tests/comparison_dom.test.cjs` |
+| FR-03 | 수정문 재분석 | 초기 전사문을 보존하고 수정문만 재분석한다. 빈 입력에서는 실행할 수 없다. | **구현됨** | `medspeech/review.py:reanalyse`; `tests/test_review.py`의 `test_only_corrected_input_is_analysed_and_schema_failure_is_retryable`, `test_review_api_rejects_empty_and_extra_initial_payloads`; `tests/review_dom.test.cjs` 초기 보존·빈 입력 테스트 |
+| FR-04 | 증상 비교 | 가상 사례에서 「구토를 했어요」를 「구토는 안 했어요」로 수정하면 「있음 → 없음」과 각 입력의 근거 문구를 볼 수 있다. | **구현됨 (지정 예시 경로)**. 실제 모델 성공은 확인되지 않음 | `medspeech/review.py:reanalyse`, `medspeech/web/review.js`; `tests/test_review.py:test_example_is_explicit_and_bounded`; `tests/review_dom.test.cjs` 변경 강조; `artifacts/review/example_run.json` |
+| FR-05 | 가상 MRI 소견 | 판독문을 켜면 폐쇄 위치와 뇌실 확장이 표시되고 끄면 추출 영역에 「영상 정보 없음」이 표시된다. | **구현됨 (판독문 문자열 규칙)** | `medspeech/demo.py:imaging_from_report`, `medspeech/web/app.js`; `tests/test_review.py:test_mri_is_constant_across_corrections_and_removed_when_hidden`; `tests/demo_dom.test.cjs` MRI 숨김 |
+| FR-06 | 실행 상태 표시 | 재분석 전의 이전 결과, 모델 미실행, 예시 결과, 스키마 오류를 각각 구분할 수 있다. | **구현됨** | `medspeech/review.py:ReviewAnalysis`, `medspeech/comparison.py:Side`, `medspeech/web/review.js`; `tests/test_review.py:test_unavailable_model_and_blank_are_not_successful_analyses`; `tests/review_dom.test.cjs` 재편집·스키마 실패·재시도 |
+| NFR-01 | 추적성 | 증상 결과는 추출 실행과 전사 버전까지, 영상 소견은 가상 판독문까지 추적할 수 있다. | **일부 구현됨:** 응답·메모리·CLI JSON의 입력 본문과 근거 대응. **설계안:** 영구 ID, 전체 버전·실행 이력의 DB 추적 | `medspeech/schema.py:grounded`, `medspeech/review.py:main`의 `initial_snapshot`/`analysis`, `medspeech/web/review.js`의 `last_analysis`/`previous_draft_basis`; `tests/test_review.py`. 제안 FK·버전 관리는 위 DB 설계이며 마이그레이션은 없음 |
