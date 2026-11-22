@@ -178,11 +178,11 @@ def run_models(provider, mode, include_mri=True, audio_path=None):
     return present(case, state, AudioFindings(symptoms=parsed.symptoms), include_mri)
 
 
-def mount_demo(app: FastAPI, provider, mode):
+def mount_demo(app: FastAPI, provider, mode, review_backend='local'):
     from .comparison import mount_comparison
     mount_comparison(app, provider, mode)
     from .review import mount_review
-    mount_review(app, provider, mode)
+    mount_review(app, provider, mode, review_backend)
     web = Path(__file__).with_name("web")
     app.mount("/demo/assets", StaticFiles(directory=web), name="demo-assets")
 

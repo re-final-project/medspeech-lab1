@@ -25,7 +25,8 @@ class InferenceResponse(BaseModel):
     retained: bool
 
 
-def create_app(stt=None,llm=None,mode=None):
+def create_app(stt=None,llm=None,mode=None,review_backend=None):
+    review_backend = review_backend or ('local' if llm is not None else os.getenv('MEDSPEECH_REVIEW_BACKEND','hf'))
     mode=mode or os.getenv("MEDSPEECH_MODE","full")
     app=FastAPI(title="medspeech-lab",description="Synthetic-data research only; no diagnosis or prescription")
     @app.get("/health")
@@ -50,7 +51,9 @@ def create_app(stt=None,llm=None,mode=None):
         return stt,llm
 
     from .demo import mount_demo
-    mount_demo(app,ensure_models,mode)
+    mount_demo(app,ensure_models,mode,review_backend)
+    from .stt_compare import mount_stt_compare
+    mount_stt_compare(app,mode)
 
     @app.post("/infer",response_model=InferenceResponse)
     async def infer(file:UploadFile=File(...)):

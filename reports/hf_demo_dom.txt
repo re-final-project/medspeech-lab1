@@ -1,0 +1,13 @@
+✔ initial obstruction stops the downstream arrow and expands upstream nodes (101.1754ms)
+✔ normal flow reaches fourth ventricle; switching back restores all obstruction signs (52.7807ms)
+✔ hiding MRI removes raw text, findings, evidence and exported imaging, not scenario (38.3203ms)
+✔ schema failure preserves STT and shows failure rather than example/success (25.4537ms)
+✔ model unavailable and network failure leave the demo usable (47.1311ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 270.6656

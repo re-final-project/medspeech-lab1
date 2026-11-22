@@ -1,0 +1,50 @@
+{
+  "$defs": {
+    "SymptomEvidence": {
+      "additionalProperties": false,
+      "properties": {
+        "mention_status": {
+          "enum": [
+            "present",
+            "absent",
+            "not_mentioned"
+          ],
+          "title": "Mention Status",
+          "type": "string"
+        },
+        "evidence_text": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Evidence Text"
+        }
+      },
+      "required": [
+        "mention_status",
+        "evidence_text"
+      ],
+      "title": "SymptomEvidence",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "headache": {
+      "$ref": "#/$defs/SymptomEvidence"
+    },
+    "vomiting": {
+      "$ref": "#/$defs/SymptomEvidence"
+    }
+  },
+  "required": [
+    "headache",
+    "vomiting"
+  ],
+  "title": "TwoSymptoms",
+  "type": "object"
+}

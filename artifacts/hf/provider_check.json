@@ -1,0 +1,61 @@
+{
+  "source": "https://router.huggingface.co/v1/models",
+  "model": {
+    "id": "Qwen/Qwen3-32B",
+    "object": "model",
+    "created": 1745725979,
+    "owned_by": "Qwen",
+    "architecture": {
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ]
+    },
+    "providers": [
+      {
+        "provider": "deepinfra",
+        "status": "live",
+        "context_length": 40960,
+        "pricing": {
+          "input": 0.08,
+          "output": 0.28
+        },
+        "is_free": false,
+        "supports_tools": true,
+        "supports_structured_output": true,
+        "first_token_latency_ms": 424,
+        "throughput": 24,
+        "is_model_author": false,
+        "provider_name": "DeepInfra",
+        "uptime_last_day_percent": 100,
+        "quantization": "fp8"
+      },
+      {
+        "provider": "tenstorrent",
+        "status": "live",
+        "context_length": 20000,
+        "pricing": {
+          "input": 0.14,
+          "output": 0.4
+        },
+        "is_free": false,
+        "supports_tools": true,
+        "supports_structured_output": false,
+        "first_token_latency_ms": 421,
+        "throughput": 42,
+        "is_model_author": false,
+        "provider_name": "Tenstorrent",
+        "uptime_last_day_percent": 97.68451519536903,
+        "quantization": "fp8"
+      },
+      {
+        "provider": "featherless-ai",
+        "status": "live",
+        "is_free": false,
+        "is_model_author": false
+      }
+    ]
+  }
+}

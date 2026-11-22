@@ -72,7 +72,7 @@
     byId("mri-report").hidden = !includeMRI;
     byId("mri-empty").hidden = includeMRI;
     const symptoms = byId("symptoms"); symptoms.replaceChildren();
-    byId("symptom-method").textContent = state.structure === "example_annotation" ? "예시 주석 · 모델 미실행" : state.structure === "completed" ? "실제 LLM 출력 · 전사문 근거 검증 통과" : `모델 결과 없음 · ${state.structure}`;
+    byId("symptom-method").textContent = state.structure === "example_annotation" ? "모의 결과 · 예시 주석 · 모델 미실행" : state.structure === "completed" ? "실제 LLM 출력 · 전사문 근거 검증 통과" : `모델 결과 없음 · ${state.structure}`;
     if (value.audio_findings) {
       value.audio_findings.symptoms.forEach(item => finding(symptoms, item));
       if (!value.audio_findings.symptoms.length) empty(symptoms, "추출된 증상 없음");

@@ -1,0 +1,80 @@
+{
+  "verified_at": "2026-11-22T07:21:16.829613+00:00",
+  "commands": [
+    {
+      "name": "pytest",
+      "command": [
+        "C:\\Users\\정준하\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-m",
+        "pytest",
+        "tests",
+        "-q",
+        "-s",
+        "-p",
+        "no:cacheprovider",
+        "-p",
+        "no:tmpdir"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "demo_dom",
+      "command": [
+        "node",
+        "tests/demo_dom.test.cjs"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "comparison_dom",
+      "command": [
+        "node",
+        "tests/comparison_dom.test.cjs"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "review_dom",
+      "command": [
+        "node",
+        "tests/review_dom.test.cjs"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "hf_dom",
+      "command": [
+        "node",
+        "tests/hf_dom.test.cjs"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "smoke",
+      "command": [
+        "C:\\Users\\정준하\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-m",
+        "medspeech.cli",
+        "smoke",
+        "--base",
+        "C:\\Users\\정준하\\Documents\\Codex\\2026-11-20\\llm-medspeech-lab-stt-llm-qc\\work\\publish-medspeech-lab1\\work\\hf-smoke-check"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "python_tests": 75,
+  "dom_tests": 19,
+  "actual_qwen": "unverified: HF_TOKEN missing",
+  "actual_stt": [
+    "LoRA",
+    "Whisper Turbo"
+  ],
+  "browser": {
+    "initial_and_corrected_versions": true,
+    "missing_token_retry": true,
+    "lora_real_stt": true,
+    "turbo_selection": true,
+    "mock_negation_flip": true
+  },
+  "evidence": "hf-review.jpg shows an actual token-missing response, not successful Qwen inference"
+}

@@ -1,0 +1,207 @@
+{
+  "hardware": {
+    "platform": "Windows-11-10.0.22621-SP0",
+    "torch": "2.6.0+cpu",
+    "device": "cpu",
+    "warmup": false,
+    "timing": "STT generation excludes model loading; no warmup",
+    "processor": "Intel64 Family 6 Model 140 Stepping 1, GenuineIntel",
+    "logical_cpus": 8,
+    "torch_threads": 2,
+    "huggingface_hub": "0.29.3"
+  },
+  "qwen": [
+    {
+      "analysis": {
+        "status": "unavailable",
+        "message": "재분석 실패 · HF_TOKEN 누락 · 모델 미실행",
+        "side": {
+          "text": "머리가 계속 아프고 구토를 했어요.",
+          "structure_status": "failed",
+          "model_states": null,
+          "model_json": null,
+          "example_answer": null
+        },
+        "llm_model": "Qwen/Qwen3-32B",
+        "stt_executed": false,
+        "simulated_mri_report": "송과체 부위 종괴가 중뇌수도관을 압박한다. 측뇌실과 제3뇌실이 확장되어 폐쇄성 수두증을 시사한다.",
+        "imaging_findings": {
+          "obstruction_site": {
+            "value": "중뇌수도관",
+            "evidence": "송과체 부위 종괴가 중뇌수도관을 압박한다."
+          },
+          "enlarged_ventricles": [
+            {
+              "value": "측뇌실",
+              "evidence": "측뇌실과 제3뇌실이 확장되어 폐쇄성 수두증을 시사한다."
+            },
+            {
+              "value": "제3뇌실",
+              "evidence": "측뇌실과 제3뇌실이 확장되어 폐쇄성 수두증을 시사한다."
+            }
+          ]
+        },
+        "run_id": "76ed82d2-5e4b-4d89-ba4e-9410de7379ef",
+        "input_version": "corrected:4d703bc5b27980b5050448c3d4ca936b2c7b6b404ebb9275d5659317b5a08732",
+        "provider": "deepinfra",
+        "schema_version": "two-symptoms-v1",
+        "schema_valid": null,
+        "error_code": "token_missing",
+        "symptom_output": null
+      },
+      "symptom_states_correct": null,
+      "verification": "unverified"
+    },
+    {
+      "analysis": {
+        "status": "unavailable",
+        "message": "재분석 실패 · HF_TOKEN 누락 · 모델 미실행",
+        "side": {
+          "text": "머리가 계속 아프고 구토는 안 했어요.",
+          "structure_status": "failed",
+          "model_states": null,
+          "model_json": null,
+          "example_answer": null
+        },
+        "llm_model": "Qwen/Qwen3-32B",
+        "stt_executed": false,
+        "simulated_mri_report": "송과체 부위 종괴가 중뇌수도관을 압박한다. 측뇌실과 제3뇌실이 확장되어 폐쇄성 수두증을 시사한다.",
+        "imaging_findings": {
+          "obstruction_site": {
+            "value": "중뇌수도관",
+            "evidence": "송과체 부위 종괴가 중뇌수도관을 압박한다."
+          },
+          "enlarged_ventricles": [
+            {
+              "value": "측뇌실",
+              "evidence": "측뇌실과 제3뇌실이 확장되어 폐쇄성 수두증을 시사한다."
+            },
+            {
+              "value": "제3뇌실",
+              "evidence": "측뇌실과 제3뇌실이 확장되어 폐쇄성 수두증을 시사한다."
+            }
+          ]
+        },
+        "run_id": "b42e8743-0a97-4d0d-8ea6-7a6592921904",
+        "input_version": "corrected:31710d282cc099098570109dbc54975bca5df186a7cbd1992624e53aa8492e16",
+        "provider": "deepinfra",
+        "schema_version": "two-symptoms-v1",
+        "schema_valid": null,
+        "error_code": "token_missing",
+        "symptom_output": null
+      },
+      "symptom_states_correct": null,
+      "verification": "unverified"
+    }
+  ],
+  "stt": [
+    {
+      "choice": "lora",
+      "model": "openai/whisper-tiny/LoRA",
+      "status": "completed",
+      "label": "실제 STT 결과",
+      "transcript": " 머리락에서 갚고 구톤은 안 했어요.",
+      "cer": 0.4375,
+      "input_version": "stt_lora:7b290ca2ef0c1396a7677ffef62b18bbc643141c624647b0a4f00a0bead6ceb9",
+      "audio_sha256": "ad580be9bc67335f8b3185c6d19cdfec045727969862dc13e4a652b165eb6589",
+      "reference_transcript": "머리가 계속 아프고 구토는 안 했어요.",
+      "revision": "169d4a4341b33bc18d8881c4b69c2e104e1cc0af",
+      "checkpoint": "C:\\Users\\정준하\\Documents\\Codex\\2026-11-20\\llm-medspeech-lab-stt-llm-qc\\work\\publish-medspeech-lab1\\artifacts\\full\\checkpoints\\best",
+      "audio_seconds": 4.144,
+      "stt_seconds": 1.2881316000130028,
+      "rtf": 0.3108425675707053
+    },
+    {
+      "choice": "turbo",
+      "model": "openai/whisper-large-v3-turbo",
+      "status": "completed",
+      "label": "실제 STT 결과",
+      "transcript": " 머리라 계속 아프고 구토는 안 했어요.",
+      "cer": 0.0625,
+      "input_version": "stt_turbo:6f9f1a214d64c7489263b013358aeec3d2e53038d3f270ec3e082d2e8cb393f8",
+      "audio_sha256": "ad580be9bc67335f8b3185c6d19cdfec045727969862dc13e4a652b165eb6589",
+      "reference_transcript": "머리가 계속 아프고 구토는 안 했어요.",
+      "revision": "41f01f3fe87f28c78e2fbf8b568835947dd65ed9",
+      "checkpoint": null,
+      "audio_seconds": 4.144,
+      "stt_seconds": 176.07121850003023,
+      "rtf": 42.488228402516945
+    }
+  ],
+  "stt_extraction": [
+    {
+      "status": "unavailable",
+      "message": "재분석 실패 · HF_TOKEN 누락 · 모델 미실행",
+      "side": {
+        "text": " 머리락에서 갚고 구톤은 안 했어요.",
+        "structure_status": "failed",
+        "model_states": null,
+        "model_json": null,
+        "example_answer": null
+      },
+      "llm_model": "Qwen/Qwen3-32B",
+      "stt_executed": false,
+      "simulated_mri_report": "송과체 부위 종괴가 중뇌수도관을 압박한다. 측뇌실과 제3뇌실이 확장되어 폐쇄성 수두증을 시사한다.",
+      "imaging_findings": {
+        "obstruction_site": {
+          "value": "중뇌수도관",
+          "evidence": "송과체 부위 종괴가 중뇌수도관을 압박한다."
+        },
+        "enlarged_ventricles": [
+          {
+            "value": "측뇌실",
+            "evidence": "측뇌실과 제3뇌실이 확장되어 폐쇄성 수두증을 시사한다."
+          },
+          {
+            "value": "제3뇌실",
+            "evidence": "측뇌실과 제3뇌실이 확장되어 폐쇄성 수두증을 시사한다."
+          }
+        ]
+      },
+      "run_id": "64608ece-6f82-4df1-bebb-78e74c90f883",
+      "input_version": "stt_lora:7b290ca2ef0c1396a7677ffef62b18bbc643141c624647b0a4f00a0bead6ceb9",
+      "provider": "deepinfra",
+      "schema_version": "two-symptoms-v1",
+      "schema_valid": null,
+      "error_code": "token_missing",
+      "symptom_output": null
+    },
+    {
+      "status": "unavailable",
+      "message": "재분석 실패 · HF_TOKEN 누락 · 모델 미실행",
+      "side": {
+        "text": " 머리라 계속 아프고 구토는 안 했어요.",
+        "structure_status": "failed",
+        "model_states": null,
+        "model_json": null,
+        "example_answer": null
+      },
+      "llm_model": "Qwen/Qwen3-32B",
+      "stt_executed": false,
+      "simulated_mri_report": "송과체 부위 종괴가 중뇌수도관을 압박한다. 측뇌실과 제3뇌실이 확장되어 폐쇄성 수두증을 시사한다.",
+      "imaging_findings": {
+        "obstruction_site": {
+          "value": "중뇌수도관",
+          "evidence": "송과체 부위 종괴가 중뇌수도관을 압박한다."
+        },
+        "enlarged_ventricles": [
+          {
+            "value": "측뇌실",
+            "evidence": "측뇌실과 제3뇌실이 확장되어 폐쇄성 수두증을 시사한다."
+          },
+          {
+            "value": "제3뇌실",
+            "evidence": "측뇌실과 제3뇌실이 확장되어 폐쇄성 수두증을 시사한다."
+          }
+        ]
+      },
+      "run_id": "d9083ed9-d736-42c4-af14-a60b772d1950",
+      "input_version": "stt_turbo:6f9f1a214d64c7489263b013358aeec3d2e53038d3f270ec3e082d2e8cb393f8",
+      "provider": "deepinfra",
+      "schema_version": "two-symptoms-v1",
+      "schema_valid": null,
+      "error_code": "token_missing",
+      "symptom_output": null
+    }
+  ]
+}

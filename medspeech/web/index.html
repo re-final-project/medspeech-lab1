@@ -9,6 +9,7 @@
   <script src="/demo/assets/comparison.js" defer></script>
   <link rel="stylesheet" href="/demo/assets/review.css">
   <script src="/demo/assets/review.js" defer></script>
+  <script src="/demo/assets/stt-options.js" defer></script>
 </head>
 <body>
   <header class="topbar"><a class="brand" href="/demo/aqueduct"><span class="brand-mark">m</span> medspeech<span class="brand-light">-lab</span></a><span class="eyebrow">KOREAN MEDICAL SPEECH LAB</span><a href="/docs">API 문서</a></header>
@@ -75,12 +76,27 @@
         <article><h3>초기 전사문</h3><p id="review-initial" class="diff-text"></p><div id="review-initial-result"></div></article>
         <article><h3>검토 후 수정문</h3><label class="field-label" for="review-editor">초기 전사문을 복사한 편집 초안</label><textarea id="review-editor" rows="4" maxlength="2000"></textarea><p id="review-result-basis" class="field-label"></p><div id="review-corrected-result"></div></article>
       </div>
-      <div class="review-actions"><button id="review-analyse" class="primary" type="button" disabled>수정문 재분석</button><button id="review-demo" class="secondary" type="button">모의 검토 시연 · 모델 미실행</button><button id="review-fill" class="secondary" type="button">구토 부정 수정 예시 채우기</button></div>
+      <div class="review-actions"><button id="review-analyse" class="primary" type="button" disabled>수정문 재분석</button><button id="review-initial-analyse" class="secondary" type="button">초기 전사문 Qwen 분석</button><button id="review-demo" class="secondary" type="button">모의 검토 시연 · 모델 미실행</button><button id="review-fill" class="secondary" type="button">구토 부정 수정 예시 채우기</button></div>
+      <p class="muted">실제 분석은 교육용 전사문만 HF 제공자에 전송합니다. MRI·설정 질환은 전송하지 않습니다. 모의 시연 선택 시 실제 모델은 호출하지 않습니다.</p>
+      <p id="review-initial-status" role="status"></p>
       <p id="review-status" class="execution-banner" role="status" aria-live="polite">검토 데이터 불러오는 중</p>
       <div id="review-transitions" aria-live="polite"></div>
       <details><summary>초기 스냅샷·수정문 분석 JSON</summary><pre id="review-json"></pre></details>
     </section>
 
+    <section class="review-card" aria-labelledby="stt-options-heading">
+      <h2 id="stt-options-heading">STT 모델 비교 · 같은 가상 음성</h2>
+      <label for="stt-choice">STT 선택</label>
+      <select id="stt-choice"><option value="lora" selected>기존 LoRA STT</option><option value="turbo">Whisper Turbo</option></select>
+      <button id="stt-option-run" class="primary" type="button">선택한 STT 실행</button>
+      <p class="muted">비교용 부정 발화의 동일 WAV를 사용합니다. CER는 기존 정규화 기준이며 미실행 결과는 계산하지 않습니다.</p>
+      <p id="stt-options-status" role="status"></p>
+      <div class="review-grid">
+        <article><h3>기존 LoRA STT</h3><div id="stt-lora-result">미실행</div><button id="stt-lora-analyse" type="button" class="secondary" disabled>LoRA 전사 Qwen 분석</button><div id="stt-lora-structure"></div></article>
+        <article><h3>Whisper Turbo</h3><div id="stt-turbo-result">미실행</div><button id="stt-turbo-analyse" type="button" class="secondary" disabled>Turbo 전사 Qwen 분석</button><div id="stt-turbo-structure"></div></article>
+      </div>
+      <p id="stt-state-comparison"></p>
+    </section>
     <div class="evidence-heading"><div><span class="mini-label">INPUT & EVIDENCE</span><h2>입력과 근거 확인</h2></div><button id="mri-toggle" class="secondary" type="button" aria-expanded="true" aria-controls="mri-panel">가상 MRI 판독문 숨기기</button></div>
     <div id="execution-status" class="execution-banner" role="status" aria-live="polite">예시 전사문 · 모델 미실행</div>
     <section class="evidence-grid">

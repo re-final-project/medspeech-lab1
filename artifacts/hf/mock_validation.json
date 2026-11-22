@@ -1,0 +1,34 @@
+[
+  {
+    "provenance": "mock-response-not-model",
+    "input": "머리가 계속 아프고 구토를 했어요",
+    "schema_valid": true,
+    "symptom_states_correct": true,
+    "output": {
+      "headache": {
+        "mention_status": "present",
+        "evidence_text": "머리가 계속 아프고"
+      },
+      "vomiting": {
+        "mention_status": "present",
+        "evidence_text": "구토를 했어요"
+      }
+    }
+  },
+  {
+    "provenance": "mock-response-not-model",
+    "input": "머리가 계속 아프고 구토는 안 했어요",
+    "schema_valid": true,
+    "symptom_states_correct": true,
+    "output": {
+      "headache": {
+        "mention_status": "present",
+        "evidence_text": "머리가 계속 아프고"
+      },
+      "vomiting": {
+        "mention_status": "absent",
+        "evidence_text": "구토는 안 했어요"
+      }
+    }
+  }
+]

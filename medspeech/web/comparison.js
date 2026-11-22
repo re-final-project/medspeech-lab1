@@ -47,7 +47,7 @@
   function renderSide(container, side) {
     container.replaceChildren();
     const source = document.createElement("p"); source.className = "state-source";
-    source.textContent = "예시 정답 · 한정 문자열 주석 · 모델 결과 아님"; container.append(source);
+    source.textContent = "모의 결과 · 예시 정답 · 한정 문자열 주석 · 모델 결과 아님"; container.append(source);
     if (side.example_answer) states(container, side.example_answer);
     else {const p = document.createElement("p"); p.className = "empty-state"; p.textContent = "빈 전사문 · 예시 정답도 평가하지 않습니다."; container.append(p);}
     const model = document.createElement("div"); model.className = "model-result";

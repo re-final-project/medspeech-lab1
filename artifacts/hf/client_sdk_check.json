@@ -1,0 +1,9 @@
+{
+  "huggingface_hub": "1.24.0",
+  "provider_helper": "DeepInfraConversationalTask",
+  "request_url": "https://router.huggingface.co/deepinfra/v1/openai/chat/completions",
+  "response_format": "json_schema",
+  "strict": true,
+  "network_model_call": false,
+  "provenance": "real SDK request construction with intercepted mock response; no real inference"
+}

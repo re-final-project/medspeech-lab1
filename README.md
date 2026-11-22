@@ -14,6 +14,7 @@
 - [API](#api)
 - [데이터와 평가 규약](#데이터와-평가-규약)
 - [코드와 산출물](#코드와-산출물)
+- [Hugging Face 모델 연결](#hugging-face-모델-연결)
 - [ERD](#erd)
 - [DB 설계](#db-설계)
 - [요구사항 정의서](#요구사항-정의서)
@@ -185,6 +186,56 @@ LLM은 최대 256 tokens를 생성합니다(train/dev 정답은 동일 tokenizer
 
 MMS 음성 사용·공유 조건은 [data_license.md](reports/data_license.md), 오류 검수 기준은 [qc_examples.md](reports/qc_examples.md)를 확인하세요. [Whisper 모델 카드](https://huggingface.co/openai/whisper-tiny), [Qwen 모델 카드](https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct)의 모델 명칭·라이선스를 확인했습니다.
 
+## Hugging Face 모델 연결
+
+**구현됨:** 같은 데모의 「수정문 재분석」과 「초기 전사문 Qwen 분석」은 기본적으로 `huggingface_hub.InferenceClient`를 통해 `Qwen/Qwen3-32B`에 연결됩니다. 기존 로컬 Qwen2.5 실험 및 `/infer` 경로는 유지됩니다. 위의 이전 실험 결과는 새 Qwen3의 성능이 아닙니다. `MEDSPEECH_REVIEW_BACKEND=local`을 명시하면 기존 로컬 구조화 경로를 선택할 수 있습니다.
+
+제공자는 `deepinfra`를 기본값으로 사용합니다. [공식 Structured Outputs 문서](https://huggingface.co/docs/inference-providers/guides/structured-output)의 `response_format=json_schema`와 strict 스키마 방식을 적용했습니다. [Qwen 모델 페이지](https://huggingface.co/Qwen/Qwen3-32B)와 [공식 Hub API](https://huggingface.co/docs/inference-providers/hub-api)를 확인하고, 공개 `https://router.huggingface.co/v1/models` 응답에서 이 모델의 DeepInfra가 `live`, `supports_structured_output=true`인 것을 확인했습니다. 문서 예시의 Cerebras를 현재 지원 제공자로 가정하지 않습니다. 호출 직전에도 모델·제공자·Structured Outputs 지원을 검사하며 자동으로 다른 모델이나 제공자로 우회하지 않습니다. 서비스 가용성은 변할 수 있습니다.
+
+```powershell
+.\.venv\Scripts\python.exe -m pip install -e '.[test,full]'
+# HF SDK는 기존 Transformers/LoRA 환경과 분리합니다.
+py -3.12 -m venv .venv-hf
+.\.venv-hf\Scripts\python.exe -m pip install -e '.[hf]'
+$env:HF_CLIENT_PYTHON = (Resolve-Path '.\.venv-hf\Scripts\python.exe').Path
+$env:HF_LLM_MODEL = 'Qwen/Qwen3-32B'
+$env:HF_LLM_PROVIDER = 'deepinfra'
+$env:MEDSPEECH_REVIEW_BACKEND = 'hf'
+$env:MEDSPEECH_MODE = 'full'
+# 토큰은 서버 PowerShell에서만 입력합니다. 실제 값을 명령 이력에 적지 않습니다.
+$secret = Read-Host 'HF_TOKEN (Inference Providers 권한)' -AsSecureString
+$env:HF_TOKEN = [System.Net.NetworkCredential]::new('', $secret).Password
+.\.venv\Scripts\python.exe -m medspeech.demo serve --port 8765
+```
+
+`http://127.0.0.1:8765/demo/aqueduct`에서 초기 전사 분석과 수정문 재분석을 각각 실행합니다. 전송하는 사용자 입력은 교육용 전사문 하나뿐이며 가상 MRI·질환 설정은 프롬프트에 포함하지 않습니다. 토큰은 서버의 `HF_TOKEN`만 읽고 응답·브라우저·실험 로그에 담지 않습니다. 웹 요청은 전사문을 지속 저장하지 않습니다. 공개 서비스가 아닌 로컬 가상 사례 데모 용도로 사용하세요.
+
+`hf` extra는 DeepInfra 지원을 확인한 `huggingface_hub==1.24.0`을 사용합니다. 기존 Transformers 4.49의 `huggingface-hub<1` 요구와 충돌하므로 `full,hf`를 같은 환경에 설치하지 마세요. `HF_CLIENT_PYTHON`이 지정되면 서버는 해당 Python의 `medspeech.hf_worker`에 전사문만 표준입력으로 전달합니다. 토큰은 상속된 서버 환경변수로만 전달하며 명령 인자에 포함하지 않습니다. 모델 응답은 서버에서 다시 검증합니다. STT가 필요 없는 별도 `.[hf]` 서버는 이 변수 없이 최신 클라이언트를 직접 사용할 수도 있습니다. 오래된 SDK만 있는 서버는 `client_unavailable`로 표시하며 조용히 다른 경로로 전환하지 않습니다.
+
+출력은 필수 고정 키 `headache`, `vomiting` 각각의 `mention_status`와 `evidence_text`입니다. `present`/`absent`/`not_mentioned`를 화면의 「있음」「없음」「언급 없음」으로 표시합니다. 앞의 두 상태에는 증상과 긍정·부정 구절을 그대로 인용하고, 미언급 근거는 null입니다. 기존 `Consultation`, `Evidence`, `grounded()` 계약을 재사용하면서 외부 출력용 `TwoSymptoms` 스키마를 추가했습니다. 서버는 추가·누락·중복 JSON 키, null 규약, 입력에 없는 근거, 증상 이름 없는 근거 및 제한적인 한국어 부정 충돌을 거부합니다. 이 검사는 모든 한국어 문장의 의미 정확성을 보장하지 않습니다. 스키마 통과(`schema_valid`)와 실험 정답 일치(`symptom_states_correct`)는 별도로 기록합니다.
+
+각 결과에는 `run_id`, `input_version`(입력 종류 + 본문 SHA256), `llm_model`, `provider`, `schema_version=two-symptoms-v1`, 실행 상태·오류 코드가 포함됩니다. 초기 전사·수정문·STT별 입력을 구별하며, 해시는 DB의 영구 버전 번호나 동일 본문의 개별 편집 이벤트 ID를 대체하지 않습니다. `token_missing`, `provider_unsupported`, `provider_check_failed`, `client_unavailable`, `call_failed`, `schema_error`, `grounding_error`, `content_error`를 화면에서 구별합니다. 실패는 성공 결과로 채우지 않습니다. **모의 검토 시연**은 별도의 **모의 결과 · 예시 결과 · 모델 미실행** 경로이며, 실제 HF 모드로 돌아가려면 페이지를 새로고침합니다.
+
+### STT 모델 선택과 재현
+
+**구현됨:** 「STT 모델 비교 · 같은 가상 음성」에서 기본값 **기존 LoRA STT**와 **Whisper Turbo**를 선택합니다. 각각 실행하면 두 결과가 보존되고 모델명·전사·CER·입력 버전을 따로 보여줍니다. 양쪽은 `data/demo/comparison_patient.wav`의 같은 바이트(SHA256 포함)를 읽고, 해당 음성의 메타데이터가 부정 기준 발화와 일치하는지도 확인합니다. 한국어 전사를 `language=ko`, `task=transcribe`로 강제하고 기존 `metrics.normalize`와 `distance`로 공백 제외 CER를 계산합니다. 기준·실제 모델·미실행 결과를 섞지 않습니다.
+
+- LoRA: `configs/full.json`의 Whisper와 `artifacts/full/checkpoints/best`를 실제로 연결합니다. 체크포인트가 없으면 미실행이며 기본 모델로 몰래 대체하지 않습니다. `MEDSPEECH_LORA_PATH`로 경로를 바꿀 수 있습니다.
+- Turbo: [openai/whisper-large-v3-turbo 공식 모델](https://huggingface.co/openai/whisper-large-v3-turbo)을 로컬 PyTorch로 실행합니다. 첫 실행은 대용량 모델 다운로드와 메모리가 필요합니다. `HF_TURBO_REVISION`으로 SHA를 고정할 수 있고 실제 사용한 SHA를 결과에 남깁니다.
+- 각 전사 아래의 Qwen 분석 버튼은 동일 `/demo/api/review/reanalyse`로 연결됩니다. 양쪽 분석이 성공한 경우에만 두통·구토 상태를 비교합니다. 미실행 모델은 전사·CER가 null이며 「미실행」으로 표시합니다.
+
+```powershell
+# 지정 가상 긍정/부정 문장 두 개를 실제 HF에 요청하고 검증 기록 저장
+.\.venv\Scripts\python.exe -m medspeech.hf_demo --output artifacts/hf/verification.json
+# 같은 WAV로 LoRA와 Turbo를 실제 실행하고 각각 Qwen 구조화까지 요청
+.\.venv\Scripts\python.exe -m medspeech.hf_demo --stt both --output artifacts/hf/verification.json
+# 테스트 (외부 호출 없는 모의 응답 검증 포함)
+.\.venv\Scripts\python.exe -m pytest -q
+npm run test:ui
+```
+
+현재 실행 결과와 실제 호출 범위는 [HF 연결 검증 보고서](reports/hf_report.md) 및 `artifacts/hf/verification.json`을 확인하세요. HF_TOKEN이 없는 환경의 Qwen 실제 추출은 **미검증**이며 모의 응답 테스트를 실제 성능으로 제시하지 않습니다.
+
 ## ERD
 
 **구현됨 — 현재 저장 구조:** 관계형 DB, ORM, SQL DDL 및 DB 마이그레이션은 없습니다. `pyproject.toml`에도 DB 의존성은 없습니다. Pydantic 모델은 요청·응답과 파일 내용의 검증용이며 DB 테이블이 아닙니다. 데모는 `medspeech/demo.py:main` → `medspeech.api:create_app` → `mount_demo`/`mount_review`로 실행됩니다.
@@ -228,6 +279,9 @@ erDiagram
         string status
         string schema_version
         string model_id
+        string provider
+        string input_version
+        boolean schema_valid
         string error_code
         datetime executed_at
     }
@@ -271,6 +325,10 @@ erDiagram
 4. **성공 결과와 실패 이력:** JSON·근거·내용 검증 실패는 실행 행에 `failed`와 `schema_error`/`grounding_error`/`content_error` 등을 기록합니다. 모델 준비 불가는 `unavailable`로 남깁니다. 실패·미실행을 증상의 「언급 없음」으로 바꾸지 않습니다. 실행과 증상 행을 한 트랜잭션에서 확정하고, 성공 또는 명시적 예시에만 증상 행을 허용하는 트리거를 둡니다. 실패 실행의 증상 행은 0개이며 검증된 증상 결과를 생성하지 않습니다. 예시 증상은 실행 방식으로 구분되며 실제 모델의 검증된 결과로 취급하지 않습니다.
 5. **근거와 MRI 경계:** 증상 근거는 실행에 연결된 전사 본문에서, MRI 위치·확장 근거는 해당 `report_id`의 판독문에서 검증합니다. 전사 수정으로 MRI를 생성·갱신하지 않습니다. 판독문 숨김은 표시 제어이며 저장 문서 삭제와 다릅니다. 판독문 개정도 새 ID로 추가하고 기존 행을 보존합니다. 현재는 판독문 선택·개정 이력 UI도 없습니다.
 
+### 모델 연결 후 실제 이력 필드와 설계안의 차이
+
+**구현됨:** `ReviewAnalysis`의 실행 UUID·입력 종류/본문 해시·모델/제공자·스키마 식별자·스키마 통과 여부·오류 코드는 API 응답과 CLI JSON에 남습니다. 실패 시 `symptom_output`과 `model_states`는 null입니다. STT 결과도 모델 revision·체크포인트·음성 SHA·입력 해시를 포함합니다. UI는 두 입력의 결과와 당시 본문을 표시합니다. **설계안:** ERD의 `EXTRACTION_RUN.provider`, `input_version`, `schema_valid`는 이 응답 정보를 저장할 제안 열입니다. DB 테이블·FK·연속 버전·전체 실행 이력 보존은 여전히 미구현입니다. 기존 `schema_version` 제안과 별개로 새 외부 스키마는 `two-symptoms-v1`이라는 코드 내 식별자를 사용합니다. `schema_valid`는 미호출/통신 실패 시 NULL, JSON 검증 실패 시 false, JSON 통과 후 근거·내용 실패 시 true가 될 수 있으므로 실행 성공 여부와 별도로 확인합니다.
+
 ## 요구사항 정의서
 
 아래는 실제 코드·테스트 확인 결과입니다. 「구현됨」은 기능 경로의 존재를 뜻하며 실제 모델의 추출 성공을 보장하지 않습니다. 저장된 실제 Qwen 수정문 실행은 `schema_error`였고, 부정 수정의 성공 시연은 별도 예시 결과입니다.
@@ -284,3 +342,7 @@ erDiagram
 | FR-05 | 가상 MRI 소견 | 판독문을 켜면 폐쇄 위치와 뇌실 확장이 표시되고 끄면 추출 영역에 「영상 정보 없음」이 표시된다. | **구현됨 (판독문 문자열 규칙)** | `medspeech/demo.py:imaging_from_report`, `medspeech/web/app.js`; `tests/test_review.py:test_mri_is_constant_across_corrections_and_removed_when_hidden`; `tests/demo_dom.test.cjs` MRI 숨김 |
 | FR-06 | 실행 상태 표시 | 재분석 전의 이전 결과, 모델 미실행, 예시 결과, 스키마 오류를 각각 구분할 수 있다. | **구현됨** | `medspeech/review.py:ReviewAnalysis`, `medspeech/comparison.py:Side`, `medspeech/web/review.js`; `tests/test_review.py:test_unavailable_model_and_blank_are_not_successful_analyses`; `tests/review_dom.test.cjs` 재편집·스키마 실패·재시도 |
 | NFR-01 | 추적성 | 증상 결과는 추출 실행과 전사 버전까지, 영상 소견은 가상 판독문까지 추적할 수 있다. | **일부 구현됨:** 응답·메모리·CLI JSON의 입력 본문과 근거 대응. **설계안:** 영구 ID, 전체 버전·실행 이력의 DB 추적 | `medspeech/schema.py:grounded`, `medspeech/review.py:main`의 `initial_snapshot`/`analysis`, `medspeech/web/review.js`의 `last_analysis`/`previous_draft_basis`; `tests/test_review.py`. 제안 FK·버전 관리는 위 DB 설계이며 마이그레이션은 없음 |
+| FR-07 | HF 두 증상 구조화 | 초기·수정·두 STT 전사를 같은 Qwen JSON Schema 경로로 분석하고 모델·입력 버전·토큰/제공자/호출/검증 오류를 구분한다. | **구현됨**, 실제 Qwen 호출은 토큰 없을 때 **미검증** | `medspeech/hf_models.py`, `medspeech/review.py`; `tests/test_hf_models.py`, `tests/hf_dom.test.cjs` |
+| FR-08 | STT 모델 비교 | 기본 LoRA/Turbo 선택, 같은 가상 WAV 전사·CER와 Qwen 증상 비교를 제공한다. | **구현됨**, 실제 실행 상태는 HF 보고서 참조 | `medspeech/stt_compare.py`, `medspeech/web/stt-options.js`, `tests/test_hf_models.py:test_same_audio_and_existing_cer_and_unrun`, `tests/hf_dom.test.cjs` |
+
+FR-02·FR-03·FR-06 및 NFR-01의 추가 근거는 `tests/hf_dom.test.cjs`의 초기/수정 입력 버전·모델 표시·토큰 누락 재시도 검증입니다. 새 실행은 응답의 해시 입력 버전과 UUID로 구분되지만 NFR-01의 영구 DB 추적은 계속 설계안입니다.
