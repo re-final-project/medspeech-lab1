@@ -99,6 +99,23 @@ $env:HF_HOME = Join-Path (Get-Location) '.cache\huggingface'
 
 관리형 Windows에서 Hugging Face의 symlink 임시 디렉터리 검사에 PermissionError가 발생하면 `python tools\run_windows_copy_cache.py full`로 동일 실험을 파일 복사 캐시 방식으로 실행할 수 있습니다. 이 스크립트는 모델·평가 코드를 바꾸지 않습니다. 실제 호스트의 설치 우회 및 명령 기록은 `reports/execution_log.md`를 참조하세요.
 
+## 전사 검토 및 수정
+
+같은 `/demo/aqueduct` 화면에서 기준 발화, 고정된 초기 전사·결과, 편집 가능한 수정문을 비교합니다. 초기 전사문을 복사해 편집을 시작하고 **수정문 재분석**으로 수정문만 기존 구조화 모듈에 전달합니다. 재편집 후 분석 전에는 결과에 **이전 수정문 기준**과 당시 입력을 표시합니다. 빈 수정문은 재분석할 수 없습니다.
+
+```powershell
+.\.venv\Scripts\python.exe -m medspeech.demo serve --port 8765
+Start-Process 'http://127.0.0.1:8765/demo/aqueduct'
+# 실제 수정문 LLM 실행 기록 (full 설치·모델 캐시 필요)
+.\.venv\Scripts\python.exe -m medspeech.review run
+# 모델 없이 지정된 긍정/부정 문장만 시연
+.\.venv\Scripts\python.exe -m medspeech.review run --example --output artifacts/review/example_run.json
+```
+
+화면의 **모의 검토 시연 · 모델 미실행 → 구토 부정 수정 예시 채우기 → 수정문 재분석**을 누르면 두통 있음→있음, 구토 있음→없음을 각 입력 근거와 확인할 수 있습니다. **모의 전사문 · STT 미실행**, **예시 결과**는 실제 모델 결과와 구분합니다. 임의의 문장에는 예시 값을 생성하지 않습니다. 실제 스키마 오류는 **재분석 실패**로 표시하며 재시도할 수 있습니다. 이전 성공 결과가 있으면 그 입력 기준을 붙여 유지합니다.
+
+MRI 판독문과 개념도는 전사 수정에 영향받지 않습니다. MRI를 숨기면 영상 소견·근거와 표시 JSON에서 제거합니다. 웹 요청은 수정문을 지속 저장하지 않으며 CLI만 가상 실험 JSON을 저장합니다. 이번 실제 Qwen 실행은 schema_error였고 STT는 재실행하지 않았습니다. 검증·한계·실행 명령은 [review_report.md](reports/review_report.md)에 기록했습니다.
+
 ## API
 
 ```powershell

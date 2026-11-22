@@ -1,0 +1,13 @@
+✔ fixed example highlights negation change and labels expected answers, not model success (135.6948ms)
+✔ MRI toggle clears both JSON views and editing transcripts never changes MRI evidence (47.163ms)
+✔ empty edited transcript is invalid input rather than unmentioned symptoms (27.7839ms)
+✔ actual STT and JSON failures stay distinct from simulated values and example answers (49.9662ms)
+✔ failed comparison request restores controls and does not infer imaging from speech (26.69ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 293.8933

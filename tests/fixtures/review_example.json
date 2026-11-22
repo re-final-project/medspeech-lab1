@@ -1,0 +1,119 @@
+{
+  "session": {
+    "reference_transcript": "머리가 계속 아프고 구토는 안 했어요.",
+    "initial": {
+      "text": "머리가 계속 아프고 구토를 했어요.",
+      "structure_status": "not_run",
+      "model_states": null,
+      "model_json": null,
+      "example_answer": {
+        "headache": {
+          "status": "있음",
+          "evidence": "머리가 계속 아프고"
+        },
+        "vomiting": {
+          "status": "있음",
+          "evidence": "구토를 했어요"
+        }
+      }
+    },
+    "source": "simulated",
+    "label": "모의 전사문 · STT 미실행",
+    "analysis_mode": "example",
+    "simulated_mri_report": "송과체 부위 종괴가 중뇌수도관을 압박한다. 측뇌실과 제3뇌실이 확장되어 폐쇄성 수두증을 시사한다.",
+    "imaging_findings": {
+      "obstruction_site": {
+        "value": "중뇌수도관",
+        "evidence": "송과체 부위 종괴가 중뇌수도관을 압박한다."
+      },
+      "enlarged_ventricles": [
+        {
+          "value": "측뇌실",
+          "evidence": "측뇌실과 제3뇌실이 확장되어 폐쇄성 수두증을 시사한다."
+        },
+        {
+          "value": "제3뇌실",
+          "evidence": "측뇌실과 제3뇌실이 확장되어 폐쇄성 수두증을 시사한다."
+        }
+      ]
+    }
+  },
+  "positive": {
+    "status": "example",
+    "message": "예시 결과 · 모의 검토 시연 · 구조화 모델 미실행",
+    "side": {
+      "text": "머리가 계속 아프고 구토를 했어요.",
+      "structure_status": "not_run",
+      "model_states": null,
+      "model_json": null,
+      "example_answer": {
+        "headache": {
+          "status": "있음",
+          "evidence": "머리가 계속 아프고"
+        },
+        "vomiting": {
+          "status": "있음",
+          "evidence": "구토를 했어요"
+        }
+      }
+    },
+    "llm_model": null,
+    "stt_executed": false,
+    "simulated_mri_report": "송과체 부위 종괴가 중뇌수도관을 압박한다. 측뇌실과 제3뇌실이 확장되어 폐쇄성 수두증을 시사한다.",
+    "imaging_findings": {
+      "obstruction_site": {
+        "value": "중뇌수도관",
+        "evidence": "송과체 부위 종괴가 중뇌수도관을 압박한다."
+      },
+      "enlarged_ventricles": [
+        {
+          "value": "측뇌실",
+          "evidence": "측뇌실과 제3뇌실이 확장되어 폐쇄성 수두증을 시사한다."
+        },
+        {
+          "value": "제3뇌실",
+          "evidence": "측뇌실과 제3뇌실이 확장되어 폐쇄성 수두증을 시사한다."
+        }
+      ]
+    }
+  },
+  "negative": {
+    "status": "example",
+    "message": "예시 결과 · 모의 검토 시연 · 구조화 모델 미실행",
+    "side": {
+      "text": "머리가 계속 아프고 구토는 안 했어요.",
+      "structure_status": "not_run",
+      "model_states": null,
+      "model_json": null,
+      "example_answer": {
+        "headache": {
+          "status": "있음",
+          "evidence": "머리가 계속 아프고"
+        },
+        "vomiting": {
+          "status": "없음",
+          "evidence": "구토는 안 했어요"
+        }
+      }
+    },
+    "llm_model": null,
+    "stt_executed": false,
+    "simulated_mri_report": "송과체 부위 종괴가 중뇌수도관을 압박한다. 측뇌실과 제3뇌실이 확장되어 폐쇄성 수두증을 시사한다.",
+    "imaging_findings": {
+      "obstruction_site": {
+        "value": "중뇌수도관",
+        "evidence": "송과체 부위 종괴가 중뇌수도관을 압박한다."
+      },
+      "enlarged_ventricles": [
+        {
+          "value": "측뇌실",
+          "evidence": "측뇌실과 제3뇌실이 확장되어 폐쇄성 수두증을 시사한다."
+        },
+        {
+          "value": "제3뇌실",
+          "evidence": "측뇌실과 제3뇌실이 확장되어 폐쇄성 수두증을 시사한다."
+        }
+      ]
+    }
+  }
+}

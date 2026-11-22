@@ -1,0 +1,14 @@
+✔ initial text is copied; only corrected text is submitted; vomiting change is highlighted (143.3961ms)
+✔ editing after analysis retains results marked previous-draft basis until reanalysed (62.7971ms)
+✔ blank or whitespace input disables reanalysis without replacing prior results (37.725ms)
+✔ real schema failure shows reanalysis failure, permits retry, and never fabricates examples (42.644ms)
+✔ typing during an in-flight analysis does not overwrite draft and marks returned result stale (23.4902ms)
+✔ review leaves MRI findings and normal/blocked controls independent; hidden MRI clears review JSON (40.0455ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 357.1824

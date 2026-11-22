@@ -1,0 +1,62 @@
+Structure gold/basic: s10-clean (0.00s)
+Structure gold/basic: s10-noise20db (0.00s)
+Structure gold/basic: s10-speed1.1 (0.00s)
+Structure gold/basic: s11-clean (0.00s)
+Structure gold/basic: s11-noise20db (0.00s)
+Structure gold/basic: s11-speed1.1 (0.00s)
+Structure gold/grounded: s10-clean (0.00s)
+Structure gold/grounded: s10-noise20db (0.00s)
+Structure gold/grounded: s10-speed1.1 (0.00s)
+Structure gold/grounded: s11-clean (0.00s)
+Structure gold/grounded: s11-noise20db (0.00s)
+Structure gold/grounded: s11-speed1.1 (0.00s)
+Structure fixture_A/basic: s10-clean (0.00s)
+Structure fixture_A/basic: s10-noise20db (0.00s)
+Structure fixture_A/basic: s10-speed1.1 (0.00s)
+Structure fixture_A/basic: s11-clean (0.00s)
+Structure fixture_A/basic: s11-noise20db (0.00s)
+Structure fixture_A/basic: s11-speed1.1 (0.00s)
+Structure fixture_A/grounded: s10-clean (0.00s)
+Structure fixture_A/grounded: s10-noise20db (0.00s)
+Structure fixture_A/grounded: s10-speed1.1 (0.00s)
+Structure fixture_A/grounded: s11-clean (0.00s)
+Structure fixture_A/grounded: s11-noise20db (0.00s)
+Structure fixture_A/grounded: s11-speed1.1 (0.00s)
+Structure fixture_B/basic: s10-clean (0.00s)
+Structure fixture_B/basic: s10-noise20db (0.00s)
+Structure fixture_B/basic: s10-speed1.1 (0.00s)
+Structure fixture_B/basic: s11-clean (0.00s)
+Structure fixture_B/basic: s11-noise20db (0.00s)
+Structure fixture_B/basic: s11-speed1.1 (0.00s)
+Structure fixture_B/grounded: s10-clean (0.00s)
+Structure fixture_B/grounded: s10-noise20db (0.00s)
+Structure fixture_B/grounded: s10-speed1.1 (0.00s)
+Structure fixture_B/grounded: s11-clean (0.00s)
+Structure fixture_B/grounded: s11-noise20db (0.00s)
+Structure fixture_B/grounded: s11-speed1.1 (0.00s)
+{
+  "mode": "smoke",
+  "stt": {
+    "fixture_A": {
+      "n": 6,
+      "cer": 0.043010752688172046,
+      "wer": 0.19230769230769232,
+      "medical_term_f1": 0.9090909090909091,
+      "number_unit_exact": 0.5,
+      "negation_exact": 0.5,
+      "char_edits": 12,
+      "reference_chars": 279
+    },
+    "fixture_B": {
+      "n": 6,
+      "cer": 0.043010752688172046,
+      "wer": 0.19230769230769232,
+      "medical_term_f1": 0.9090909090909091,
+      "number_unit_exact": 0.5,
+      "negation_exact": 0.5,
+      "char_edits": 12,
+      "reference_chars": 279
+    }
+  },
+  "metrics_path": "artifacts/smoke/metrics.json"
+}

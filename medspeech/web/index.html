@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="/demo/assets/comparison.css">
   <script src="/demo/assets/app.js" defer></script>
   <script src="/demo/assets/comparison.js" defer></script>
+  <link rel="stylesheet" href="/demo/assets/review.css">
+  <script src="/demo/assets/review.js" defer></script>
 </head>
 <body>
   <header class="topbar"><a class="brand" href="/demo/aqueduct"><span class="brand-mark">m</span> medspeech<span class="brand-light">-lab</span></a><span class="eyebrow">KOREAN MEDICAL SPEECH LAB</span><a href="/docs">API 문서</a></header>
@@ -62,6 +64,21 @@
       <div class="comparison-actions"><button id="comparison-run" class="primary" type="button">비교용 합성 음성으로 실제 STT 실행</button><button id="comparison-simulated" class="secondary" type="button">모의 전사 오류 보기</button><button id="comparison-apply" class="secondary" type="button">전사문 적용 · 구조화 실행</button></div>
       <p id="comparison-models" class="muted"></p>
       <details><summary>비교 결과 JSON · 모델 결과와 예시 정답 구분</summary><pre id="comparison-json"></pre></details>
+    </section>
+
+    <section class="review-card" aria-labelledby="review-heading">
+      <div class="evidence-heading"><div><span class="mini-label">TRANSCRIPT REVIEW</span><h2 id="review-heading">전사 검토 및 수정</h2></div><span class="chip-light">가상 사례 · 교육용</span></div>
+      <p class="muted">초기 전사와 기존 결과는 고정하고, 검토 후 수정문만 다시 구조화합니다. MRI 판독문과 시나리오 개념도는 수정하지 않습니다.</p>
+      <p id="review-source" class="field-label"></p>
+      <div class="review-grid">
+        <article><h3>기준 발화</h3><p id="review-reference" class="diff-text"></p></article>
+        <article><h3>초기 전사문</h3><p id="review-initial" class="diff-text"></p><div id="review-initial-result"></div></article>
+        <article><h3>검토 후 수정문</h3><label class="field-label" for="review-editor">초기 전사문을 복사한 편집 초안</label><textarea id="review-editor" rows="4" maxlength="2000"></textarea><p id="review-result-basis" class="field-label"></p><div id="review-corrected-result"></div></article>
+      </div>
+      <div class="review-actions"><button id="review-analyse" class="primary" type="button" disabled>수정문 재분석</button><button id="review-demo" class="secondary" type="button">모의 검토 시연 · 모델 미실행</button><button id="review-fill" class="secondary" type="button">구토 부정 수정 예시 채우기</button></div>
+      <p id="review-status" class="execution-banner" role="status" aria-live="polite">검토 데이터 불러오는 중</p>
+      <div id="review-transitions" aria-live="polite"></div>
+      <details><summary>초기 스냅샷·수정문 분석 JSON</summary><pre id="review-json"></pre></details>
     </section>
 
     <div class="evidence-heading"><div><span class="mini-label">INPUT & EVIDENCE</span><h2>입력과 근거 확인</h2></div><button id="mri-toggle" class="secondary" type="button" aria-expanded="true" aria-controls="mri-panel">가상 MRI 판독문 숨기기</button></div>

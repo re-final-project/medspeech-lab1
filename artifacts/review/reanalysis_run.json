@@ -1,0 +1,62 @@
+{
+  "initial_snapshot": {
+    "reference_transcript": "머리가 계속 아프고 구토는 안 했어요.",
+    "initial": {
+      "text": " 머리가 계속 아프고, 구톤은 안 했어요.",
+      "structure_status": "schema_error",
+      "model_states": null,
+      "model_json": null,
+      "example_answer": null
+    },
+    "source": "actual_stt",
+    "label": "저장된 실제 STT 결과 · 현재 요청에서 모델 재실행 안 함",
+    "analysis_mode": "model",
+    "simulated_mri_report": "송과체 부위 종괴가 중뇌수도관을 압박한다. 측뇌실과 제3뇌실이 확장되어 폐쇄성 수두증을 시사한다.",
+    "imaging_findings": {
+      "obstruction_site": {
+        "value": "중뇌수도관",
+        "evidence": "송과체 부위 종괴가 중뇌수도관을 압박한다."
+      },
+      "enlarged_ventricles": [
+        {
+          "value": "측뇌실",
+          "evidence": "측뇌실과 제3뇌실이 확장되어 폐쇄성 수두증을 시사한다."
+        },
+        {
+          "value": "제3뇌실",
+          "evidence": "측뇌실과 제3뇌실이 확장되어 폐쇄성 수두증을 시사한다."
+        }
+      ]
+    }
+  },
+  "analysis": {
+    "status": "failed",
+    "message": "재분석 실패 · schema_error · 수정문을 확인하고 재시도하세요.",
+    "side": {
+      "text": "머리가 계속 아프고 구토는 안 했어요.",
+      "structure_status": "schema_error",
+      "model_states": null,
+      "model_json": null,
+      "example_answer": null
+    },
+    "llm_model": "Qwen/Qwen2.5-0.5B-Instruct/cpu-dynamic-int8",
+    "stt_executed": false,
+    "simulated_mri_report": "송과체 부위 종괴가 중뇌수도관을 압박한다. 측뇌실과 제3뇌실이 확장되어 폐쇄성 수두증을 시사한다.",
+    "imaging_findings": {
+      "obstruction_site": {
+        "value": "중뇌수도관",
+        "evidence": "송과체 부위 종괴가 중뇌수도관을 압박한다."
+      },
+      "enlarged_ventricles": [
+        {
+          "value": "측뇌실",
+          "evidence": "측뇌실과 제3뇌실이 확장되어 폐쇄성 수두증을 시사한다."
+        },
+        {
+          "value": "제3뇌실",
+          "evidence": "측뇌실과 제3뇌실이 확장되어 폐쇄성 수두증을 시사한다."
+        }
+      ]
+    }
+  }
+}

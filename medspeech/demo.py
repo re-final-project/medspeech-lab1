@@ -181,6 +181,8 @@ def run_models(provider, mode, include_mri=True, audio_path=None):
 def mount_demo(app: FastAPI, provider, mode):
     from .comparison import mount_comparison
     mount_comparison(app, provider, mode)
+    from .review import mount_review
+    mount_review(app, provider, mode)
     web = Path(__file__).with_name("web")
     app.mount("/demo/assets", StaticFiles(directory=web), name="demo-assets")
 
